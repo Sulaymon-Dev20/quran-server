@@ -1,5 +1,6 @@
 package com.suyo.quran.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.suyo.quran.models.Language;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -7,32 +8,51 @@ import org.springframework.stereotype.Service;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
 
 @Service
 public class DataService {
-    final JSONArray jsonArray;
+    final JSONArray chapterList;
+    final JSONObject chapter;
+    final JSONObject chapterBN;
+    final JSONObject chapterEN;
+    final JSONObject chapterES;
+    final JSONObject chapterFR;
+    final JSONObject chapterID;
+    final JSONObject chapterRU;
+    final JSONObject chapterSV;
+    final JSONObject chapterTR;
+    final JSONObject chapterUR;
+    final JSONObject chapterZH;
 
     {
         try {
-            Path path = Path.of("chapters.json");
-            String source = new String(Files.readAllBytes(path));
-            jsonArray = new JSONArray(source);
+            chapterList = new JSONArray(new String(Files.readAllBytes(Path.of("data/chapters.json"))));
+            chapter = new JSONObject(new String(Files.readAllBytes(Path.of("data/quran.json"))));
+            chapterBN = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/bn.json"))));
+            chapterEN = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/en.json"))));
+            chapterES = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/es.json"))));
+            chapterFR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/fr.json"))));
+            chapterID = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/id.json"))));
+            chapterRU = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ru.json"))));
+            chapterSV = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/sv.json"))));
+            chapterTR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/tr.json"))));
+            chapterUR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ur.json"))));
+            chapterZH = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/zh.json"))));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public JSONArray getChapter() {
-        return jsonArray;
+    public JSONArray getChapterListByLanguage() {
+        return chapterList;
     }
 
-    public List<Object> getChapter(Language language) {
+    public List<Object> getChapterListByLanguage(Language language) {
         String fieldName = getFieldName(language);
         if (!fieldName.equals("ALL")) {
-            return new ArrayList<>(jsonArray.toList())
+            return new ArrayList<>(chapterList.toList())
                     .stream()
                     .peek(item -> {
                         HashMap chapter = (HashMap) item;
@@ -49,8 +69,31 @@ public class DataService {
                         chapter.remove("translation_zh");
                     }).toList();
         } else {
-            return jsonArray.toList();
+            return chapterList.toList();
         }
+    }
+
+    public Map<String,Object> getChapterSource(Language language) {
+        var item = switch (language) {
+            case BN -> chapterBN;
+            case EN -> chapterEN;
+            case ES -> chapterES;
+            case FR -> chapterFR;
+            case ID -> chapterID;
+            case RU -> chapterRU;
+            case SV -> chapterSV;
+            case TR -> chapterTR;
+            case UR -> chapterUR;
+            case ZH -> chapterZH;
+            default -> chapter;
+        };
+        TreeMap<String, Object> res = new TreeMap<>(Comparator.comparingInt(String::length).thenComparing(Function.identity()));
+        res.putAll(item.toMap());
+        return res;
+    }
+
+    public Object getChapterByNumber(Language language, String chapterNumber) {
+        return getChapterSource(language).get(chapterNumber);
     }
 
     private String getFieldName(Language language) {

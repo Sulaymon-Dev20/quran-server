@@ -14,7 +14,15 @@ public class ChapterService {
         this.dataService = service;
     }
 
+    public Response getChapterListByLanguage(Language language) {
+        return new Response(new Status(200), dataService.getChapterListByLanguage(language));
+    }
+
     public Response getChapterByLanguage(Language language) {
-        return new Response(new Status(200), dataService.getChapter(language));
+        return new Response(new Status(200), dataService.getChapterSource(language));
+    }
+
+    public Response getChapterByLanguage(Language language, String chapterNumber) {
+        return new Response(new Status(200), dataService.getChapterByNumber(language, chapterNumber));
     }
 }

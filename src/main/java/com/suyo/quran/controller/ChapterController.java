@@ -20,7 +20,17 @@ public class ChapterController {
     }
 
     @GetMapping("/{language}")
-    public Response getChapterByLanguage(@PathVariable Language language) {
+    public Response getChapterListByLanguage(@PathVariable Language language) {
+        return chapterService.getChapterListByLanguage(language);
+    }
+
+    @GetMapping("/all/{language}")
+    public Response getChapterSource(@PathVariable Language language) {
         return chapterService.getChapterByLanguage(language);
+    }
+
+    @GetMapping("/{language}/{number}")
+    public Response getChapterByLanguage(@PathVariable Language language, @PathVariable("number") String chapterNumber) {
+        return chapterService.getChapterByLanguage(language, chapterNumber);
     }
 }
