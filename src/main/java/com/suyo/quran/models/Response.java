@@ -10,6 +10,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Response {
+    public Response(Status status, Object data) {
+        this.status = status;
+        this.data = data;
+        this.errorList = List.of();
+    }
+
     private Status status;
     private List<ErrorsField> errorList;
     private Object data;
