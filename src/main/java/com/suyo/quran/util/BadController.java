@@ -2,8 +2,6 @@ package com.suyo.quran.util;
 
 import com.suyo.quran.models.Response;
 import com.suyo.quran.models.Status;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
@@ -11,6 +9,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Random;
 
@@ -53,5 +53,6 @@ public class BadController implements ErrorController {
 
     @GetMapping("favicon.ico")
     @ResponseBody
-    void returnNoFavicon() {}
+    void returnNoFavicon() {
+    }
 }

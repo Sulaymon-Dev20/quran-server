@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.0</version>
+        <version>2.6.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.suyo</groupId>
@@ -20,10 +20,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -32,14 +29,19 @@
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
         </dependency>
-
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
+            <artifactId>springfox-bean-validators</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.json/json todo I might be not necessary -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230618</version>
         </dependency>
     </dependencies>
 

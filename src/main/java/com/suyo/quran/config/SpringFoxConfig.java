@@ -29,7 +29,7 @@ public class SpringFoxConfig {
     public Docket api1() {
         Class[] classes = {InputStream.class, Resource.class};
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("For Web Front")
+                .groupName("FOR IOS PART")
                 .select()
 //                .apis(RequestHandlerSelectors.any())
                 .apis(RequestHandlerSelectors.basePackage("com.suyo.quran.controller"))
@@ -60,12 +60,12 @@ public class SpringFoxConfig {
     }
 
     private ApiInfo apiInfo() {
-        String version = "UNKNOWN";
+        final String version = "UNKNOWN";
         return new ApiInfo(applicationName,
                 "API description",
                 version,
-                "https://ssd.uz",
-                new Contact("𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠", "https://t.me/sulaymon_yahyo", "sulaymon1w@gmail.com"),
+                null,
+                new Contact("𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠", "https://sulaymonyahyo.com", "sulaymon1w@gmail.com"),
                 null,
                 null,
                 Collections.emptyList());
