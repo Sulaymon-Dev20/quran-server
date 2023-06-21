@@ -1,6 +1,5 @@
 package com.suyo.quran.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.suyo.quran.models.Language;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -47,29 +46,25 @@ public class DataService {
 
     public List<Object> getChapterListByLanguage(Language language) {
         String fieldName = getFieldName(language);
-        if (!fieldName.equals("ALL")) {
-            return new ArrayList<>(chapterList.toList())
-                    .stream()
-                    .peek(item -> {
-                        HashMap chapter = (HashMap) item;
-                        chapter.put("translation", chapter.get(fieldName));
-                        chapter.remove("translation_bn");
-                        chapter.remove("translation_en");
-                        chapter.remove("translation_es");
-                        chapter.remove("translation_fr");
-                        chapter.remove("translation_id");
-                        chapter.remove("translation_ru");
-                        chapter.remove("translation_sv");
-                        chapter.remove("translation_tr");
-                        chapter.remove("translation_ur");
-                        chapter.remove("translation_zh");
-                    }).toList();
-        } else {
-            return chapterList.toList();
-        }
+        return !fieldName.equals("ALL") ? new ArrayList<>(chapterList.toList())
+                .stream()
+                .peek(item -> {
+                    HashMap<String, Object> chapter = (HashMap) item;
+                    chapter.put("translation", chapter.get(fieldName));
+                    chapter.remove("translation_bn");
+                    chapter.remove("translation_en");
+                    chapter.remove("translation_es");
+                    chapter.remove("translation_fr");
+                    chapter.remove("translation_id");
+                    chapter.remove("translation_ru");
+                    chapter.remove("translation_sv");
+                    chapter.remove("translation_tr");
+                    chapter.remove("translation_ur");
+                    chapter.remove("translation_zh");
+                }).toList() : chapterList.toList();
     }
 
-    public Map<String,Object> getChapterSource(Language language) {
+    public Map<String, Object> getChapterSource(Language language) {
         var item = switch (language) {
             case BN -> chapterBN;
             case EN -> chapterEN;
