@@ -45,10 +45,6 @@ public class DataService {
         }
     }
 
-    public JSONArray getChapterListByLanguage() {
-        return chapterList;
-    }
-
     public List<Object> getChapterListByLanguage(Language language) {
         String fieldName = getFieldName(language);
         if (!fieldName.equals("ALL")) {
