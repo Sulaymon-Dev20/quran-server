@@ -22,7 +22,7 @@ public class ChapterService {
         return new Response(new Status(200), dataService.getChapterSource(language));
     }
 
-    public Response getChapterByLanguage(Language language, String chapterNumber) {
+    public Response getChapterByLanguage(Language language, Integer chapterNumber) {
         return new Response(new Status(200), dataService.getChapterByNumber(language, chapterNumber));
     }
 }

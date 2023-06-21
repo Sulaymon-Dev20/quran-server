@@ -92,8 +92,8 @@ public class DataService {
         return res;
     }
 
-    public Object getChapterByNumber(Language language, String chapterNumber) {
-        return getChapterSource(language).get(chapterNumber);
+    public Object getChapterByNumber(Language language, Integer chapterNumber) {
+        return getChapterSource(language).get(chapterNumber.toString());
     }
 
     private String getFieldName(Language language) {

@@ -17,6 +17,6 @@ public class Response {
     }
 
     private Status status;
-    private List<ErrorsField> errorList;
+    private List<String> errorList;
     private Object data;
 }
