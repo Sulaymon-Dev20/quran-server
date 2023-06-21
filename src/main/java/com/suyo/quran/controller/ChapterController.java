@@ -18,7 +18,6 @@ import javax.validation.constraints.NotNull;
 @Validated
 public class ChapterController {
 
-
     final ChapterService chapterService;
 
     public ChapterController(ChapterService chapterService) {

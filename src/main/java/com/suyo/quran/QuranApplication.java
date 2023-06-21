@@ -14,7 +14,6 @@ public class QuranApplication {
     private static ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
-//        System.out.println(PageContent.titleList.get(new Random().nextInt(PageContent.titleList.size())));
         context = SpringApplication.run(QuranApplication.class, args);
     }
 

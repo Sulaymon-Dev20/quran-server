@@ -15,5 +15,4 @@ public class JuzController {
         this.juzService = juzService;
     }
 
-
 }
