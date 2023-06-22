@@ -24,6 +24,7 @@ public class DataService {
     final JSONObject chapterTR;
     final JSONObject chapterUR;
     final JSONObject chapterZH;
+    final JSONArray juzList;
 
     {
         try {
@@ -39,6 +40,7 @@ public class DataService {
             chapterTR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/tr.json"))));
             chapterUR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ur.json"))));
             chapterZH = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/zh.json"))));
+            juzList = new JSONArray(new String(Files.readAllBytes(Path.of("data/juz.json"))));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -101,5 +103,9 @@ public class DataService {
             case ZH -> "translation_zh";
             default -> "ALL";
         };
+    }
+
+    public List<Object> getJuz() {
+        return juzList.toList();
     }
 }

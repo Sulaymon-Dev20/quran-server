@@ -1,6 +1,7 @@
 package com.suyo.quran.service;
 
 import com.suyo.quran.models.Response;
+import com.suyo.quran.models.Status;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -13,6 +14,6 @@ public class JuzService {
     }
 
     public Response getJuz() {
-        return null;
+        return new Response(new Status(200), dataService.getJuz());
     }
 }
