@@ -23,6 +23,7 @@ public class DataService {
     final JSONObject chapterSV;
     final JSONObject chapterTR;
     final JSONObject chapterUR;
+    final JSONObject chapterUZ;
     final JSONObject chapterZH;
     final JSONArray juzList;
 
@@ -39,6 +40,7 @@ public class DataService {
             chapterSV = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/sv.json"))));
             chapterTR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/tr.json"))));
             chapterUR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ur.json"))));
+            chapterUZ = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/uz.json"))));
             chapterZH = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/zh.json"))));
             juzList = new JSONArray(new String(Files.readAllBytes(Path.of("data/juz.json"))));
         } catch (Exception e) {
@@ -62,6 +64,7 @@ public class DataService {
                     chapter.remove("translation_sv");
                     chapter.remove("translation_tr");
                     chapter.remove("translation_ur");
+                    chapter.remove("translation_uz");
                     chapter.remove("translation_zh");
                 }).toList() : chapterList.toList();
     }
@@ -77,6 +80,7 @@ public class DataService {
             case SV -> chapterSV;
             case TR -> chapterTR;
             case UR -> chapterUR;
+            case UZ -> chapterUZ;
             case ZH -> chapterZH;
             default -> chapter;
         };
@@ -100,6 +104,7 @@ public class DataService {
             case SV -> "translation_sv";
             case TR -> "translation_tr";
             case UR -> "translation_ur";
+            case UZ -> "translation_uz";
             case ZH -> "translation_zh";
             default -> "ALL";
         };
