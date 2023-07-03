@@ -1,6 +1,8 @@
 package com.suyo.quran.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.suyo.quran.models.Status;
+import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 
 import java.nio.charset.StandardCharsets;
@@ -22,7 +24,12 @@ public class TestUzbChapter {
                 chapter++;
             } else {
                 LinkedList<Object> surah = res.computeIfAbsent(chapter, value -> new LinkedList<>());
-                surah.addLast(Map.of("chapter", chapter, "verse", count, "text", s.replace(String.valueOf(count), "")));
+//                surah.addLast(Map.of("chapter", chapter, "verse", count, "text", s.replace(String.valueOf(count), "").replace("\r", "")));
+                LinkedHashMap<Object, Object> ayat = new LinkedHashMap<>();
+                ayat.put("chapter", chapter);
+                ayat.put("verse", count);
+                ayat.put("text", s.replace(String.valueOf(count), "").replace("\r", ""));
+                surah.addLast(ayat);
             }
         }
         Files.writeString(Path.of("uz.json"), new ObjectMapper().writeValueAsString(res), StandardCharsets.UTF_8);
