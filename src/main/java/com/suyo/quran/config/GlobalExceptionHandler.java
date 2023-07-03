@@ -36,7 +36,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    Response onMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+    public Response onMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         Response res = new Response();
         res.setStatus(new Status(400));
         res.setErrorList(e.getBindingResult().getFieldErrors().stream().map(fieldError -> fieldError.getField() + " " + fieldError.getDefaultMessage()).toList());
