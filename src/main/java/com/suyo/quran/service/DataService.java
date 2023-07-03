@@ -87,7 +87,16 @@ public class DataService {
         return language == Language.DEFAULT ? "All" : language.toString().toLowerCase();
     }
 
-    public List<Object> getJuz() {
-        return juzList.toList();
+    public List<Object> getJuz(Language language) {
+        String fieldName = getFieldName(language);
+        return !fieldName.equals("All") ? new ArrayList<>(juzList.toList())
+                .stream()
+                .peek(item -> {
+                    HashMap<String, Object> chapter = (HashMap) item;
+                    ArrayList<HashMap> list = (ArrayList<HashMap>) chapter.get("chapters");
+                    for (HashMap surah : list) {
+                        surah.put("translation", ((HashMap) surah.remove("translation")).get(fieldName));
+                    }
+                }).toList() : juzList.toList();
     }
 }

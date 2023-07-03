@@ -1,5 +1,6 @@
 package com.suyo.quran.service;
 
+import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Response;
 import com.suyo.quran.models.Status;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ public class JuzService {
         this.dataService = dataService;
     }
 
-    public Response getJuz() {
-        return new Response(new Status(200), dataService.getJuz());
+    public Response getJuz(Language language) {
+        return new Response(new Status(200), dataService.getJuz(language));
     }
 }
