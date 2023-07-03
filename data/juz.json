@@ -4,26 +4,50 @@
     "page": 1,
     "chapters": [
       {
-        "pageNumber": "1",
-        "type": "Makkiyah",
+        "index": 1,
+        "pageNumber": 1,
         "verse": {
           "start": 1,
           "end": 7
         },
-        "title": "Al-Fatiha",
-        "titleAr": "الفاتحة",
-        "index": 1
+        "type": "Makkiyah",
+        "title": "الفاتحة",
+        "translation": {
+          "ru": "Открывающая Коран",
+          "sv": "Öppningen",
+          "uz": "Fotiha",
+          "en": "The Opener",
+          "id": "Pembukaan",
+          "fr": "L'ouverture",
+          "bn": "সূচনা",
+          "ur": "کھولنے والی",
+          "tr": "Fâtiha",
+          "es": "La Apertura",
+          "zh": "开端章"
+        }
       },
       {
-        "pageNumber": "2",
-        "type": "Madaniyah",
+        "index": 2,
+        "pageNumber": 2,
         "verse": {
           "start": 1,
           "end": 141
         },
-        "title": "Al-Baqara",
-        "titleAr": "البقرة",
-        "index": 2
+        "type": "Madaniyah",
+        "title": "البقرة",
+        "translation": {
+          "ru": "Корова",
+          "sv": "Kon",
+          "uz": "Baqara",
+          "en": "The Cow",
+          "id": "Sapi Betina",
+          "fr": "La vache",
+          "bn": "বকনা-বাছুর",
+          "ur": "گائے",
+          "tr": "Bakara",
+          "es": "La Vaca",
+          "zh": "黄牛"
+        }
       }
     ]
   },
@@ -32,15 +56,27 @@
     "page": 20,
     "chapters": [
       {
-        "pageNumber": "2",
-        "type": "Madaniyah",
+        "index": 2,
+        "pageNumber": 2,
         "verse": {
           "start": 142,
           "end": 252
         },
-        "title": "Al-Baqara",
-        "titleAr": "البقرة",
-        "index": 2
+        "type": "Madaniyah",
+        "title": "البقرة",
+        "translation": {
+          "ru": "Корова",
+          "sv": "Kon",
+          "uz": "Baqara",
+          "en": "The Cow",
+          "id": "Sapi Betina",
+          "fr": "La vache",
+          "bn": "বকনা-বাছুর",
+          "ur": "گائے",
+          "tr": "Bakara",
+          "es": "La Vaca",
+          "zh": "黄牛"
+        }
       }
     ]
   },
@@ -49,26 +85,50 @@
     "page": 38,
     "chapters": [
       {
-        "pageNumber": "2",
-        "type": "Madaniyah",
+        "index": 2,
+        "pageNumber": 2,
         "verse": {
           "start": 253,
           "end": 286
         },
-        "title": "Al-Baqara",
-        "titleAr": "البقرة",
-        "index": 2
+        "type": "Madaniyah",
+        "title": "البقرة",
+        "translation": {
+          "ru": "Корова",
+          "sv": "Kon",
+          "uz": "Baqara",
+          "en": "The Cow",
+          "id": "Sapi Betina",
+          "fr": "La vache",
+          "bn": "বকনা-বাছুর",
+          "ur": "گائے",
+          "tr": "Bakara",
+          "es": "La Vaca",
+          "zh": "黄牛"
+        }
       },
       {
-        "pageNumber": "45",
-        "type": "Madaniyah",
+        "index": 3,
+        "pageNumber": 45,
         "verse": {
           "start": 1,
           "end": 92
         },
-        "title": "Al-Imran",
-        "titleAr": "آل عمران",
-        "index": 3
+        "type": "Madaniyah",
+        "title": "آل عمران",
+        "translation": {
+          "ru": "Семейство Имрана",
+          "sv": "Imrans Ätt",
+          "uz": "Oli Imron",
+          "en": "Family of Imran",
+          "id": "Keluarga Imran",
+          "fr": "La famille de 'imran",
+          "bn": "ইমরানের পরিবার",
+          "ur": "عمران کا خاندان",
+          "tr": "Âl-i İmrân",
+          "es": "La Familia de Imran",
+          "zh": "仪姆兰的家属"
+        }
       }
     ]
   },
@@ -77,26 +137,50 @@
     "page": 56,
     "chapters": [
       {
-        "pageNumber": "45",
-        "type": "Madaniyah",
+        "index": 3,
+        "pageNumber": 45,
         "verse": {
           "start": 93,
           "end": 200
         },
-        "title": "Al-Imran",
-        "titleAr": "آل عمران",
-        "index": 3
+        "type": "Madaniyah",
+        "title": "آل عمران",
+        "translation": {
+          "ru": "Семейство Имрана",
+          "sv": "Imrans Ätt",
+          "uz": "Oli Imron",
+          "en": "Family of Imran",
+          "id": "Keluarga Imran",
+          "fr": "La famille de 'imran",
+          "bn": "ইমরানের পরিবার",
+          "ur": "عمران کا خاندان",
+          "tr": "Âl-i İmrân",
+          "es": "La Familia de Imran",
+          "zh": "仪姆兰的家属"
+        }
       },
       {
-        "pageNumber": "69",
-        "type": "Madaniyah",
+        "index": 4,
+        "pageNumber": 69,
         "verse": {
           "start": 1,
           "end": 23
         },
-        "title": "An-Nisaa'",
-        "titleAr": "النساء",
-        "index": 4
+        "type": "Madaniyah",
+        "title": "النساء",
+        "translation": {
+          "ru": "Женщины",
+          "sv": "Kvinnor",
+          "uz": "Niso",
+          "en": "The Women",
+          "id": "Wanita",
+          "fr": "Les femmes",
+          "bn": "নারী",
+          "ur": "عورت",
+          "tr": "Nisâ",
+          "es": "Las Mujeres",
+          "zh": "妇女"
+        }
       }
     ]
   },
@@ -105,15 +189,27 @@
     "page": 73,
     "chapters": [
       {
-        "pageNumber": "69",
-        "type": "Madaniyah",
+        "index": 4,
+        "pageNumber": 69,
         "verse": {
           "start": 24,
           "end": 147
         },
-        "title": "An-Nisaa'",
-        "titleAr": "النساء",
-        "index": 4
+        "type": "Madaniyah",
+        "title": "النساء",
+        "translation": {
+          "ru": "Женщины",
+          "sv": "Kvinnor",
+          "uz": "Niso",
+          "en": "The Women",
+          "id": "Wanita",
+          "fr": "Les femmes",
+          "bn": "নারী",
+          "ur": "عورت",
+          "tr": "Nisâ",
+          "es": "Las Mujeres",
+          "zh": "妇女"
+        }
       }
     ]
   },
@@ -122,26 +218,50 @@
     "page": 91,
     "chapters": [
       {
-        "pageNumber": "69",
-        "type": "Madaniyah",
+        "index": 4,
+        "pageNumber": 69,
         "verse": {
           "start": 148,
           "end": 176
         },
-        "title": "An-Nisaa'",
-        "titleAr": "النساء",
-        "index": 4
+        "type": "Madaniyah",
+        "title": "النساء",
+        "translation": {
+          "ru": "Женщины",
+          "sv": "Kvinnor",
+          "uz": "Niso",
+          "en": "The Women",
+          "id": "Wanita",
+          "fr": "Les femmes",
+          "bn": "নারী",
+          "ur": "عورت",
+          "tr": "Nisâ",
+          "es": "Las Mujeres",
+          "zh": "妇女"
+        }
       },
       {
-        "pageNumber": "95",
-        "type": "Madaniyah",
+        "index": 5,
+        "pageNumber": 95,
         "verse": {
           "start": 1,
           "end": 81
         },
-        "title": "Al-Ma'ida",
-        "titleAr": "المائدة",
-        "index": 5
+        "type": "Madaniyah",
+        "title": "المائدة",
+        "translation": {
+          "ru": "Трапеза",
+          "sv": "Den Himmelska Måltiden",
+          "uz": "Moida",
+          "en": "The Table Spread",
+          "id": "Jamuan (Hidangan Makanan)",
+          "fr": "La table servie",
+          "bn": "খাদ্য পরিবেশিত টেবিল",
+          "ur": "دسترخوان",
+          "tr": "Mâide",
+          "es": "La Mesa Servida",
+          "zh": "筵席"
+        }
       }
     ]
   },
@@ -150,26 +270,50 @@
     "page": 109,
     "chapters": [
       {
-        "pageNumber": "95",
-        "type": "Madaniyah",
+        "index": 5,
+        "pageNumber": 95,
         "verse": {
           "start": 82,
           "end": 120
         },
-        "title": "Al-Ma'ida",
-        "titleAr": "المائدة",
-        "index": 5
+        "type": "Madaniyah",
+        "title": "المائدة",
+        "translation": {
+          "ru": "Трапеза",
+          "sv": "Den Himmelska Måltiden",
+          "uz": "Moida",
+          "en": "The Table Spread",
+          "id": "Jamuan (Hidangan Makanan)",
+          "fr": "La table servie",
+          "bn": "খাদ্য পরিবেশিত টেবিল",
+          "ur": "دسترخوان",
+          "tr": "Mâide",
+          "es": "La Mesa Servida",
+          "zh": "筵席"
+        }
       },
       {
-        "pageNumber": "115",
-        "type": "Makkiyah",
+        "index": 6,
+        "pageNumber": 115,
         "verse": {
           "start": 1,
           "end": 110
         },
-        "title": "Al-An'am",
-        "titleAr": "الأنعام",
-        "index": 6
+        "type": "Makkiyah",
+        "title": "الأنعام",
+        "translation": {
+          "ru": "Скот",
+          "sv": "Boskap",
+          "uz": "An'om",
+          "en": "The Cattle",
+          "id": "Binatang Ternak",
+          "fr": "Les bestiaux",
+          "bn": "গৃহপালিত পশু",
+          "ur": "مویشی",
+          "tr": "En'âm",
+          "es": "Los Rebaños",
+          "zh": "牲畜"
+        }
       }
     ]
   },
@@ -178,26 +322,50 @@
     "page": 128,
     "chapters": [
       {
-        "pageNumber": "115",
-        "type": "Makkiyah",
+        "index": 6,
+        "pageNumber": 115,
         "verse": {
           "start": 111,
           "end": 165
         },
-        "title": "Al-An'am",
-        "titleAr": "الأنعام",
-        "index": 6
+        "type": "Makkiyah",
+        "title": "الأنعام",
+        "translation": {
+          "ru": "Скот",
+          "sv": "Boskap",
+          "uz": "An'om",
+          "en": "The Cattle",
+          "id": "Binatang Ternak",
+          "fr": "Les bestiaux",
+          "bn": "গৃহপালিত পশু",
+          "ur": "مویشی",
+          "tr": "En'âm",
+          "es": "Los Rebaños",
+          "zh": "牲畜"
+        }
       },
       {
-        "pageNumber": "136",
-        "type": "Makkiyah",
+        "index": 7,
+        "pageNumber": 136,
         "verse": {
           "start": 1,
           "end": 87
         },
-        "title": "Al-A'raf",
-        "titleAr": "الأعراف",
-        "index": 7
+        "type": "Makkiyah",
+        "title": "الأعراف",
+        "translation": {
+          "ru": "Ограды",
+          "sv": "Urskiljning",
+          "uz": "A'rof",
+          "en": "The Heights",
+          "id": "Tempat-tempat Tinggi",
+          "fr": "Al-A'raf",
+          "bn": "উচু স্থান",
+          "ur": "اونچی جگہ",
+          "tr": "A'râf",
+          "es": "Los Lugares Elevados",
+          "zh": "高处"
+        }
       }
     ]
   },
@@ -206,26 +374,50 @@
     "page": 146,
     "chapters": [
       {
-        "pageNumber": "136",
-        "type": "Makkiyah",
+        "index": 7,
+        "pageNumber": 136,
         "verse": {
           "start": 88,
           "end": 206
         },
-        "title": "Al-A'raf",
-        "titleAr": "الأعراف",
-        "index": 7
+        "type": "Makkiyah",
+        "title": "الأعراف",
+        "translation": {
+          "ru": "Ограды",
+          "sv": "Urskiljning",
+          "uz": "A'rof",
+          "en": "The Heights",
+          "id": "Tempat-tempat Tinggi",
+          "fr": "Al-A'raf",
+          "bn": "উচু স্থান",
+          "ur": "اونچی جگہ",
+          "tr": "A'râf",
+          "es": "Los Lugares Elevados",
+          "zh": "高处"
+        }
       },
       {
-        "pageNumber": "160",
-        "type": "Madaniyah",
+        "index": 8,
+        "pageNumber": 160,
         "verse": {
           "start": 1,
           "end": 40
         },
-        "title": "Al-Anfal",
-        "titleAr": "الأنفال",
-        "index": 8
+        "type": "Madaniyah",
+        "title": "الأنفال",
+        "translation": {
+          "ru": "Трофеи",
+          "sv": "Krigsbyte",
+          "uz": "Anfol",
+          "en": "The Spoils of War",
+          "id": "Rampasan Perang",
+          "fr": "Le butin",
+          "bn": "যুদ্ধ-লব্ধ ধনসম্পদ",
+          "ur": "مال غنیمت",
+          "tr": "Enfâl",
+          "es": "Los Botines de Guerra",
+          "zh": "战利品"
+        }
       }
     ]
   },
@@ -234,26 +426,50 @@
     "page": 164,
     "chapters": [
       {
-        "pageNumber": "160",
-        "type": "Madaniyah",
+        "index": 8,
+        "pageNumber": 160,
         "verse": {
           "start": 41,
           "end": 75
         },
-        "title": "Al-Anfal",
-        "titleAr": "الأنفال",
-        "index": 8
+        "type": "Madaniyah",
+        "title": "الأنفال",
+        "translation": {
+          "ru": "Трофеи",
+          "sv": "Krigsbyte",
+          "uz": "Anfol",
+          "en": "The Spoils of War",
+          "id": "Rampasan Perang",
+          "fr": "Le butin",
+          "bn": "যুদ্ধ-লব্ধ ধনসম্পদ",
+          "ur": "مال غنیمت",
+          "tr": "Enfâl",
+          "es": "Los Botines de Guerra",
+          "zh": "战利品"
+        }
       },
       {
-        "pageNumber": "169",
-        "type": "Madaniyah",
+        "index": 9,
+        "pageNumber": 169,
         "verse": {
           "start": 1,
           "end": 92
         },
-        "title": "Al-Tawba",
-        "titleAr": "التوبة",
-        "index": 9
+        "type": "Madaniyah",
+        "title": "التوبة",
+        "translation": {
+          "ru": "Покаяние",
+          "sv": "Ånger",
+          "uz": "Tavba",
+          "en": "The Repentance",
+          "id": "Pengampunan",
+          "fr": "Le repentir",
+          "bn": "অনুশোচনা",
+          "ur": "توبہ",
+          "tr": "Tevbe",
+          "es": "El Arrepentimiento",
+          "zh": "忏悔"
+        }
       }
     ]
   },
@@ -262,37 +478,73 @@
     "page": 181,
     "chapters": [
       {
-        "pageNumber": "169",
-        "type": "Madaniyah",
+        "index": 9,
+        "pageNumber": 169,
         "verse": {
           "start": 93,
           "end": 129
         },
-        "title": "Al-Tawba",
-        "titleAr": "التوبة",
-        "index": 9
+        "type": "Madaniyah",
+        "title": "التوبة",
+        "translation": {
+          "ru": "Покаяние",
+          "sv": "Ånger",
+          "uz": "Tavba",
+          "en": "The Repentance",
+          "id": "Pengampunan",
+          "fr": "Le repentir",
+          "bn": "অনুশোচনা",
+          "ur": "توبہ",
+          "tr": "Tevbe",
+          "es": "El Arrepentimiento",
+          "zh": "忏悔"
+        }
       },
       {
-        "pageNumber": "187",
-        "type": "Makkiyah",
+        "index": 10,
+        "pageNumber": 187,
         "verse": {
           "start": 1,
           "end": 109
         },
-        "title": "Yunus",
-        "titleAr": "يونس",
-        "index": 10
+        "type": "Makkiyah",
+        "title": "يونس",
+        "translation": {
+          "ru": "Йунус",
+          "sv": "Jonah",
+          "uz": "Yunus",
+          "en": "Jonah",
+          "id": "Yunus",
+          "fr": "Jonas",
+          "bn": "নবী ইউনুস",
+          "ur": "یونس",
+          "tr": "Yûnus",
+          "es": "Jonás",
+          "zh": "优努斯"
+        }
       },
       {
-        "pageNumber": "199",
-        "type": "Makkiyah",
+        "index": 11,
+        "pageNumber": 199,
         "verse": {
           "start": 1,
           "end": 5
         },
-        "title": "Hud",
-        "titleAr": "هود",
-        "index": 11
+        "type": "Makkiyah",
+        "title": "هود",
+        "translation": {
+          "ru": "Худ",
+          "sv": "Hud",
+          "uz": "Hud",
+          "en": "Hud",
+          "id": "Hud",
+          "fr": "Houd",
+          "bn": "নবী হুদ",
+          "ur": "حود",
+          "tr": "Hûd",
+          "es": "Hud",
+          "zh": "呼德"
+        }
       }
     ]
   },
@@ -301,26 +553,50 @@
     "page": 200,
     "chapters": [
       {
-        "pageNumber": "199",
-        "type": "Makkiyah",
+        "index": 11,
+        "pageNumber": 199,
         "verse": {
           "start": 6,
           "end": 123
         },
-        "title": "Hud",
-        "titleAr": "هود",
-        "index": 11
+        "type": "Makkiyah",
+        "title": "هود",
+        "translation": {
+          "ru": "Худ",
+          "sv": "Hud",
+          "uz": "Hud",
+          "en": "Hud",
+          "id": "Hud",
+          "fr": "Houd",
+          "bn": "নবী হুদ",
+          "ur": "حود",
+          "tr": "Hûd",
+          "es": "Hud",
+          "zh": "呼德"
+        }
       },
       {
-        "pageNumber": "212",
-        "type": "Makkiyah",
+        "index": 12,
+        "pageNumber": 212,
         "verse": {
           "start": 1,
           "end": 52
         },
-        "title": "Yusuf",
-        "titleAr": "يوسف",
-        "index": 12
+        "type": "Makkiyah",
+        "title": "يوسف",
+        "translation": {
+          "ru": "Йусуф",
+          "sv": "Josef",
+          "uz": "Yusuf",
+          "en": "Joseph",
+          "id": "Yusuf",
+          "fr": "Joseph",
+          "bn": "নবী ইউসুফ",
+          "ur": "یوسف",
+          "tr": "Yûsuf",
+          "es": "José",
+          "zh": "优素福"
+        }
       }
     ]
   },
@@ -329,37 +605,73 @@
     "page": 219,
     "chapters": [
       {
-        "pageNumber": "212",
-        "type": "Makkiyah",
+        "index": 12,
+        "pageNumber": 212,
         "verse": {
           "start": 53,
           "end": 111
         },
-        "title": "Yusuf",
-        "titleAr": "يوسف",
-        "index": 12
+        "type": "Makkiyah",
+        "title": "يوسف",
+        "translation": {
+          "ru": "Йусуф",
+          "sv": "Josef",
+          "uz": "Yusuf",
+          "en": "Joseph",
+          "id": "Yusuf",
+          "fr": "Joseph",
+          "bn": "নবী ইউসুফ",
+          "ur": "یوسف",
+          "tr": "Yûsuf",
+          "es": "José",
+          "zh": "优素福"
+        }
       },
       {
-        "pageNumber": "225",
-        "type": "Madaniyah",
+        "index": 13,
+        "pageNumber": 225,
         "verse": {
           "start": 1,
           "end": 43
         },
-        "title": "Ar-Ra'd",
-        "titleAr": "الرعد",
-        "index": 13
+        "type": "Madaniyah",
+        "title": "الرعد",
+        "translation": {
+          "ru": "Гром",
+          "sv": "Åskan",
+          "uz": "Ra'd",
+          "en": "The Thunder",
+          "id": "Guruh (Petir)",
+          "fr": "Le tonnerre",
+          "bn": "বজ্রপাত",
+          "ur": "گرج",
+          "tr": "Ra'd",
+          "es": "El Trueno",
+          "zh": "雷霆"
+        }
       },
       {
-        "pageNumber": "231",
-        "type": "Makkiyah",
+        "index": 14,
+        "pageNumber": 231,
         "verse": {
           "start": 1,
           "end": 52
         },
-        "title": "Ibrahim",
-        "titleAr": "إبراهيم",
-        "index": 14
+        "type": "Makkiyah",
+        "title": "إبراهيم",
+        "translation": {
+          "ru": "Ибрахим",
+          "sv": "Abraham",
+          "uz": "Ibrohim",
+          "en": "Abraham",
+          "id": "Ibrahim",
+          "fr": "Abraham",
+          "bn": "নবী ইবরাহীম",
+          "ur": "ابراہیم",
+          "tr": "İbrâhîm",
+          "es": "Abraham",
+          "zh": "易卜拉欣"
+        }
       }
     ]
   },
@@ -368,26 +680,50 @@
     "page": 237,
     "chapters": [
       {
-        "pageNumber": "237",
-        "type": "Makkiyah",
+        "index": 15,
+        "pageNumber": 237,
         "verse": {
           "start": 1,
           "end": 99
         },
-        "title": "Al-Hijr",
-        "titleAr": "الحجر",
-        "index": 15
+        "type": "Makkiyah",
+        "title": "الحجر",
+        "translation": {
+          "ru": "Хиджр ",
+          "sv": "Al-Hijr",
+          "uz": "Hijr",
+          "en": "The Rocky Tract",
+          "id": "Bukit",
+          "fr": "Al-Hijr",
+          "bn": "পাথুরে পাহাড়",
+          "ur": "پتھر",
+          "tr": "Hicr",
+          "es": "Al-Hiyr",
+          "zh": "石谷"
+        }
       },
       {
-        "pageNumber": "242",
-        "type": "Makkiyah",
+        "index": 16,
+        "pageNumber": 242,
         "verse": {
           "start": 1,
           "end": 128
         },
-        "title": "An-Nahl",
-        "titleAr": "النحل",
-        "index": 16
+        "type": "Makkiyah",
+        "title": "النحل",
+        "translation": {
+          "ru": "Пчелы",
+          "sv": "Biet",
+          "uz": "Nahl",
+          "en": "The Bee",
+          "id": "Lebah Madu",
+          "fr": "Les abeilles",
+          "bn": "মৌমাছি",
+          "ur": "شہد کی مکھی",
+          "tr": "Nahl",
+          "es": "Las Abejas",
+          "zh": "蜜蜂"
+        }
       }
     ]
   },
@@ -396,26 +732,50 @@
     "page": 255,
     "chapters": [
       {
-        "pageNumber": "255",
-        "type": "Makkiyah",
+        "index": 17,
+        "pageNumber": 255,
         "verse": {
           "start": 1,
           "end": 111
         },
-        "title": "Al-Israa",
-        "titleAr": "الإسراء",
-        "index": 17
+        "type": "Makkiyah",
+        "title": "الإسراء",
+        "translation": {
+          "ru": "Ночной перенос",
+          "sv": "Den Nattliga Resan",
+          "uz": "Isro",
+          "en": "The Night Journey",
+          "id": "Perjalanan Malam",
+          "fr": "Le voyage nocturne",
+          "bn": "ইহুদি জাতি",
+          "ur": "رات کا صفر",
+          "tr": "İsrâ",
+          "es": "El Viaje Nocturno",
+          "zh": "夜行"
+        }
       },
       {
-        "pageNumber": "266",
-        "type": "Makkiyah",
+        "index": 18,
+        "pageNumber": 266,
         "verse": {
           "start": 1,
           "end": 74
         },
-        "title": "Al-Kahf",
-        "titleAr": "الكهف",
-        "index": 18
+        "type": "Makkiyah",
+        "title": "الكهف",
+        "translation": {
+          "ru": "Пещера",
+          "sv": "Grottan",
+          "uz": "Kahf",
+          "en": "The Cave",
+          "id": "Para Penghuni Gua",
+          "fr": "La caverne",
+          "bn": "গুহা",
+          "ur": "غار",
+          "tr": "Kehf",
+          "es": "La Caverna",
+          "zh": "山洞"
+        }
       }
     ]
   },
@@ -424,37 +784,73 @@
     "page": 274,
     "chapters": [
       {
-        "pageNumber": "266",
-        "type": "Makkiyah",
+        "index": 18,
+        "pageNumber": 266,
         "verse": {
           "start": 75,
           "end": 110
         },
-        "title": "Al-Kahf",
-        "titleAr": "الكهف",
-        "index": 18
+        "type": "Makkiyah",
+        "title": "الكهف",
+        "translation": {
+          "ru": "Пещера",
+          "sv": "Grottan",
+          "uz": "Kahf",
+          "en": "The Cave",
+          "id": "Para Penghuni Gua",
+          "fr": "La caverne",
+          "bn": "গুহা",
+          "ur": "غار",
+          "tr": "Kehf",
+          "es": "La Caverna",
+          "zh": "山洞"
+        }
       },
       {
-        "pageNumber": "277",
-        "type": "Makkiyah",
+        "index": 19,
+        "pageNumber": 277,
         "verse": {
           "start": 1,
           "end": 98
         },
-        "title": "Maryam",
-        "titleAr": "مريم",
-        "index": 19
+        "type": "Makkiyah",
+        "title": "مريم",
+        "translation": {
+          "ru": "Марьям",
+          "sv": "Maria",
+          "uz": "Maryam",
+          "en": "Mary",
+          "id": "Maryam",
+          "fr": "Marie",
+          "bn": "মারইয়াম (ঈসা নবীর মা)",
+          "ur": "مریم",
+          "tr": "Meryem",
+          "es": "María",
+          "zh": "麦尔彦"
+        }
       },
       {
-        "pageNumber": "284",
-        "type": "Makkiyah",
+        "index": 20,
+        "pageNumber": 284,
         "verse": {
           "start": 1,
           "end": 135
         },
-        "title": "Ta-Ha",
-        "titleAr": "طه",
-        "index": 20
+        "type": "Makkiyah",
+        "title": "طه",
+        "translation": {
+          "ru": "Та Ха ",
+          "sv": "Ta-Ha",
+          "uz": "Toha",
+          "en": "Ta-Ha",
+          "id": "Tha-Ha",
+          "fr": "Ta-Ha",
+          "bn": "ত়া হা",
+          "ur": "طٰہٰ",
+          "tr": "Tâhâ",
+          "es": "Ta-Ha",
+          "zh": "塔哈"
+        }
       }
     ]
   },
@@ -463,26 +859,50 @@
     "page": 294,
     "chapters": [
       {
-        "pageNumber": "294",
-        "type": "Makkiyah",
+        "index": 21,
+        "pageNumber": 294,
         "verse": {
           "start": 1,
           "end": 112
         },
-        "title": "Al-Anbiya",
-        "titleAr": "الأنبياء",
-        "index": 21
+        "type": "Makkiyah",
+        "title": "الأنبياء",
+        "translation": {
+          "ru": "Пророки",
+          "sv": "Profeterna",
+          "uz": "Anbiyo",
+          "en": "The Prophets",
+          "id": "Para Nabi",
+          "fr": "Les prophètes",
+          "bn": "নবীগণ",
+          "ur": "پیغمبر",
+          "tr": "Enbiyâ",
+          "es": "Los Profetas",
+          "zh": "众先知"
+        }
       },
       {
-        "pageNumber": "302",
-        "type": "Madaniyah",
+        "index": 22,
+        "pageNumber": 302,
         "verse": {
           "start": 1,
           "end": 78
         },
-        "title": "Al-Hajj",
-        "titleAr": "الحج",
-        "index": 22
+        "type": "Madaniyah",
+        "title": "الحج",
+        "translation": {
+          "ru": "Паломничество",
+          "sv": "Vallfärden",
+          "uz": "Haj",
+          "en": "The Pilgrimage",
+          "id": "Haji",
+          "fr": "Le pèlerinage",
+          "bn": "হ়াজ্জ",
+          "ur": "حج",
+          "tr": "Hac",
+          "es": "La Peregrinación",
+          "zh": "朝觐"
+        }
       }
     ]
   },
@@ -491,37 +911,73 @@
     "page": 311,
     "chapters": [
       {
-        "pageNumber": "311",
-        "type": "Makkiyah",
+        "index": 23,
+        "pageNumber": 311,
         "verse": {
           "start": 1,
           "end": 118
         },
-        "title": "Al-Muminun",
-        "titleAr": "المؤمنون",
-        "index": 23
+        "type": "Makkiyah",
+        "title": "المؤمنون",
+        "translation": {
+          "ru": "Верующие",
+          "sv": "De Troende",
+          "uz": "Mu'minun",
+          "en": "The Believers",
+          "id": "Orang-orang Mukmin",
+          "fr": "Les croyants",
+          "bn": "বিশ্বাসী",
+          "ur": "مومنین",
+          "tr": "Mü'minûn",
+          "es": "Los Creyentes",
+          "zh": "信士"
+        }
       },
       {
-        "pageNumber": "319",
-        "type": "Madaniyah",
+        "index": 24,
+        "pageNumber": 319,
         "verse": {
           "start": 1,
           "end": 64
         },
-        "title": "An-Nur",
-        "titleAr": "النور",
-        "index": 24
+        "type": "Madaniyah",
+        "title": "النور",
+        "translation": {
+          "ru": "Свет",
+          "sv": "Ljus",
+          "uz": "Nur",
+          "en": "The Light",
+          "id": "Cahaya",
+          "fr": "La lumière",
+          "bn": "আলো",
+          "ur": "نور",
+          "tr": "Nûr",
+          "es": "La Luz",
+          "zh": "光明"
+        }
       },
       {
-        "pageNumber": "329",
-        "type": "Makkiyah",
+        "index": 25,
+        "pageNumber": 329,
         "verse": {
           "start": 1,
           "end": 20
         },
-        "title": "Al-Furqan",
-        "titleAr": "الفرقان",
-        "index": 25
+        "type": "Makkiyah",
+        "title": "الفرقان",
+        "translation": {
+          "ru": "аль-Фуркан",
+          "sv": "Måttstocken",
+          "uz": "Furqon",
+          "en": "The Criterion",
+          "id": "Pembeda",
+          "fr": "Le discernement",
+          "bn": "মানদণ্ড",
+          "ur": "صحیح اور غلط میں فرق کرنے والی کتاب",
+          "tr": "Furkân",
+          "es": "El Discernimiento",
+          "zh": "准则"
+        }
       }
     ]
   },
@@ -530,37 +986,73 @@
     "page": 331,
     "chapters": [
       {
-        "pageNumber": "329",
-        "type": "Makkiyah",
+        "index": 25,
+        "pageNumber": 329,
         "verse": {
           "start": 21,
           "end": 77
         },
-        "title": "Al-Furqan",
-        "titleAr": "الفرقان",
-        "index": 25
+        "type": "Makkiyah",
+        "title": "الفرقان",
+        "translation": {
+          "ru": "аль-Фуркан",
+          "sv": "Måttstocken",
+          "uz": "Furqon",
+          "en": "The Criterion",
+          "id": "Pembeda",
+          "fr": "Le discernement",
+          "bn": "মানদণ্ড",
+          "ur": "صحیح اور غلط میں فرق کرنے والی کتاب",
+          "tr": "Furkân",
+          "es": "El Discernimiento",
+          "zh": "准则"
+        }
       },
       {
-        "pageNumber": "335",
-        "type": "Makkiyah",
+        "index": 26,
+        "pageNumber": 335,
         "verse": {
           "start": 1,
           "end": 227
         },
-        "title": "Ash-Shuara",
-        "titleAr": "الشعراء",
-        "index": 26
+        "type": "Makkiyah",
+        "title": "الشعراء",
+        "translation": {
+          "ru": "Поэты",
+          "sv": "Poeterna",
+          "uz": "Shuaro",
+          "en": "The Poets",
+          "id": "Penyair",
+          "fr": "Les poètes",
+          "bn": "কবি",
+          "ur": "شعراٗ",
+          "tr": "Şuarâ",
+          "es": "Los Poetas",
+          "zh": "众诗人"
+        }
       },
       {
-        "pageNumber": "345",
-        "type": "Makkiyah",
+        "index": 27,
+        "pageNumber": 345,
         "verse": {
           "start": 1,
           "end": 55
         },
-        "title": "An-Naml",
-        "titleAr": "النمل",
-        "index": 27
+        "type": "Makkiyah",
+        "title": "النمل",
+        "translation": {
+          "ru": "Муравьи",
+          "sv": "Myrorna",
+          "uz": "Naml",
+          "en": "The Ant",
+          "id": "Semut",
+          "fr": "Les fourmis",
+          "bn": "পিঁপড়া",
+          "ur": "چیونٹی",
+          "tr": "Neml",
+          "es": "Las Hormigas",
+          "zh": "蚂蚁"
+        }
       }
     ]
   },
@@ -569,37 +1061,73 @@
     "page": 350,
     "chapters": [
       {
-        "pageNumber": "345",
-        "type": "Makkiyah",
+        "index": 27,
+        "pageNumber": 345,
         "verse": {
           "start": 56,
           "end": 93
         },
-        "title": "An-Naml",
-        "titleAr": "النمل",
-        "index": 27
+        "type": "Makkiyah",
+        "title": "النمل",
+        "translation": {
+          "ru": "Муравьи",
+          "sv": "Myrorna",
+          "uz": "Naml",
+          "en": "The Ant",
+          "id": "Semut",
+          "fr": "Les fourmis",
+          "bn": "পিঁপড়া",
+          "ur": "چیونٹی",
+          "tr": "Neml",
+          "es": "Las Hormigas",
+          "zh": "蚂蚁"
+        }
       },
       {
-        "pageNumber": "354",
-        "type": "Makkiyah",
+        "index": 28,
+        "pageNumber": 354,
         "verse": {
           "start": 1,
           "end": 88
         },
-        "title": "Al-Qasas",
-        "titleAr": "القصص",
-        "index": 28
+        "type": "Makkiyah",
+        "title": "القصص",
+        "translation": {
+          "ru": "Рассказ",
+          "sv": "Berättelsen",
+          "uz": "Qasas",
+          "en": "The Stories",
+          "id": "Kisah-kisah",
+          "fr": "Le récit",
+          "bn": "কাহিনি",
+          "ur": "قصے",
+          "tr": "Kasas",
+          "es": "Los Relatos",
+          "zh": "故事"
+        }
       },
       {
-        "pageNumber": "364",
-        "type": "Makkiyah",
+        "index": 29,
+        "pageNumber": 364,
         "verse": {
           "start": 1,
           "end": 45
         },
-        "title": "Al-Ankabut",
-        "titleAr": "العنكبوت",
-        "index": 29
+        "type": "Makkiyah",
+        "title": "العنكبوت",
+        "translation": {
+          "ru": "Паук",
+          "sv": "Spindeln",
+          "uz": "Ankabut",
+          "en": "The Spider",
+          "id": "Laba-laba",
+          "fr": "L'araignée",
+          "bn": "মাকড়শা",
+          "ur": "مکڑی",
+          "tr": "Ankebût",
+          "es": "La Araña",
+          "zh": "蜘蛛"
+        }
       }
     ]
   },
@@ -608,59 +1136,119 @@
     "page": 368,
     "chapters": [
       {
-        "pageNumber": "364",
-        "type": "Makkiyah",
+        "index": 29,
+        "pageNumber": 364,
         "verse": {
           "start": 46,
           "end": 69
         },
-        "title": "Al-Ankabut",
-        "titleAr": "العنكبوت",
-        "index": 29
+        "type": "Makkiyah",
+        "title": "العنكبوت",
+        "translation": {
+          "ru": "Паук",
+          "sv": "Spindeln",
+          "uz": "Ankabut",
+          "en": "The Spider",
+          "id": "Laba-laba",
+          "fr": "L'araignée",
+          "bn": "মাকড়শা",
+          "ur": "مکڑی",
+          "tr": "Ankebût",
+          "es": "La Araña",
+          "zh": "蜘蛛"
+        }
       },
       {
-        "pageNumber": "371",
-        "type": "Makkiyah",
+        "index": 30,
+        "pageNumber": 371,
         "verse": {
           "start": 1,
           "end": 60
         },
-        "title": "Ar-Rum",
-        "titleAr": "الروم",
-        "index": 30
+        "type": "Makkiyah",
+        "title": "الروم",
+        "translation": {
+          "ru": "Римляне",
+          "sv": "Bysantinerna",
+          "uz": "Rum",
+          "en": "The Romans",
+          "id": "Bangsa Romawi",
+          "fr": "Les romains",
+          "bn": "রোমান জাতি",
+          "ur": "روم",
+          "tr": "Rûm",
+          "es": "Los Romanos",
+          "zh": "罗马人"
+        }
       },
       {
-        "pageNumber": "377",
-        "type": "Makkiyah",
+        "index": 31,
+        "pageNumber": 377,
         "verse": {
           "start": 1,
           "end": 34
         },
-        "title": "Luqman",
-        "titleAr": "لقمان",
-        "index": 31
-      },
-      {
-        "pageNumber": "381",
         "type": "Makkiyah",
-        "verse": {
-          "start": 1,
-          "end": 30
-        },
-        "title": "As-Sajdah",
-        "titleAr": "السجدة",
-        "index": 32
+        "title": "لقمان",
+        "translation": {
+          "ru": "Лукман",
+          "sv": "Luqman",
+          "uz": "Luqmon",
+          "en": "Luqman",
+          "id": "Luqman",
+          "fr": "Louqman",
+          "bn": "এক জ্ঞানী ব্যাক্তি",
+          "ur": "لقمان",
+          "tr": "Lokmân",
+          "es": "Luqmán",
+          "zh": "鲁格曼"
+        }
       },
       {
-        "pageNumber": "383",
-        "type": "Madaniyah",
+        "index": 32,
+        "pageNumber": 381,
         "verse": {
           "start": 1,
           "end": 30
         },
-        "title": "Al-Ahzab",
-        "titleAr": "الأحزاب",
-        "index": 33
+        "type": "Makkiyah",
+        "title": "السجدة",
+        "translation": {
+          "ru": "Земной поклон",
+          "sv": "De Faller Ned I Tillbedjan",
+          "uz": "Sajda",
+          "en": "The Prostration",
+          "id": "Sujud",
+          "fr": "La prosternation",
+          "bn": "সিজদা",
+          "ur": "سجدہ",
+          "tr": "Secde",
+          "es": "La Postración",
+          "zh": "叩头"
+        }
+      },
+      {
+        "index": 33,
+        "pageNumber": 383,
+        "verse": {
+          "start": 1,
+          "end": 30
+        },
+        "type": "Madaniyah",
+        "title": "الأحزاب",
+        "translation": {
+          "ru": "Союзники",
+          "sv": "De Sammansvurna",
+          "uz": "Ahzob",
+          "en": "The Combined Forces",
+          "id": "Golongan yang Bersekutu",
+          "fr": "Les coalisés",
+          "bn": "জোট",
+          "ur": "متحد گروہ",
+          "tr": "Ahzâb",
+          "es": "Los Coligados",
+          "zh": "同盟军"
+        }
       }
     ]
   },
@@ -669,48 +1257,96 @@
     "page": 387,
     "chapters": [
       {
-        "pageNumber": "383",
-        "type": "Madaniyah",
+        "index": 33,
+        "pageNumber": 383,
         "verse": {
           "start": 31,
           "end": 73
         },
-        "title": "Al-Ahzab",
-        "titleAr": "الأحزاب",
-        "index": 33
+        "type": "Madaniyah",
+        "title": "الأحزاب",
+        "translation": {
+          "ru": "Союзники",
+          "sv": "De Sammansvurna",
+          "uz": "Ahzob",
+          "en": "The Combined Forces",
+          "id": "Golongan yang Bersekutu",
+          "fr": "Les coalisés",
+          "bn": "জোট",
+          "ur": "متحد گروہ",
+          "tr": "Ahzâb",
+          "es": "Los Coligados",
+          "zh": "同盟军"
+        }
       },
       {
-        "pageNumber": "393",
-        "type": "Makkiyah",
+        "index": 34,
+        "pageNumber": 393,
         "verse": {
           "start": 1,
           "end": 54
         },
-        "title": "Saba",
-        "titleAr": "سبأ",
-        "index": 34
+        "type": "Makkiyah",
+        "title": "سبأ",
+        "translation": {
+          "ru": "Сава",
+          "sv": "Saba",
+          "uz": "Saba'",
+          "en": "Sheba",
+          "id": "Saba\\'",
+          "fr": "Saba'",
+          "bn": "রানী সাবা/শেবা",
+          "ur": "سبا",
+          "tr": "Sebe'",
+          "es": "Saba",
+          "zh": "赛伯邑"
+        }
       },
       {
-        "pageNumber": "399",
-        "type": "Makkiyah",
+        "index": 35,
+        "pageNumber": 399,
         "verse": {
           "start": 1,
           "end": 45
         },
-        "title": "Fatir",
-        "titleAr": "فاطر",
-        "index": 35
+        "type": "Makkiyah",
+        "title": "فاطر",
+        "translation": {
+          "ru": "Творец",
+          "sv": "Himlarnas Och Jordens Skapare",
+          "uz": "Fotir",
+          "en": "Originator",
+          "id": "Pencipta",
+          "fr": "Le Créateur",
+          "bn": "আদি স্রষ্টা",
+          "ur": "پیدا کرنے والا",
+          "tr": "Fâtır",
+          "es": "El Originador",
+          "zh": "创造者"
+        }
       },
       {
-        "pageNumber": "404",
-        "type": "Makkiyah",
+        "index": 36,
+        "pageNumber": 404,
         "verse": {
           "start": 1,
           "end": 27
         },
-        "title": "Yasin",
-        "titleAr": "يس",
-        "index": 36
+        "type": "Makkiyah",
+        "title": "يس",
+        "translation": {
+          "ru": "Йа Син",
+          "sv": "Ya-Sin",
+          "uz": "Yosin",
+          "en": "Ya Sin",
+          "id": "Yas Sin",
+          "fr": "Ya-Sin",
+          "bn": "ইয়াসীন",
+          "ur": "یٰسٓ",
+          "tr": "Yâsîn",
+          "es": "Ya Sin",
+          "zh": "雅辛"
+        }
       }
     ]
   },
@@ -719,48 +1355,96 @@
     "page": 406,
     "chapters": [
       {
-        "pageNumber": "404",
-        "type": "Makkiyah",
+        "index": 36,
+        "pageNumber": 404,
         "verse": {
           "start": 28,
           "end": 83
         },
-        "title": "Yasin",
-        "titleAr": "يس",
-        "index": 36
+        "type": "Makkiyah",
+        "title": "يس",
+        "translation": {
+          "ru": "Йа Син",
+          "sv": "Ya-Sin",
+          "uz": "Yosin",
+          "en": "Ya Sin",
+          "id": "Yas Sin",
+          "fr": "Ya-Sin",
+          "bn": "ইয়াসীন",
+          "ur": "یٰسٓ",
+          "tr": "Yâsîn",
+          "es": "Ya Sin",
+          "zh": "雅辛"
+        }
       },
       {
-        "pageNumber": "410",
-        "type": "Makkiyah",
+        "index": 37,
+        "pageNumber": 410,
         "verse": {
           "start": 1,
           "end": 182
         },
-        "title": "As-Saffat",
-        "titleAr": "الصافات",
-        "index": 37
+        "type": "Makkiyah",
+        "title": "الصافات",
+        "translation": {
+          "ru": "Выстроившиеся в ряды",
+          "sv": "I Sluten Ordning",
+          "uz": "Soffat",
+          "en": "Those who set the Ranks",
+          "id": "Barisan-barisan",
+          "fr": "Les rangés",
+          "bn": "সারিবদ্ধভাবে দাঁড়ানো",
+          "ur": "صف باندھنے والے",
+          "tr": "Sâffât",
+          "es": "Los Que se Ponen en Filas",
+          "zh": "列班者"
+        }
       },
       {
-        "pageNumber": "417",
-        "type": "Makkiyah",
+        "index": 38,
+        "pageNumber": 417,
         "verse": {
           "start": 1,
           "end": 88
         },
-        "title": "Sad",
-        "titleAr": "ص",
-        "index": 38
+        "type": "Makkiyah",
+        "title": "ص",
+        "translation": {
+          "ru": "Сод",
+          "sv": "Sad",
+          "uz": "Sod",
+          "en": "The Letter \"Saad\"",
+          "id": "Shad",
+          "fr": "Sad",
+          "bn": "আরবি বর্ণ সাদ",
+          "ur": "صٓ",
+          "tr": "Sâd",
+          "es": "Sad",
+          "zh": "萨德"
+        }
       },
       {
-        "pageNumber": "422",
-        "type": "Makkiyah",
+        "index": 39,
+        "pageNumber": 422,
         "verse": {
           "start": 1,
           "end": 31
         },
-        "title": "Az-Zumar",
-        "titleAr": "الزمر",
-        "index": 39
+        "type": "Makkiyah",
+        "title": "الزمر",
+        "translation": {
+          "ru": "Толпы",
+          "sv": "Skarorna",
+          "uz": "Zumar",
+          "en": "The Troops",
+          "id": "Para Rombongan",
+          "fr": "Les groupes",
+          "bn": "দলবদ্ধ জনতা",
+          "ur": "گروہ",
+          "tr": "Zümer",
+          "es": "Los Grupos",
+          "zh": "队伍"
+        }
       }
     ]
   },
@@ -769,37 +1453,73 @@
     "page": 426,
     "chapters": [
       {
-        "pageNumber": "422",
-        "type": "Makkiyah",
+        "index": 39,
+        "pageNumber": 422,
         "verse": {
           "start": 32,
           "end": 75
         },
-        "title": "Az-Zumar",
-        "titleAr": "الزمر",
-        "index": 39
+        "type": "Makkiyah",
+        "title": "الزمر",
+        "translation": {
+          "ru": "Толпы",
+          "sv": "Skarorna",
+          "uz": "Zumar",
+          "en": "The Troops",
+          "id": "Para Rombongan",
+          "fr": "Les groupes",
+          "bn": "দলবদ্ধ জনতা",
+          "ur": "گروہ",
+          "tr": "Zümer",
+          "es": "Los Grupos",
+          "zh": "队伍"
+        }
       },
       {
-        "pageNumber": "431",
-        "type": "Makkiyah",
+        "index": 40,
+        "pageNumber": 431,
         "verse": {
           "start": 1,
           "end": 85
         },
-        "title": "Ghafir",
-        "titleAr": "غافر",
-        "index": 40
+        "type": "Makkiyah",
+        "title": "غافر",
+        "translation": {
+          "ru": "Прощающий",
+          "sv": "Han Som Förlåter",
+          "uz": "G'ofir",
+          "en": "The Forgiver",
+          "id": "Sang Maha Pengampun",
+          "fr": "Le Pardonneur",
+          "bn": "ক্ষমাকারী",
+          "ur": "بخشنے والا",
+          "tr": "Mü'min",
+          "es": "El Perdonador",
+          "zh": "赦宥者"
+        }
       },
       {
-        "pageNumber": "439",
-        "type": "Makkiyah",
+        "index": 41,
+        "pageNumber": 439,
         "verse": {
           "start": 1,
           "end": 46
         },
-        "title": "Fussilat",
-        "titleAr": "فصلت",
-        "index": 41
+        "type": "Makkiyah",
+        "title": "فصلت",
+        "translation": {
+          "ru": "Разъяснены",
+          "sv": "En Fast Och Klar Förkunnelse",
+          "uz": "Fussilat",
+          "en": "Explained in Detail",
+          "id": "Yang Dijelaskan",
+          "fr": "Les versets explicites",
+          "bn": "সুস্পষ্ট বিবরণ",
+          "ur": "مفصل",
+          "tr": "Fussilet",
+          "es": "Se Han Expresado Con Claridad",
+          "zh": "奉绥来特"
+        }
       }
     ]
   },
@@ -808,59 +1528,119 @@
     "page": 444,
     "chapters": [
       {
-        "pageNumber": "439",
-        "type": "Makkiyah",
+        "index": 41,
+        "pageNumber": 439,
         "verse": {
           "start": 47,
           "end": 54
         },
-        "title": "Fussilat",
-        "titleAr": "فصلت",
-        "index": 41
+        "type": "Makkiyah",
+        "title": "فصلت",
+        "translation": {
+          "ru": "Разъяснены",
+          "sv": "En Fast Och Klar Förkunnelse",
+          "uz": "Fussilat",
+          "en": "Explained in Detail",
+          "id": "Yang Dijelaskan",
+          "fr": "Les versets explicites",
+          "bn": "সুস্পষ্ট বিবরণ",
+          "ur": "مفصل",
+          "tr": "Fussilet",
+          "es": "Se Han Expresado Con Claridad",
+          "zh": "奉绥来特"
+        }
       },
       {
-        "pageNumber": "445",
-        "type": "Makkiyah",
+        "index": 42,
+        "pageNumber": 445,
         "verse": {
           "start": 1,
           "end": 53
         },
-        "title": "Ash-Shura",
-        "titleAr": "الشورى",
-        "index": 42
+        "type": "Makkiyah",
+        "title": "الشورى",
+        "translation": {
+          "ru": "Совет",
+          "sv": "Samråd",
+          "uz": "Shuro",
+          "en": "The Consultation",
+          "id": "Musyawarah",
+          "fr": "La concertation",
+          "bn": "পরামর্শ",
+          "ur": "شورٰی",
+          "tr": "Şûrâ",
+          "es": "La Consulta",
+          "zh": "协商"
+        }
       },
       {
-        "pageNumber": "451",
-        "type": "Makkiyah",
+        "index": 43,
+        "pageNumber": 451,
         "verse": {
           "start": 1,
           "end": 89
         },
-        "title": "Az-Zukhruf",
-        "titleAr": "الزخرف",
-        "index": 43
+        "type": "Makkiyah",
+        "title": "الزخرف",
+        "translation": {
+          "ru": "Украшения",
+          "sv": "Guld",
+          "uz": "Zuxruf",
+          "en": "The Ornaments of Gold",
+          "id": "Perhiasan",
+          "fr": "L'ornement",
+          "bn": "সোনাদানা",
+          "ur": "سونے کی چمک",
+          "tr": "Zuhruf",
+          "es": "Los Dorados",
+          "zh": "金饰"
+        }
       },
       {
-        "pageNumber": "457",
-        "type": "Makkiyah",
+        "index": 44,
+        "pageNumber": 457,
         "verse": {
           "start": 1,
           "end": 59
         },
-        "title": "Ad-Dukhan",
-        "titleAr": "الدخان",
-        "index": 44
+        "type": "Makkiyah",
+        "title": "الدخان",
+        "translation": {
+          "ru": "Дым",
+          "sv": "Rök",
+          "uz": "Duxon",
+          "en": "The Smoke",
+          "id": "Kabut",
+          "fr": "La fumée",
+          "bn": "ধোঁয়া",
+          "ur": "دھواں",
+          "tr": "Duhân",
+          "es": "El Humo",
+          "zh": "烟雾"
+        }
       },
       {
-        "pageNumber": "460",
-        "type": "Makkiyah",
+        "index": 45,
+        "pageNumber": 460,
         "verse": {
           "start": 1,
           "end": 37
         },
-        "title": "Al-Jathiya",
-        "titleAr": "الجاثية",
-        "index": 45
+        "type": "Makkiyah",
+        "title": "الجاثية",
+        "translation": {
+          "ru": "Коленопреклоненные",
+          "sv": "På Knä",
+          "uz": "Josiya",
+          "en": "The Crouching",
+          "id": "Yang Bertekuk Lutut",
+          "fr": "L'agenouillée",
+          "bn": "নতজানু",
+          "ur": "زانوٗوں کے بل گری ہوئی",
+          "tr": "Câsiye",
+          "es": "La Arrodillada",
+          "zh": "屈膝"
+        }
       }
     ]
   },
@@ -869,70 +1649,142 @@
     "page": 464,
     "chapters": [
       {
-        "pageNumber": "464",
-        "type": "Makkiyah",
+        "index": 46,
+        "pageNumber": 464,
         "verse": {
           "start": 1,
           "end": 35
         },
-        "title": "Al-Ahqaf",
-        "titleAr": "الأحقاف",
-        "index": 46
+        "type": "Makkiyah",
+        "title": "الأحقاف",
+        "translation": {
+          "ru": "Барханы",
+          "sv": "Sanddynorna",
+          "uz": "Ahqof",
+          "en": "The Wind-Curved Sandhills",
+          "id": "Bukit-bukir Pasir",
+          "fr": "Al-Ahqaf",
+          "bn": "বালুর পাহাড়",
+          "ur": "ریگستان",
+          "tr": "Ahkâf",
+          "es": "Las Dunas",
+          "zh": "沙丘"
+        }
       },
       {
-        "pageNumber": "468",
-        "type": "Madaniyah",
+        "index": 47,
+        "pageNumber": 468,
         "verse": {
           "start": 1,
           "end": 38
         },
-        "title": "Muhammad",
-        "titleAr": "محمد",
-        "index": 47
+        "type": "Madaniyah",
+        "title": "محمد",
+        "translation": {
+          "ru": "Мухаммад",
+          "sv": "Muhammad",
+          "uz": "Muhammad",
+          "en": "Muhammad",
+          "id": "Muhammad",
+          "fr": "Mouhammad",
+          "bn": "নবী মুহাম্মদ",
+          "ur": "محمدﷺ",
+          "tr": "Muhammed",
+          "es": "Muhammad",
+          "zh": "穆罕默德"
+        }
       },
       {
-        "pageNumber": "472",
-        "type": "Madaniyah",
+        "index": 48,
+        "pageNumber": 472,
         "verse": {
           "start": 1,
           "end": 29
         },
-        "title": "Al-Fath",
-        "titleAr": "الفتح",
-        "index": 48
+        "type": "Madaniyah",
+        "title": "الفتح",
+        "translation": {
+          "ru": "Победа",
+          "sv": "Segern",
+          "uz": "Fath",
+          "en": "The Victory",
+          "id": "Kemenangan",
+          "fr": "La victoire éclatante",
+          "bn": "বিজয়",
+          "ur": "فتح",
+          "tr": "Fetih",
+          "es": "La Victoria",
+          "zh": "胜利"
+        }
       },
       {
-        "pageNumber": "477",
-        "type": "Madaniyah",
+        "index": 49,
+        "pageNumber": 477,
         "verse": {
           "start": 1,
           "end": 18
         },
-        "title": "Al-Hujurat",
-        "titleAr": "الحجرات",
-        "index": 49
+        "type": "Madaniyah",
+        "title": "الحجرات",
+        "translation": {
+          "ru": "Комнаты",
+          "sv": "De Inre Rummen",
+          "uz": "Hujurot",
+          "en": "The Rooms",
+          "id": "Kamar-kamar",
+          "fr": "Les appartements",
+          "bn": "আবাস",
+          "ur": "حجرے",
+          "tr": "Hucurât",
+          "es": "Los Aposentos Privados",
+          "zh": "寝室"
+        }
       },
       {
-        "pageNumber": "479",
-        "type": "Makkiyah",
+        "index": 50,
+        "pageNumber": 479,
         "verse": {
           "start": 1,
           "end": 45
         },
-        "title": "Qaf",
-        "titleAr": "ق",
-        "index": 50
+        "type": "Makkiyah",
+        "title": "ق",
+        "translation": {
+          "ru": "Каф",
+          "sv": "Qaf",
+          "uz": "Qof",
+          "en": "The Letter \"Qaf\"",
+          "id": "Qaf",
+          "fr": "Qaf",
+          "bn": "কাফ",
+          "ur": "قٓ",
+          "tr": "Kâf",
+          "es": "Qaf",
+          "zh": "戛弗"
+        }
       },
       {
-        "pageNumber": "482",
-        "type": "Makkiyah",
+        "index": 51,
+        "pageNumber": 482,
         "verse": {
           "start": 1,
           "end": 30
         },
-        "title": "Az-Zariyat",
-        "titleAr": "الذاريات",
-        "index": 51
+        "type": "Makkiyah",
+        "title": "الذاريات",
+        "translation": {
+          "ru": "Рассеивающие прах",
+          "sv": "De Som Virvlar Upp",
+          "uz": "Zoriyot",
+          "en": "The Winnowing Winds",
+          "id": "Angin yang Menerbangkan",
+          "fr": "Qui éparpillent",
+          "bn": "বিক্ষেপকারী বাতাস",
+          "ur": "بکھیرنے والیاں",
+          "tr": "Zâriyât",
+          "es": "Los Que Levantan un Torbellino",
+          "zh": "播种者"
+        }
       }
     ]
   },
@@ -941,81 +1793,165 @@
     "page": 483,
     "chapters": [
       {
-        "pageNumber": "482",
-        "type": "Makkiyah",
+        "index": 51,
+        "pageNumber": 482,
         "verse": {
           "start": 31,
           "end": 60
         },
-        "title": "Az-Zariyat",
-        "titleAr": "الذاريات",
-        "index": 51
+        "type": "Makkiyah",
+        "title": "الذاريات",
+        "translation": {
+          "ru": "Рассеивающие прах",
+          "sv": "De Som Virvlar Upp",
+          "uz": "Zoriyot",
+          "en": "The Winnowing Winds",
+          "id": "Angin yang Menerbangkan",
+          "fr": "Qui éparpillent",
+          "bn": "বিক্ষেপকারী বাতাস",
+          "ur": "بکھیرنے والیاں",
+          "tr": "Zâriyât",
+          "es": "Los Que Levantan un Torbellino",
+          "zh": "播种者"
+        }
       },
       {
-        "pageNumber": "485",
-        "type": "Makkiyah",
+        "index": 52,
+        "pageNumber": 485,
         "verse": {
           "start": 1,
           "end": 49
         },
-        "title": "At-Tur",
-        "titleAr": "الطور",
-        "index": 52
+        "type": "Makkiyah",
+        "title": "الطور",
+        "translation": {
+          "ru": "Гора",
+          "sv": "Sinai Berg",
+          "uz": "Tur",
+          "en": "The Mount",
+          "id": "Bukit",
+          "fr": "Le mont At-Tour",
+          "bn": "পাহাড়",
+          "ur": "طور پہاڑ",
+          "tr": "Tûr",
+          "es": "El Monte",
+          "zh": "山岳"
+        }
       },
       {
-        "pageNumber": "487",
-        "type": "Makkiyah",
+        "index": 53,
+        "pageNumber": 487,
         "verse": {
           "start": 1,
           "end": 62
         },
-        "title": "An-Najm",
-        "titleAr": "النجم",
-        "index": 53
+        "type": "Makkiyah",
+        "title": "النجم",
+        "translation": {
+          "ru": "Звезда",
+          "sv": "Stjärnan",
+          "uz": "Najm",
+          "en": "The Star",
+          "id": "Bintang",
+          "fr": "L'étoile",
+          "bn": "তারা",
+          "ur": "ستارہ",
+          "tr": "Necm",
+          "es": "El Astro",
+          "zh": "星宿"
+        }
       },
       {
-        "pageNumber": "490",
-        "type": "Makkiyah",
+        "index": 54,
+        "pageNumber": 490,
         "verse": {
           "start": 1,
           "end": 55
         },
-        "title": "Al-Qamar",
-        "titleAr": "القمر",
-        "index": 54
+        "type": "Makkiyah",
+        "title": "القمر",
+        "translation": {
+          "ru": "Месяц",
+          "sv": "Månen",
+          "uz": "Qamar",
+          "en": "The Moon",
+          "id": "Bulan",
+          "fr": "La lune",
+          "bn": "চাঁদ",
+          "ur": "چاند",
+          "tr": "Kamer",
+          "es": "La Luna",
+          "zh": "月亮"
+        }
       },
       {
-        "pageNumber": "493",
-        "type": "Madaniyah",
+        "index": 55,
+        "pageNumber": 493,
         "verse": {
           "start": 1,
           "end": 78
         },
-        "title": "Ar-Rahman",
-        "titleAr": "الرحمن",
-        "index": 55
+        "type": "Madaniyah",
+        "title": "الرحمن",
+        "translation": {
+          "ru": "Милостивый",
+          "sv": "Den Nåderike",
+          "uz": "Rahmon",
+          "en": "The Beneficent",
+          "id": "Yang Maha Pemurah",
+          "fr": "Le Tout Miséricordieux",
+          "bn": "পরম করুণাময়",
+          "ur": "مہربان",
+          "tr": "Rahmân",
+          "es": "El Misericordioso",
+          "zh": "至仁主"
+        }
       },
       {
-        "pageNumber": "496",
-        "type": "Makkiyah",
+        "index": 56,
+        "pageNumber": 496,
         "verse": {
           "start": 1,
           "end": 96
         },
-        "title": "Al-Waqia",
-        "titleAr": "الواقعة",
-        "index": 56
+        "type": "Makkiyah",
+        "title": "الواقعة",
+        "translation": {
+          "ru": "Событие",
+          "sv": "Det Som Måste Komma",
+          "uz": "Voqea",
+          "en": "The Inevitable",
+          "id": "Hari Kiamat",
+          "fr": "L'inévitable",
+          "bn": "নিশ্চিত ঘটনা",
+          "ur": "واقعہ ہونے والی قیامت",
+          "tr": "Vâkıa",
+          "es": "Lo Que ha de Ocurrir",
+          "zh": "大事"
+        }
       },
       {
-        "pageNumber": "499",
-        "type": "Madaniyah",
+        "index": 57,
+        "pageNumber": 499,
         "verse": {
           "start": 1,
           "end": 29
         },
-        "title": "Al-Hadid",
-        "titleAr": "الحديد",
-        "index": 57
+        "type": "Madaniyah",
+        "title": "الحديد",
+        "translation": {
+          "ru": "Железо",
+          "sv": "Järnet",
+          "uz": "Hadid",
+          "en": "The Iron",
+          "id": "Besi",
+          "fr": "Le fer",
+          "bn": "লোহা",
+          "ur": "فولاد",
+          "tr": "Hadîd",
+          "es": "El Hierro",
+          "zh": "铁"
+        }
       }
     ]
   },
@@ -1024,103 +1960,211 @@
     "page": 504,
     "chapters": [
       {
-        "pageNumber": "504",
-        "type": "Madaniyah",
+        "index": 58,
+        "pageNumber": 504,
         "verse": {
           "start": 1,
           "end": 22
         },
-        "title": "Al-Mujadilah",
-        "titleAr": "المجادلة",
-        "index": 58
+        "type": "Madaniyah",
+        "title": "المجادلة",
+        "translation": {
+          "ru": "Препирающаяся",
+          "sv": "Hon Som Vädjar",
+          "uz": "Mujodala",
+          "en": "The Pleading Woman",
+          "id": "Wanita yang Menggugat",
+          "fr": "La discussion",
+          "bn": "অনুযোগকারিণী",
+          "ur": "جھگڑنے والی",
+          "tr": "Mücâdele",
+          "es": "La Discusión",
+          "zh": "辩诉者"
+        }
       },
       {
-        "pageNumber": "507",
-        "type": "Madaniyah",
+        "index": 59,
+        "pageNumber": 507,
         "verse": {
           "start": 1,
           "end": 24
         },
-        "title": "Al-Hashr",
-        "titleAr": "الحشر",
-        "index": 59
+        "type": "Madaniyah",
+        "title": "الحشر",
+        "translation": {
+          "ru": "Сбор",
+          "sv": "Mönstringen",
+          "uz": "Hashr",
+          "en": "The Exile",
+          "id": "Pengusiran",
+          "fr": "L'exode",
+          "bn": "সমাবেশ",
+          "ur": "حشر",
+          "tr": "Haşr",
+          "es": "La Concentración",
+          "zh": "放逐"
+        }
       },
       {
-        "pageNumber": "510",
-        "type": "Madaniyah",
+        "index": 60,
+        "pageNumber": 510,
         "verse": {
           "start": 1,
           "end": 13
         },
-        "title": "Al-Mumtahinah",
-        "titleAr": "الممتحنة",
-        "index": 60
+        "type": "Madaniyah",
+        "title": "الممتحنة",
+        "translation": {
+          "ru": "Испытуемая",
+          "sv": "Den Som Skall Förhöras",
+          "uz": "Mumtahana",
+          "en": "She that is to be examined",
+          "id": "Wanita yang Diuji",
+          "fr": "L'éprouvée",
+          "bn": "নারী, যাকে পরীক্ষা করা হবে",
+          "ur": "امتحان لی جانے والی",
+          "tr": "Mümtehine",
+          "es": "La Examinada",
+          "zh": "受考验的妇人"
+        }
       },
       {
-        "pageNumber": "513",
-        "type": "Madaniyah",
+        "index": 61,
+        "pageNumber": 513,
         "verse": {
           "start": 1,
           "end": 14
         },
-        "title": "As-Saff",
-        "titleAr": "الصف",
-        "index": 61
+        "type": "Madaniyah",
+        "title": "الصف",
+        "translation": {
+          "ru": "Ряды",
+          "sv": "I Slutna Led",
+          "uz": "Sof",
+          "en": "The Ranks",
+          "id": "Barisan",
+          "fr": "Le rang",
+          "bn": "সারিবদ্ধ সৈন্যদল",
+          "ur": "صف",
+          "tr": "Saf",
+          "es": "La Fila",
+          "zh": "列阵"
+        }
       },
       {
-        "pageNumber": "515",
-        "type": "Madaniyah",
+        "index": 62,
+        "pageNumber": 515,
         "verse": {
           "start": 1,
           "end": 11
         },
-        "title": "Al-Jumu'ah",
-        "titleAr": "الجمعة",
-        "index": 62
+        "type": "Madaniyah",
+        "title": "الجمعة",
+        "translation": {
+          "ru": "Собрание",
+          "sv": "Fredagsbönen",
+          "uz": "Juma",
+          "en": "The Congregation, Friday",
+          "id": "Hari Jum\\'at",
+          "fr": "Le vendredi",
+          "bn": "সম্মেলন/শুক্রবার",
+          "ur": "جمعہ",
+          "tr": "Cuma",
+          "es": "El Viernes",
+          "zh": "聚礼"
+        }
       },
       {
-        "pageNumber": "516",
-        "type": "Madaniyah",
+        "index": 63,
+        "pageNumber": 516,
         "verse": {
           "start": 1,
           "end": 11
         },
-        "title": "Al-Munafiqun",
-        "titleAr": "المنافقون",
-        "index": 63
+        "type": "Madaniyah",
+        "title": "المنافقون",
+        "translation": {
+          "ru": "Лицемеры",
+          "sv": "Hycklarna",
+          "uz": "Munofiqun",
+          "en": "The Hypocrites",
+          "id": "Kaum Munafik",
+          "fr": "Les hypocrites",
+          "bn": "ভণ্ড বিশ্বাসী",
+          "ur": "منافقین",
+          "tr": "Münâfikûn",
+          "es": "Los Hipócritas",
+          "zh": "伪信者"
+        }
       },
       {
-        "pageNumber": "518",
-        "type": "Madaniyah",
+        "index": 64,
+        "pageNumber": 518,
         "verse": {
           "start": 1,
           "end": 18
         },
-        "title": "At-Taghabun",
-        "titleAr": "التغابن",
-        "index": 64
+        "type": "Madaniyah",
+        "title": "التغابن",
+        "translation": {
+          "ru": "Взаимное обделение",
+          "sv": "Då Vinnarna Och Förlorarna Byter Plats",
+          "uz": "Tag'obun",
+          "en": "The Mutual Disillusion",
+          "id": "Hari Dinampakkan Kesalahan",
+          "fr": "La grande perte",
+          "bn": "মোহ অপসারণ",
+          "ur": "ہار جیت",
+          "tr": "Tegâbün",
+          "es": "El Desengaño",
+          "zh": "相欺"
+        }
       },
       {
-        "pageNumber": "520",
-        "type": "Madaniyah",
+        "index": 65,
+        "pageNumber": 520,
         "verse": {
           "start": 1,
           "end": 12
         },
-        "title": "At-Talaq",
-        "titleAr": "الطلاق",
-        "index": 65
+        "type": "Madaniyah",
+        "title": "الطلاق",
+        "translation": {
+          "ru": "Развод",
+          "sv": "Skilsmässa",
+          "uz": "Taloq",
+          "en": "The Divorce",
+          "id": "Perceraian",
+          "fr": "Le divorce",
+          "bn": "তালাক",
+          "ur": "طلاق",
+          "tr": "Talâk",
+          "es": "El Divorcio",
+          "zh": "离婚"
+        }
       },
       {
-        "pageNumber": "522",
-        "type": "Madaniyah",
+        "index": 66,
+        "pageNumber": 522,
         "verse": {
           "start": 1,
           "end": 12
         },
-        "title": "At-Tahrim",
-        "titleAr": "التحريم",
-        "index": 66
+        "type": "Madaniyah",
+        "title": "التحريم",
+        "translation": {
+          "ru": "Запрещение",
+          "sv": "Förbudet",
+          "uz": "Tahrim",
+          "en": "The Prohibition",
+          "id": "Mengharamkan",
+          "fr": "L'interdiction",
+          "bn": "নিষিদ্ধকরণ",
+          "ur": "حرمت",
+          "tr": "Tahrîm",
+          "es": "La Prohibición",
+          "zh": "禁戒"
+        }
       }
     ]
   },
@@ -1129,125 +2173,257 @@
     "page": 524,
     "chapters": [
       {
-        "pageNumber": "524",
-        "type": "Makkiyah",
+        "index": 67,
+        "pageNumber": 524,
         "verse": {
           "start": 1,
           "end": 30
         },
-        "title": "Al-Mulk",
-        "titleAr": "الملك",
-        "index": 67
+        "type": "Makkiyah",
+        "title": "الملك",
+        "translation": {
+          "ru": "Власть",
+          "sv": "Herravälde",
+          "uz": "Mulk",
+          "en": "The Sovereignty",
+          "id": "Kerajaan",
+          "fr": "La royauté",
+          "bn": "সার্বভৌম কর্তৃত্ব",
+          "ur": "ملک",
+          "tr": "Mülk",
+          "es": "La Soberanía",
+          "zh": "国权"
+        }
       },
       {
-        "pageNumber": "526",
-        "type": "Makkiyah",
+        "index": 68,
+        "pageNumber": 526,
         "verse": {
           "start": 1,
           "end": 52
         },
-        "title": "Al-Qalam",
-        "titleAr": "القلم",
-        "index": 68
+        "type": "Makkiyah",
+        "title": "القلم",
+        "translation": {
+          "ru": "Письменная трость",
+          "sv": "Pennan",
+          "uz": "Qalam",
+          "en": "The Pen",
+          "id": "Pena",
+          "fr": "La plume",
+          "bn": "কলম",
+          "ur": "قلم",
+          "tr": "Kalem",
+          "es": "El Cálamo",
+          "zh": "笔"
+        }
       },
       {
-        "pageNumber": "529",
-        "type": "Makkiyah",
+        "index": 69,
+        "pageNumber": 529,
         "verse": {
           "start": 1,
           "end": 52
         },
-        "title": "Al-Haqqah",
-        "titleAr": "الحاقة",
-        "index": 69
+        "type": "Makkiyah",
+        "title": "الحاقة",
+        "translation": {
+          "ru": "Неминуемое",
+          "sv": "Sanningens Stund",
+          "uz": "Haqqa",
+          "en": "The Reality",
+          "id": "Kenyataan (Hari Kiamat)",
+          "fr": "L'inéluctable",
+          "bn": "নিশ্চিত সত্য",
+          "ur": "حق ہونے والی",
+          "tr": "Hâkka",
+          "es": "La Verdad Indefectible",
+          "zh": "真灾"
+        }
       },
       {
-        "pageNumber": "531",
-        "type": "Makkiyah",
+        "index": 70,
+        "pageNumber": 531,
         "verse": {
           "start": 1,
           "end": 44
         },
-        "title": "Al-Ma'arij",
-        "titleAr": "المعارج",
-        "index": 70
+        "type": "Makkiyah",
+        "title": "المعارج",
+        "translation": {
+          "ru": "Ступени",
+          "sv": "Vägarna Upp Till Gud",
+          "uz": "Maorij",
+          "en": "The Ascending Stairways",
+          "id": "Tempat yang Naik",
+          "fr": "Les voies d'ascension",
+          "bn": "উন্নয়নের সোপান",
+          "ur": "عروج",
+          "tr": "Meâric",
+          "es": "Los Grados de Elevación",
+          "zh": "天梯"
+        }
       },
       {
-        "pageNumber": "533",
-        "type": "Makkiyah",
+        "index": 71,
+        "pageNumber": 533,
         "verse": {
           "start": 1,
           "end": 28
         },
-        "title": "Nuh",
-        "titleAr": "نوح",
-        "index": 71
+        "type": "Makkiyah",
+        "title": "نوح",
+        "translation": {
+          "ru": "Нух",
+          "sv": "Noa",
+          "uz": "Nuh",
+          "en": "Noah",
+          "id": "Nuh",
+          "fr": "Noé",
+          "bn": "নবী নূহ",
+          "ur": "نوح",
+          "tr": "Nûh",
+          "es": "Noé",
+          "zh": "努哈"
+        }
       },
       {
-        "pageNumber": "534",
-        "type": "Makkiyah",
+        "index": 72,
+        "pageNumber": 534,
         "verse": {
           "start": 1,
           "end": 28
         },
-        "title": "Al-Jinn",
-        "titleAr": "الجن",
-        "index": 72
+        "type": "Makkiyah",
+        "title": "الجن",
+        "translation": {
+          "ru": "Джинны",
+          "sv": "Osynliga Väsen",
+          "uz": "Jin",
+          "en": "The Jinn",
+          "id": "Jin",
+          "fr": "Les djinns",
+          "bn": "জিন সম্প্রদায়",
+          "ur": "جن",
+          "tr": "Cin",
+          "es": "Los Genios",
+          "zh": "精灵"
+        }
       },
       {
-        "pageNumber": "537",
-        "type": "Makkiyah",
+        "index": 73,
+        "pageNumber": 537,
         "verse": {
           "start": 1,
           "end": 20
         },
-        "title": "Al-Muzzammil",
-        "titleAr": "المزمل",
-        "index": 73
+        "type": "Makkiyah",
+        "title": "المزمل",
+        "translation": {
+          "ru": "Закутавшийся",
+          "sv": "Du Som Täcker Över Dig",
+          "uz": "Muzzammil",
+          "en": "The Enshrouded One",
+          "id": "Orang yang Berselimut",
+          "fr": "L'enveloppé",
+          "bn": "বস্ত্রাচ্ছাদনকারী",
+          "ur": "کپڑا لپیٹنے والا",
+          "tr": "Müzzemmil",
+          "es": "El Envuelto en El Manto",
+          "zh": "披衣的人"
+        }
       },
       {
-        "pageNumber": "538",
-        "type": "Makkiyah",
+        "index": 74,
+        "pageNumber": 538,
         "verse": {
           "start": 1,
           "end": 56
         },
-        "title": "Al-Muddaththir",
-        "titleAr": "المدثر",
-        "index": 74
+        "type": "Makkiyah",
+        "title": "المدثر",
+        "translation": {
+          "ru": "Завернувшийся",
+          "sv": "Du Som Sveper In Dig",
+          "uz": "Muddassir",
+          "en": "The Cloaked One",
+          "id": "Orang yang Berkemul",
+          "fr": "Celui qui se couvre",
+          "bn": "পোশাক পরিহিত",
+          "ur": "کپڑا اوڑھنے والا",
+          "tr": "Müddessir",
+          "es": "El Arropado",
+          "zh": "盖被的人"
+        }
       },
       {
-        "pageNumber": "540",
-        "type": "Makkiyah",
+        "index": 75,
+        "pageNumber": 540,
         "verse": {
           "start": 1,
           "end": 40
         },
-        "title": "Al-Qiyamah",
-        "titleAr": "القيامة",
-        "index": 75
+        "type": "Makkiyah",
+        "title": "القيامة",
+        "translation": {
+          "ru": "Воскресение",
+          "sv": "Uppståndelsen",
+          "uz": "Qiyomat",
+          "en": "The Resurrection",
+          "id": "Hari Berbangkit",
+          "fr": "La résurrection",
+          "bn": "পুনরুত্থান",
+          "ur": "قیامۃ",
+          "tr": "Kıyâmet",
+          "es": "El Levantamiento",
+          "zh": "复活"
+        }
       },
       {
-        "pageNumber": "542",
-        "type": "Madaniyah",
+        "index": 76,
+        "pageNumber": 542,
         "verse": {
           "start": 1,
           "end": 31
         },
-        "title": "Al-Insan",
-        "titleAr": "الإنسان",
-        "index": 76
+        "type": "Madaniyah",
+        "title": "الإنسان",
+        "translation": {
+          "ru": "Человек",
+          "sv": "Människan",
+          "uz": "Inson",
+          "en": "The Man",
+          "id": "Manusia",
+          "fr": "L'homme",
+          "bn": "মানবজাতি",
+          "ur": "انسان",
+          "tr": "İnsân",
+          "es": "El Hombre",
+          "zh": "人"
+        }
       },
       {
-        "pageNumber": "544",
-        "type": "Makkiyah",
+        "index": 77,
+        "pageNumber": 544,
         "verse": {
           "start": 1,
           "end": 50
         },
-        "title": "Al-Mursalat",
-        "titleAr": "المرسلات",
-        "index": 77
+        "type": "Makkiyah",
+        "title": "المرسلات",
+        "translation": {
+          "ru": "Посылаемые",
+          "sv": "De Som Sänds Ut",
+          "uz": "Mursalot",
+          "en": "The Emissaries",
+          "id": "Malaikat-malaikan yang Diutus",
+          "fr": "Les envoyés",
+          "bn": "প্রেরিত পুরুষ",
+          "ur": "بھیجی جانے والی ہوائیں",
+          "tr": "Mürselât",
+          "es": "Los Que Son Enviados",
+          "zh": "天使"
+        }
       }
     ]
   },
@@ -1256,411 +2432,855 @@
     "page": 545,
     "chapters": [
       {
-        "pageNumber": "545",
-        "type": "Makkiyah",
+        "index": 78,
+        "pageNumber": 545,
         "verse": {
           "start": 1,
           "end": 40
         },
-        "title": "An-Naba",
-        "titleAr": "النبأ",
-        "index": 78
+        "type": "Makkiyah",
+        "title": "النبأ",
+        "translation": {
+          "ru": "Весть",
+          "sv": "Tillkännagivandet",
+          "uz": "Naba'",
+          "en": "The Tidings",
+          "id": "Berita Besar",
+          "fr": "La nouvelle",
+          "bn": "মহাসংবাদ",
+          "ur": "خبر",
+          "tr": "Nebe",
+          "es": "La Noticia",
+          "zh": "消息"
+        }
       },
       {
-        "pageNumber": "547",
-        "type": "Makkiyah",
+        "index": 79,
+        "pageNumber": 547,
         "verse": {
           "start": 1,
           "end": 46
         },
-        "title": "An-Naziat",
-        "titleAr": "النازعات",
-        "index": 79
+        "type": "Makkiyah",
+        "title": "النازعات",
+        "translation": {
+          "ru": "Исторгающие",
+          "sv": "De Som Stiger Över Horisonten",
+          "uz": "Nazi'at",
+          "en": "Those who drag forth",
+          "id": "Malaikat yang Mencabut",
+          "fr": "Ceux qui arrachent",
+          "bn": "প্রচেষ্টাকারী",
+          "ur": "زور سے کھینچنے والے",
+          "tr": "Naziât",
+          "es": "Los Que Arrancan",
+          "zh": "急掣的"
+        }
       },
       {
-        "pageNumber": "548",
-        "type": "Makkiyah",
+        "index": 80,
+        "pageNumber": 548,
         "verse": {
           "start": 1,
           "end": 42
         },
-        "title": "Abasa",
-        "titleAr": "عبس",
-        "index": 80
+        "type": "Makkiyah",
+        "title": "عبس",
+        "translation": {
+          "ru": "Нахмурился",
+          "sv": "Med Bister Min",
+          "uz": "Abasa",
+          "en": "He Frowned",
+          "id": "Ia Bermuka Masam",
+          "fr": "Il s'est renfrogné",
+          "bn": "সে ভ্রু কুঁচকালো",
+          "ur": "تیوری چڑہائی",
+          "tr": "Abese",
+          "es": "Frunció El Ceño",
+          "zh": "皱眉"
+        }
       },
       {
-        "pageNumber": "550",
-        "type": "Makkiyah",
+        "index": 81,
+        "pageNumber": 550,
         "verse": {
           "start": 1,
           "end": 29
         },
-        "title": "At-Takwir",
-        "titleAr": "التكوير",
-        "index": 81
+        "type": "Makkiyah",
+        "title": "التكوير",
+        "translation": {
+          "ru": "Скручивание",
+          "sv": "När Solen Lindas In",
+          "uz": "Takvir",
+          "en": "The Overthrowing",
+          "id": "Menggulung",
+          "fr": "L'obscurcissement",
+          "bn": "অন্ধকারাচ্ছন্ন",
+          "ur": "لپیٹنا",
+          "tr": "Tekvîr",
+          "es": "El Arrollamiento",
+          "zh": "黯黮"
+        }
       },
       {
-        "pageNumber": "551",
-        "type": "Makkiyah",
+        "index": 82,
+        "pageNumber": 551,
         "verse": {
           "start": 1,
           "end": 19
         },
-        "title": "Al-Infitar",
-        "titleAr": "الإنفطار",
-        "index": 82
+        "type": "Makkiyah",
+        "title": "الإنفطار",
+        "translation": {
+          "ru": "Раскалывание",
+          "sv": "När Himlen Rämnar",
+          "uz": "Infitor",
+          "en": "The Cleaving",
+          "id": "Terbelah",
+          "fr": "La rupture",
+          "bn": "বিদীর্ণ করা",
+          "ur": "ٹکڑے ہونا",
+          "tr": "İnfitâr",
+          "es": "La Hendidura",
+          "zh": "破裂"
+        }
       },
       {
-        "pageNumber": "552",
-        "type": "Makkiyah",
+        "index": 83,
+        "pageNumber": 552,
         "verse": {
           "start": 1,
           "end": 36
         },
-        "title": "Al-Mutaffifin",
-        "titleAr": "المطففين",
-        "index": 83
+        "type": "Makkiyah",
+        "title": "المطففين",
+        "translation": {
+          "ru": "Обвешивающие",
+          "sv": "De Som Snålar Med Mått Och Vikt",
+          "uz": "Mutoffifun",
+          "en": "The Defrauding",
+          "id": "Orang-orang Curang",
+          "fr": "Les fraudeurs",
+          "bn": "প্রতারণা করা",
+          "ur": "ناپ تول میں کمی کرنے والے",
+          "tr": "Mutaffifîn",
+          "es": "Los Defraudadores",
+          "zh": "称量不公"
+        }
       },
       {
-        "pageNumber": "553",
-        "type": "Makkiyah",
+        "index": 84,
+        "pageNumber": 553,
         "verse": {
           "start": 1,
           "end": 25
         },
-        "title": "Al-Inshiqaq",
-        "titleAr": "الإنشقاق",
-        "index": 84
+        "type": "Makkiyah",
+        "title": "الإنشقاق",
+        "translation": {
+          "ru": "Разверзнется",
+          "sv": "När Himlen Brister I Stycken",
+          "uz": "Inshiqoq",
+          "en": "The Sundering",
+          "id": "Terbelah",
+          "fr": "La déchirure",
+          "bn": "খণ্ড-বিখণ্ডকরণ",
+          "ur": "پھٹنا",
+          "tr": "İnşikâk",
+          "es": "El Resquebrajamiento",
+          "zh": "绽裂"
+        }
       },
       {
-        "pageNumber": "554",
-        "type": "Makkiyah",
+        "index": 85,
+        "pageNumber": 554,
         "verse": {
           "start": 1,
           "end": 22
         },
-        "title": "Al-Buruj",
-        "titleAr": "البروج",
-        "index": 85
+        "type": "Makkiyah",
+        "title": "البروج",
+        "translation": {
+          "ru": "Созвездия Зодиака",
+          "sv": "Stjärnbilderna",
+          "uz": "Buruj",
+          "en": "The Mansions of the Stars",
+          "id": "Gugusan Bintang",
+          "fr": "Les constellations",
+          "bn": "নক্ষত্রপুঞ্জ",
+          "ur": "برج",
+          "tr": "Burûc",
+          "es": "Las Constelaciones",
+          "zh": "十二宫"
+        }
       },
       {
-        "pageNumber": "555",
-        "type": "Makkiyah",
+        "index": 86,
+        "pageNumber": 555,
         "verse": {
           "start": 1,
           "end": 17
         },
-        "title": "At-Tariq",
-        "titleAr": "الطارق",
-        "index": 86
+        "type": "Makkiyah",
+        "title": "الطارق",
+        "translation": {
+          "ru": "Ночной путник",
+          "sv": "Den Nattliga Besökaren",
+          "uz": "Toriq",
+          "en": "The Nightcommer",
+          "id": "Yang Datang di Malam Hari",
+          "fr": "L'astre nocturne",
+          "bn": "রাতের আগন্তুক",
+          "ur": "رات کو آنے والا",
+          "tr": "Târık",
+          "es": "El Que Viene de Noche",
+          "zh": "启明星"
+        }
       },
       {
-        "pageNumber": "556",
-        "type": "Makkiyah",
+        "index": 87,
+        "pageNumber": 556,
         "verse": {
           "start": 1,
           "end": 19
         },
-        "title": "Al-Ala",
-        "titleAr": "الأعلى",
-        "index": 87
+        "type": "Makkiyah",
+        "title": "الأعلى",
+        "translation": {
+          "ru": "Всевышний",
+          "sv": "Den Högste",
+          "uz": "A'lo",
+          "en": "The Most High",
+          "id": "Yang Paling Tinggi",
+          "fr": "Le Très-Haut",
+          "bn": "সর্বোন্নত",
+          "ur": "اعلی",
+          "tr": "A'lâ",
+          "es": "El Altísimo",
+          "zh": "至尊"
+        }
       },
       {
-        "pageNumber": "556",
-        "type": "Makkiyah",
+        "index": 88,
+        "pageNumber": 556,
         "verse": {
           "start": 1,
           "end": 26
         },
-        "title": "Al-Ghashiyah",
-        "titleAr": "الغاشية",
-        "index": 88
+        "type": "Makkiyah",
+        "title": "الغاشية",
+        "translation": {
+          "ru": "Покрывающее",
+          "sv": "Det Som Skall Överskugga Allt",
+          "uz": "G'oshiya",
+          "en": "The Overwhelming",
+          "id": "Hari Pembalasan",
+          "fr": "L'enveloppante",
+          "bn": "বিহ্বলকর ঘটনা",
+          "ur": "چھا جانے والی",
+          "tr": "Gâşiye",
+          "es": "El Envolvente",
+          "zh": "大灾"
+        }
       },
       {
-        "pageNumber": "557",
-        "type": "Makkiyah",
+        "index": 89,
+        "pageNumber": 557,
         "verse": {
           "start": 1,
           "end": 30
         },
-        "title": "Al-Fajr",
-        "titleAr": "الفجر",
-        "index": 89
+        "type": "Makkiyah",
+        "title": "الفجر",
+        "translation": {
+          "ru": "Заря",
+          "sv": "Gryningsljuset",
+          "uz": "Fajr",
+          "en": "The Dawn",
+          "id": "Fajar",
+          "fr": "L'aube",
+          "bn": "ভোরবেলা",
+          "ur": "فجر",
+          "tr": "Fecr",
+          "es": "La Aurora",
+          "zh": "黎明"
+        }
       },
       {
-        "pageNumber": "559",
-        "type": "Makkiyah",
+        "index": 90,
+        "pageNumber": 559,
         "verse": {
           "start": 1,
           "end": 20
         },
-        "title": "Al-Balad",
-        "titleAr": "البلد",
-        "index": 90
+        "type": "Makkiyah",
+        "title": "البلد",
+        "translation": {
+          "ru": "Город",
+          "sv": "Landet",
+          "uz": "Balad",
+          "en": "The City",
+          "id": "Negeri",
+          "fr": "La cité",
+          "bn": "নগর",
+          "ur": "شہر",
+          "tr": "Beled",
+          "es": "El Territorio",
+          "zh": "地方"
+        }
       },
       {
-        "pageNumber": "559",
-        "type": "Makkiyah",
+        "index": 91,
+        "pageNumber": 559,
         "verse": {
           "start": 1,
           "end": 15
         },
-        "title": "Ash-Shams",
-        "titleAr": "الشمس",
-        "index": 91
+        "type": "Makkiyah",
+        "title": "الشمس",
+        "translation": {
+          "ru": "Солнце",
+          "sv": "Solen",
+          "uz": "Shams",
+          "en": "The Sun",
+          "id": "Matahari",
+          "fr": "Le soleil",
+          "bn": "সূর্য",
+          "ur": "آفتاب",
+          "tr": "Şems",
+          "es": "El Sol",
+          "zh": "太阳"
+        }
       },
       {
-        "pageNumber": "560",
-        "type": "Makkiyah",
+        "index": 92,
+        "pageNumber": 560,
         "verse": {
           "start": 1,
           "end": 21
         },
-        "title": "Al-Lail",
-        "titleAr": "الليل",
-        "index": 92
+        "type": "Makkiyah",
+        "title": "الليل",
+        "translation": {
+          "ru": "Ночь",
+          "sv": "Natten",
+          "uz": "Layl",
+          "en": "The Night",
+          "id": "Malam",
+          "fr": "La nuit",
+          "bn": "রাত",
+          "ur": "رات",
+          "tr": "Leyl",
+          "es": "La Noche",
+          "zh": "黑夜"
+        }
       },
       {
-        "pageNumber": "561",
-        "type": "Makkiyah",
+        "index": 93,
+        "pageNumber": 561,
         "verse": {
           "start": 1,
           "end": 11
         },
-        "title": "Ad-Duha",
-        "titleAr": "الضحى",
-        "index": 93
+        "type": "Makkiyah",
+        "title": "الضحى",
+        "translation": {
+          "ru": "Утро",
+          "sv": "Det Klara Morgonljuset",
+          "uz": "Zuho",
+          "en": "The Morning Hours",
+          "id": "Waktu Dhuha",
+          "fr": "Le jour montant",
+          "bn": "পূর্বাহ্নের সুর্যকিরণ",
+          "ur": "دن کا چڑھنا",
+          "tr": "Duhâ",
+          "es": "La Claridad de La Mañana",
+          "zh": "上午"
+        }
       },
       {
-        "pageNumber": "561",
-        "type": "Makkiyah",
+        "index": 94,
+        "pageNumber": 561,
         "verse": {
           "start": 1,
           "end": 8
         },
-        "title": "Ash-Sharh",
-        "titleAr": "الشرح",
-        "index": 94
+        "type": "Makkiyah",
+        "title": "الشرح",
+        "translation": {
+          "ru": "Раскрытие",
+          "sv": "Har Vi Inte Öppnat Ditt Bröst",
+          "uz": "Sharh",
+          "en": "The Relief",
+          "id": "Melapangkan",
+          "fr": "L'ouverture",
+          "bn": "বক্ষ প্রশস্তকরণ",
+          "ur": "تسکین",
+          "tr": "İnşirâh",
+          "es": "No Te Hemos Abierto",
+          "zh": "开拓"
+        }
       },
       {
-        "pageNumber": "562",
-        "type": "Makkiyah",
+        "index": 95,
+        "pageNumber": 562,
         "verse": {
           "start": 1,
           "end": 8
         },
-        "title": "At-Tin",
-        "titleAr": "التين",
-        "index": 95
+        "type": "Makkiyah",
+        "title": "التين",
+        "translation": {
+          "ru": "Смоковница",
+          "sv": "Fikonträdet",
+          "uz": "Tiyn",
+          "en": "The Fig",
+          "id": "Buah Tin",
+          "fr": "Les figues",
+          "bn": "ডুমুর",
+          "ur": "انجیر",
+          "tr": "Tîn",
+          "es": "Los Higos",
+          "zh": "无花果"
+        }
       },
       {
-        "pageNumber": "562",
-        "type": "Makkiyah",
+        "index": 96,
+        "pageNumber": 562,
         "verse": {
           "start": 1,
           "end": 19
         },
-        "title": "Al-Alaq",
-        "titleAr": "العلق",
-        "index": 96
+        "type": "Makkiyah",
+        "title": "العلق",
+        "translation": {
+          "ru": "Сгусток крови",
+          "sv": "Grodden",
+          "uz": "Alaq",
+          "en": "The Clot",
+          "id": "Segumpal Darah",
+          "fr": "L'adhérence",
+          "bn": "রক্তপিণ্ড",
+          "ur": "جما ہوا خون",
+          "tr": "Alak",
+          "es": "El Coágulo",
+          "zh": "血块"
+        }
       },
       {
-        "pageNumber": "563",
-        "type": "Makkiyah",
+        "index": 97,
+        "pageNumber": 563,
         "verse": {
           "start": 1,
           "end": 5
         },
-        "title": "Al-Qadr",
-        "titleAr": "القدر",
-        "index": 97
-      },
-      {
-        "pageNumber": "563",
-        "type": "Madaniyah",
-        "verse": {
-          "start": 1,
-          "end": 8
-        },
-        "title": "Al-Bayinah",
-        "titleAr": "البينة",
-        "index": 98
-      },
-      {
-        "pageNumber": "564",
-        "type": "Madaniyah",
-        "verse": {
-          "start": 1,
-          "end": 8
-        },
-        "title": "Az-Zalzalah",
-        "titleAr": "الزلزلة",
-        "index": 99
-      },
-      {
-        "pageNumber": "564",
         "type": "Makkiyah",
+        "title": "القدر",
+        "translation": {
+          "ru": "Предопределение",
+          "sv": "Allmaktens Natt",
+          "uz": "Qadr",
+          "en": "The Power",
+          "id": "Kemuliaan",
+          "fr": "La destinée",
+          "bn": "মহিমান্বিত",
+          "ur": "شب قدر",
+          "tr": "Kadir",
+          "es": "El Decreto",
+          "zh": "高贵"
+        }
+      },
+      {
+        "index": 98,
+        "pageNumber": 563,
+        "verse": {
+          "start": 1,
+          "end": 8
+        },
+        "type": "Madaniyah",
+        "title": "البينة",
+        "translation": {
+          "ru": "Ясное знамение",
+          "sv": "Det Klara Vittnesbördet",
+          "uz": "Bayyina",
+          "en": "The Clear Proof",
+          "id": "Pembuktian",
+          "fr": "La preuve",
+          "bn": "প্রমাণ",
+          "ur": "ثبوت",
+          "tr": "Beyyine",
+          "es": "La Evidencia",
+          "zh": "明证"
+        }
+      },
+      {
+        "index": 99,
+        "pageNumber": 564,
+        "verse": {
+          "start": 1,
+          "end": 8
+        },
+        "type": "Madaniyah",
+        "title": "الزلزلة",
+        "translation": {
+          "ru": "Сотрясение",
+          "sv": "När Jorden Skälver",
+          "uz": "Zalzala",
+          "en": "The Earthquake",
+          "id": "Kegoncangan",
+          "fr": "Le séisme",
+          "bn": "ভূমিকম্প",
+          "ur": "زلزلہ",
+          "tr": "Zilzâl",
+          "es": "El Temblor",
+          "zh": "地震"
+        }
+      },
+      {
+        "index": 100,
+        "pageNumber": 564,
         "verse": {
           "start": 1,
           "end": 11
         },
-        "title": "Al-Adiyat",
-        "titleAr": "العاديات",
-        "index": 100
+        "type": "Makkiyah",
+        "title": "العاديات",
+        "translation": {
+          "ru": "Скачущие",
+          "sv": "Stridshästarna",
+          "uz": "Odiyot",
+          "en": "The Courser",
+          "id": "Berlari Kencang",
+          "fr": "Les coursiers",
+          "bn": "অভিযানকারী",
+          "ur": "دوڑنے والے گھوڑے",
+          "tr": "Âdiyât",
+          "es": "Los Que Galopan",
+          "zh": "奔驰的马队"
+        }
       },
       {
-        "pageNumber": "565",
-        "type": "Makkiyah",
+        "index": 101,
+        "pageNumber": 565,
         "verse": {
           "start": 1,
           "end": 11
         },
-        "title": "Al-Qariah",
-        "titleAr": "القارعة",
-        "index": 101
+        "type": "Makkiyah",
+        "title": "القارعة",
+        "translation": {
+          "ru": "Великое бедствие",
+          "sv": "Det Dundrande Slaget",
+          "uz": "Qori'a",
+          "en": "The Calamity",
+          "id": "Hari Kiamat",
+          "fr": "Le fracas",
+          "bn": "মহাসংকট",
+          "ur": "کھڑکھڑاہٹ",
+          "tr": "Kâria",
+          "es": "La Conmoción",
+          "zh": "大难"
+        }
       },
       {
-        "pageNumber": "565",
-        "type": "Makkiyah",
+        "index": 102,
+        "pageNumber": 565,
         "verse": {
           "start": 1,
           "end": 8
         },
-        "title": "Al-Takathur",
-        "titleAr": "التكاثر",
-        "index": 102
+        "type": "Makkiyah",
+        "title": "التكاثر",
+        "translation": {
+          "ru": "Страсть к приумножению",
+          "sv": "Tävlan I Rikedom",
+          "uz": "Takosur",
+          "en": "The Rivalry in world increase",
+          "id": "Bermegah-megahan",
+          "fr": "La course aux richesses",
+          "bn": "প্রাচুর্যের প্রতিযোগিতা",
+          "ur": "کثرت",
+          "tr": "Tekâsür",
+          "es": "La Rivalidad",
+          "zh": "竞赛富遮"
+        }
       },
       {
-        "pageNumber": "566",
-        "type": "Makkiyah",
+        "index": 103,
+        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 3
         },
-        "title": "Al-Asr",
-        "titleAr": "العصر",
-        "index": 103
+        "type": "Makkiyah",
+        "title": "العصر",
+        "translation": {
+          "ru": "Предвечернее время",
+          "sv": "Den Flyende Tiden",
+          "uz": "Asr",
+          "en": "The Declining Day",
+          "id": "Waktu Sore",
+          "fr": "Le temps",
+          "bn": "সময়",
+          "ur": "زمانہ",
+          "tr": "Asr",
+          "es": "El Tiempo",
+          "zh": "时光"
+        }
       },
       {
-        "pageNumber": "566",
-        "type": "Makkiyah",
+        "index": 104,
+        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 9
         },
-        "title": "Al-Humazah",
-        "titleAr": "الهمزة",
-        "index": 104
+        "type": "Makkiyah",
+        "title": "الهمزة",
+        "translation": {
+          "ru": "Хулитель",
+          "sv": "Baktalaren",
+          "uz": "Humaza",
+          "en": "The Traducer",
+          "id": "Pengumpat",
+          "fr": "Les calomniateurs",
+          "bn": "পরনিন্দাকারী",
+          "ur": "عیب لگانے والا",
+          "tr": "Hümeze",
+          "es": "El Murmurador",
+          "zh": "诽谤者"
+        }
       },
       {
-        "pageNumber": "566",
-        "type": "Makkiyah",
+        "index": 105,
+        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 5
         },
-        "title": "Al-Fil",
-        "titleAr": "الفيل",
-        "index": 105
+        "type": "Makkiyah",
+        "title": "الفيل",
+        "translation": {
+          "ru": "Слон",
+          "sv": "Elefanten",
+          "uz": "Fil",
+          "en": "The Elephant",
+          "id": "Gajah",
+          "fr": "L'éléphant",
+          "bn": "হাতি",
+          "ur": "ہاتھی",
+          "tr": "Fîl",
+          "es": "El Elefante",
+          "zh": "象"
+        }
       },
       {
-        "pageNumber": "567",
-        "type": "Makkiyah",
+        "index": 106,
+        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 4
         },
-        "title": "Quraish",
-        "titleAr": "قريش",
-        "index": 106
+        "type": "Makkiyah",
+        "title": "قريش",
+        "translation": {
+          "ru": "Курейшиты",
+          "sv": "Quraysh",
+          "uz": "Quraysh",
+          "en": "Quraysh",
+          "id": "Suku Quraisy",
+          "fr": "Les Quraysh",
+          "bn": "কুরাইশ গোত্র",
+          "ur": "قریش",
+          "tr": "Kureyş",
+          "es": "Los Quraysh",
+          "zh": "古来氏"
+        }
       },
       {
-        "pageNumber": "567",
-        "type": "Makkiyah",
+        "index": 107,
+        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 7
         },
-        "title": "Al-Ma'un",
-        "titleAr": "الماعون",
-        "index": 107
+        "type": "Makkiyah",
+        "title": "الماعون",
+        "translation": {
+          "ru": "Мелочь",
+          "sv": "Den Minsta Hjälp",
+          "uz": "Mo'un",
+          "en": "The Small kindnesses",
+          "id": "Barang yang Berguna",
+          "fr": "L'entraide",
+          "bn": "সাহায্য সহায়তা",
+          "ur": "تھوڑی سی چیز",
+          "tr": "Maûn",
+          "es": "La Ayuda Imprescindible",
+          "zh": "什物"
+        }
       },
       {
-        "pageNumber": "567",
-        "type": "Makkiyah",
+        "index": 108,
+        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 3
         },
-        "title": "Al-Kauthar",
-        "titleAr": "الكوثر",
-        "index": 108
+        "type": "Makkiyah",
+        "title": "الكوثر",
+        "translation": {
+          "ru": "Изобилие",
+          "sv": "Det Goda I Överflöd",
+          "uz": "Kavsar",
+          "en": "The Abundance",
+          "id": "Nikmat Berlimpah",
+          "fr": "L'abondance",
+          "bn": "কাউসার/প্রাচুর্য",
+          "ur": "جنت کی نہر",
+          "tr": "Kevser",
+          "es": "La Abundancia",
+          "zh": "多福"
+        }
       },
       {
-        "pageNumber": "568",
-        "type": "Makkiyah",
+        "index": 109,
+        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 6
         },
-        "title": "Al-Kafirun",
-        "titleAr": "الكافرون",
-        "index": 109
+        "type": "Makkiyah",
+        "title": "الكافرون",
+        "translation": {
+          "ru": "Неверующие",
+          "sv": "Sanningens Förnekare",
+          "uz": "Kofirun",
+          "en": "The Disbelievers",
+          "id": "Orang-orang Kafir",
+          "fr": "Les mécréants",
+          "bn": "অবিশ্বাসী",
+          "ur": "کافرین",
+          "tr": "Kâfirûn",
+          "es": "Los Incrédulos",
+          "zh": "不信道的人们"
+        }
       },
       {
-        "pageNumber": "568",
-        "type": "Madaniyah",
+        "index": 110,
+        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 3
         },
-        "title": "An-Nasr",
-        "titleAr": "النصر",
-        "index": 110
+        "type": "Madaniyah",
+        "title": "النصر",
+        "translation": {
+          "ru": "Помощь",
+          "sv": "Guds Hjälp",
+          "uz": "Nasr",
+          "en": "The Divine Support",
+          "id": "Pertolongan",
+          "fr": "Le secours",
+          "bn": "সাহায্য",
+          "ur": "نصرت",
+          "tr": "Nasr",
+          "es": "La Victoria",
+          "zh": "援助"
+        }
       },
       {
-        "pageNumber": "568",
-        "type": "Makkiyah",
+        "index": 111,
+        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 5
         },
-        "title": "Al-Masad",
-        "titleAr": "المسد",
-        "index": 111
+        "type": "Makkiyah",
+        "title": "المسد",
+        "translation": {
+          "ru": "Пальмовые волокна",
+          "sv": "Ett Tvinnat Rep",
+          "uz": "Masad",
+          "en": "The Palm Fiber",
+          "id": "Gejolak Api (Sabut)",
+          "fr": "Les fibres",
+          "bn": "খেজুরের পাকানো (রশি)",
+          "ur": "خوب بٹی ہوئی",
+          "tr": "Tebbet",
+          "es": "La Fibra",
+          "zh": "火焰"
+        }
       },
       {
-        "pageNumber": "569",
-        "type": "Makkiyah",
+        "index": 112,
+        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 4
         },
-        "title": "Al-Ikhlas",
-        "titleAr": "الإخلاص",
-        "index": 112
+        "type": "Makkiyah",
+        "title": "الإخلاص",
+        "translation": {
+          "ru": "Очищение веры",
+          "sv": "Den Rena Tron",
+          "uz": "Ixlos",
+          "en": "The Sincerity",
+          "id": "Ikhlash",
+          "fr": "La sincérité",
+          "bn": "আন্তরিকতা",
+          "ur": "اخلاص",
+          "tr": "İhlâs",
+          "es": "La Adoración Pura",
+          "zh": "忠诚"
+        }
       },
       {
-        "pageNumber": "569",
-        "type": "Makkiyah",
+        "index": 113,
+        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 5
         },
-        "title": "Al-Falaq",
-        "titleAr": "الفلق",
-        "index": 113
+        "type": "Makkiyah",
+        "title": "الفلق",
+        "translation": {
+          "ru": "Рассвет",
+          "sv": "Gryningens Herre",
+          "uz": "Falaq",
+          "en": "The Daybreak",
+          "id": "Waktu Shubuh",
+          "fr": "L'aube naissante",
+          "bn": "নিশিভোর",
+          "ur": "صبح",
+          "tr": "Felak",
+          "es": "El Rayar del Alba",
+          "zh": "曙光"
+        }
       },
       {
-        "pageNumber": "569",
-        "type": "Makkiyah",
+        "index": 114,
+        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 6
         },
-        "title": "An-Nas",
-        "titleAr": "الناس",
-        "index": 114
+        "type": "Makkiyah",
+        "title": "الناس",
+        "translation": {
+          "ru": "Люди",
+          "sv": "Människornas Herre",
+          "uz": "Nos",
+          "en": "Mankind",
+          "id": "Umat Manusia",
+          "fr": "Les humains",
+          "bn": "মানুষ জাতি",
+          "ur": "انسان",
+          "tr": "Nâs",
+          "es": "Los Hombres",
+          "zh": "世人"
+        }
       }
     ]
   }
