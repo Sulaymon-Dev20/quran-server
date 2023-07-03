@@ -29,19 +29,18 @@ public class SpringFoxConfig {
     public Docket api1() {
         Class[] classes = {InputStream.class, Resource.class};
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("FOR IOS PART")
-                .select()
+            .groupName("FOR IOS PART")
+            .select()
 //                .apis(RequestHandlerSelectors.any())
-                .apis(RequestHandlerSelectors.basePackage("com.suyo.quran.controller"))
-                .paths(PathSelectors.any())
-                .build()
-                .ignoredParameterTypes(classes)
-                .apiInfo(apiInfo())
-                .securityContexts(List.of(securityContext()))
-                .securitySchemes(List.of(apiKey()));
+            .apis(RequestHandlerSelectors.basePackage("com.suyo.quran.controller"))
+            .paths(PathSelectors.any())
+            .build()
+            .ignoredParameterTypes(classes)
+            .apiInfo(apiInfo())
+            .securityContexts(List.of(securityContext()))
+            .securitySchemes(List.of(apiKey()));
     }
 
-/*
     @Bean
     public Docket api2() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -49,7 +48,7 @@ public class SpringFoxConfig {
                 .select()
                 .paths(PathSelectors.ant("/api/products/**"))
                 .build();
-    }*/
+    }
 
     private SecurityContext securityContext() {
         return SecurityContext.builder().securityReferences(List.of(new SecurityReference("TOKEN SWAMP 💪", new AuthorizationScope[]{new AuthorizationScope("global", "accessEverything")}))).build();
@@ -60,14 +59,13 @@ public class SpringFoxConfig {
     }
 
     private ApiInfo apiInfo() {
-        final String version = "UNKNOWN";
         return new ApiInfo(applicationName,
-                "API description",
-                version,
-                null,
-                new Contact("𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠", "https://sulaymonyahyo.com", "sulaymon1w@gmail.com"),
-                null,
-                null,
-                Collections.emptyList());
+            "API description",
+            null,
+            null,
+            new Contact("𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠", "https://sulaymonyahyo.com", "sulaymon1w@gmail.com"),
+            null,
+            null,
+            Collections.emptyList());
     }
 }

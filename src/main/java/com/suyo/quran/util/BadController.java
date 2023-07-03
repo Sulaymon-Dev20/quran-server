@@ -17,7 +17,7 @@ import java.util.Random;
 @RestController
 public class BadController implements ErrorController {
 
-    @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH}, produces = "application/json")
+    @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH}, produces = MediaType.APPLICATION_JSON_VALUE)
     public HttpEntity<Response> handleError(HttpServletRequest request) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         if (status != null) {
@@ -49,10 +49,5 @@ public class BadController implements ErrorController {
             }
         }
         return PageContent.errorAll.get(new Random().nextInt(PageContent.errorAll.size())).replace("$statusCode$", "500").replace("$statusMessage$", HttpStatus.valueOf(500).getReasonPhrase());
-    }
-
-    @GetMapping("favicon.ico")
-    @ResponseBody
-    void returnNoFavicon() {
     }
 }
