@@ -84,20 +84,7 @@ public class DataService {
     }
 
     private String getFieldName(Language language) {
-        return switch (language) {
-            case BN -> "bn";
-            case EN -> "en";
-            case ES -> "es";
-            case FR -> "fr";
-            case ID -> "id";
-            case RU -> "ru";
-            case SV -> "sv";
-            case TR -> "tr";
-            case UR -> "ur";
-            case UZ -> "uz";
-            case ZH -> "zh";
-            default -> "ALL";
-        };
+        return language == Language.DEFAULT ? "All" : language.toString().toLowerCase();
     }
 
     public List<Object> getJuz() {
