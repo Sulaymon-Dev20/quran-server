@@ -1,20 +1,22 @@
-package com.suyo.quran.service;
+package com.suyo.quran.test;
 
 import lombok.SneakyThrows;
 import org.json.JSONArray;
 
+import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.*;
 
 public class ChapterTest {
     @SneakyThrows
     public static void main(String[] args) {
-        List<Object> chapters = new JSONArray(Files.readString(Path.of(".\\data\\chapters.json"))).toList();
+        File file = new File(".\\data\\editions\\");
+        for (File listFile : Objects.requireNonNull(file.listFiles())) {
+            List<Object> list = new JSONArray(Files.readString(Path.of(listFile.getPath()))).toList();
+        }
+        List<Object> chapters = new JSONArray(Files.readString(Path.of(".\\data\\editions\\uz.json"))).toList();
         for (Object chapter : chapters) {
             HashMap map = (HashMap) chapter;
             LinkedHashMap<Object, Object> translation = new LinkedHashMap<>(11);

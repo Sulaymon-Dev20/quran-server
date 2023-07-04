@@ -1,4 +1,4 @@
-package com.suyo.quran.service;
+package com.suyo.quran.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;

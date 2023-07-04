@@ -1,4 +1,4 @@
-package com.suyo.quran.service;
+package com.suyo.quran.test;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

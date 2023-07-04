@@ -3,16 +3,17 @@ package com.suyo.quran.controller;
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Response;
 import com.suyo.quran.service.ChapterService;
+import io.swagger.annotations.*;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/chapter")
 @Validated
+@Api(description = "Operations pertaining to manager blood donors in the application")
 public class ChapterController {
 
     final ChapterService chapterService;
@@ -22,17 +23,11 @@ public class ChapterController {
     }
 
     @GetMapping
-    public Response getChapterList(@RequestParam(defaultValue = "DEFAULT") Language language) {
+    @ApiOperation(value = "View a list of available products")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "<h1>asdfasdfasdfasdf</h1>You are not authorized to view the resource")
+    })
+    public Response getChapterList(@ApiParam(value = "the user to create", defaultValue = "DEFAULT") @RequestParam(defaultValue = "DEFAULT") Language language) {
         return chapterService.getChapterListByLanguage(language);
-    }
-
-    @GetMapping("/all")
-    public Response getChapterSource(@RequestParam(defaultValue = "DEFAULT") Language language) {
-        return chapterService.getChapterByLanguage(language);
-    }
-
-    @GetMapping("/{language}/{number}")
-    public Response getChapter(@NotNull @PathVariable Language language, @PathVariable("number") @Min(1) @Max(114) Integer chapterNumber) {
-        return chapterService.getChapterByLanguage(language, chapterNumber);
     }
 }

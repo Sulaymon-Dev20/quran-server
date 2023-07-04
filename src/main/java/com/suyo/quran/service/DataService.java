@@ -50,7 +50,7 @@ public class DataService {
 
     public List<Object> getChapterListByLanguage(Language language) {
         String fieldName = getFieldName(language);
-        return !fieldName.equals("ALL") ? new ArrayList<>(chapterList.toList())
+        return !fieldName.equals("All") ? new ArrayList<>(chapterList.toList())
                 .stream()
                 .peek(item -> {
                     HashMap<String, Object> chapter = (HashMap) item;

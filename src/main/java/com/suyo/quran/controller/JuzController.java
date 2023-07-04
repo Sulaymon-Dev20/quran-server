@@ -5,16 +5,17 @@ import com.suyo.quran.models.Response;
 import com.suyo.quran.service.JuzService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiResponse;
-import io.swagger.annotations.ApiResponses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/juz")
 @Validated
-@Api(produces = "application/json", value = "Operations pertaining to manager blood donors in the application")
+@Api(description = "Operations pertaining to manager blood donors in the application")
 public class JuzController {
 
     final JuzService juzService;
