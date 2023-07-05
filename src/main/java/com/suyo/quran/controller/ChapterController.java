@@ -23,9 +23,9 @@ public class ChapterController {
     }
 
     @GetMapping
-    @ApiOperation(value = "View a list of available products")
+    @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "<h1>asdfasdfasdfasdf</h1>You are not authorized to view the resource")
+            @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
     public Response getChapterList(@ApiParam(value = "the user to create", defaultValue = "DEFAULT") @RequestParam(defaultValue = "DEFAULT") Language language) {
         return chapterService.getChapterListByLanguage(language);

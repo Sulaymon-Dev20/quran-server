@@ -60,7 +60,7 @@ public class SpringFoxConfig {
                 .securitySchemes(List.of(apiKey()));
     }
 
-    private SecurityContext securityContext() {
+    static SecurityContext securityContext() {
         return SecurityContext.builder().securityReferences(List.of(new SecurityReference("TOKEN SWAMP 💪", new AuthorizationScope[]{new AuthorizationScope("global", "accessEverything")}))).build();
     }
 
