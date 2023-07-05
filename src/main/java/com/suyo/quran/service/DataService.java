@@ -5,47 +5,30 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.IOException;
 import java.util.*;
 import java.util.function.Function;
 
 @Service
 public class DataService {
-    final JSONArray chapterList;
-    final JSONObject chapter;
-    final JSONObject chapterBN;
-    final JSONObject chapterEN;
-    final JSONObject chapterES;
-    final JSONObject chapterFR;
-    final JSONObject chapterID;
-    final JSONObject chapterRU;
-    final JSONObject chapterSV;
-    final JSONObject chapterTR;
-    final JSONObject chapterUR;
-    final JSONObject chapterUZ;
-    final JSONObject chapterZH;
-    final JSONArray juzList;
+    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    final JSONArray chapterList = new JSONArray(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/chapters.json")).readAllBytes()));
+    final JSONObject chapter = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/quran.json")).readAllBytes()));
+    final JSONObject chapterBN = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/bn.json")).readAllBytes()));
+    final JSONObject chapterEN = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/en.json")).readAllBytes()));
+    final JSONObject chapterES = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/es.json")).readAllBytes()));
+    final JSONObject chapterFR = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/fr.json")).readAllBytes()));
+    final JSONObject chapterID = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/id.json")).readAllBytes()));
+    final JSONObject chapterRU = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/ru.json")).readAllBytes()));
+    final JSONObject chapterSV = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/sv.json")).readAllBytes()));
+    final JSONObject chapterTR = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/tr.json")).readAllBytes()));
+    final JSONObject chapterUR = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/ur.json")).readAllBytes()));
+    final JSONObject chapterUZ = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/uz.json")).readAllBytes()));
+    final JSONObject chapterZH = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/zh.json")).readAllBytes()));
+    final JSONArray juzList = new JSONArray(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/juz.json")).readAllBytes()));
 
-    {
-        try {
-            chapterList = new JSONArray(new String(Files.readAllBytes(Path.of("data/chapters.json"))));
-            chapter = new JSONObject(new String(Files.readAllBytes(Path.of("data/quran.json"))));
-            chapterBN = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/bn.json"))));
-            chapterEN = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/en.json"))));
-            chapterES = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/es.json"))));
-            chapterFR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/fr.json"))));
-            chapterID = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/id.json"))));
-            chapterRU = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ru.json"))));
-            chapterSV = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/sv.json"))));
-            chapterTR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/tr.json"))));
-            chapterUR = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/ur.json"))));
-            chapterUZ = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/uz.json"))));
-            chapterZH = new JSONObject(new String(Files.readAllBytes(Path.of("data/editions/zh.json"))));
-            juzList = new JSONArray(new String(Files.readAllBytes(Path.of("data/juz.json"))));
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    public DataService() throws IOException {
+
     }
 
     public List<Object> getChapterListByLanguage(Language language) {
