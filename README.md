@@ -28,11 +28,11 @@ Holy Quran Application <br/> Lorem Ipsum is simply dummy text of the printing an
    ```
 * setup java 17
   ```shell 
-  sudo apt update && sudo apt install openjdk-17-jdk openjdk-17-jre
+  sudo apt install openjdk-17-jdk openjdk-17-jre
    ```
 * setup git
   ```shell 
-  sudo apt update && sudo apt install git
+  sudo apt install git
    ```
 * clone project
   ```shell 
@@ -54,7 +54,7 @@ Holy Quran Application <br/> Lorem Ipsum is simply dummy text of the printing an
    ```
 * setup git
   ```zsh 
-  brew update && brew install git
+  brew install git
    ```
 * clone project
   ```zsh 
@@ -78,20 +78,60 @@ Holy Quran Application <br/> Lorem Ipsum is simply dummy text of the printing an
 **Project path**
 ```txt
 quran
-├───data
-│   └───editions
-└───src
-    └───main
-        ├───java
-        │   └───com
-        │       └───suyo
-        │           └───quran
-        │               ├───config
-        │               ├───controller
-        │               ├───models
-        │               ├───service
-        │               └───util
-        └───resources
-            ├───dist
-            └───static
+├── README.md
+├── data
+│   ├── chapters.json
+│   ├── editions
+│   │   ├── bn.json
+│   │   ├── en.json
+│   │   ├── es.json
+│   │   ├── fr.json
+│   │   ├── id.json
+│   │   ├── ru.json
+│   │   ├── sv.json
+│   │   ├── tr.json
+│   │   ├── ur.json
+│   │   ├── uz.json
+│   │   └── zh.json
+│   ├── juz.json
+│   └── quran.json
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+└── src
+    └── main
+        ├── java
+        │   └── com.suyo.quran
+        │       ├── QuranApplication.java
+        │       ├── config
+        │       │   ├── CorsConfig.java
+        │       │   ├── GlobalExceptionHandler.java
+        │       │   └── SpringFoxConfig.java
+        │       ├── controller
+        │       │   ├── ChapterController.java
+        │       │   ├── JuzController.java
+        │       │   └── VersesController.java
+        │       ├── models
+        │       │   ├── Language.java
+        │       │   ├── Response.java
+        │       │   └── Status.java
+        │       ├── service
+        │       │   ├── ChapterService.java
+        │       │   ├── DataService.java
+        │       │   ├── JuzService.java
+        │       │   └── VersesService.java
+        │       └── util
+        │           ├── BadController.java
+        │           ├── ColorsTerminal.java
+        │           ├── CronContent.java
+        │           ├── IpService.java
+        │           ├── PageContent.java
+        │           └── Utils.java
+        └── resources
+            ├── application.properties
+            ├── banner.txt
+            ├── dist
+            │   └── quran.json
+            └── static
+                └── utilLogos.png
 ```
