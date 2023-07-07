@@ -5,6 +5,8 @@ import com.suyo.quran.models.Response;
 import com.suyo.quran.service.JuzService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +27,10 @@ public class JuzController {
     }
 
     @GetMapping
-    @ApiOperation(value = "Create a new donor", nickname = "Sulaymon Yahyo", response = ResponseEntity.class)
+    @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
+    })
     public Response getJuz(@RequestParam(defaultValue = "DEFAULT") Language language) {
         return juzService.getJuz(language);
     }

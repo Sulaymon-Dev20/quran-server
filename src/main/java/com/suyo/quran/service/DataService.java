@@ -33,13 +33,9 @@ public class DataService {
 
     public List<Object> getChapterListByLanguage(Language language) {
         String fieldName = getFieldName(language);
-        return !fieldName.equals("All") ? new ArrayList<>(chapterList.toList())
+        return fieldName != null ? new ArrayList<>(chapterList.toList())
                 .stream()
-                .peek(item -> {
-                    HashMap<String, Object> chapter = (HashMap) item;
-                    HashMap translate = (HashMap) chapter.remove("translation");
-                    chapter.put("translation", translate.get(fieldName));
-                }).toList() : chapterList.toList();
+                .peek(item -> chapter.put("translation", ((HashMap) ((HashMap) item).remove("translation")).get(fieldName))).toList() : chapterList.toList();
     }
 
     public Map<String, Object> getChapterSource(Language language) {
@@ -67,17 +63,15 @@ public class DataService {
     }
 
     private String getFieldName(Language language) {
-        return language == Language.DEFAULT ? "All" : language.toString().toLowerCase();
+        return language == Language.DEFAULT ? null : language.toString().toLowerCase();
     }
 
     public List<Object> getJuz(Language language) {
         String fieldName = getFieldName(language);
-        return !fieldName.equals("All") ? new ArrayList<>(juzList.toList())
+        return fieldName != null ? new ArrayList<>(juzList.toList())
                 .stream()
                 .peek(item -> {
-                    HashMap<String, Object> chapter = (HashMap) item;
-                    ArrayList<HashMap> list = (ArrayList<HashMap>) chapter.get("chapters");
-                    for (HashMap surah : list) {
+                    for (HashMap surah : (ArrayList<HashMap>) ((HashMap) item).get("chapters")) {
                         surah.put("translation", ((HashMap) surah.remove("translation")).get(fieldName));
                     }
                 }).toList() : juzList.toList();
