@@ -21,19 +21,19 @@ public class Verse {
     private Integer verse;
     @ApiModelProperty(name = "Text", position = 3, example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", notes = "Verse value")
     private String text;
-    @ApiModelProperty(name = "Translation", position = 4, example = "\"translation\": {\n" +
-        "                \"bn\": \"শুরু করছি আল্লাহর নামে যিনি পরম করুণাময়, অতি দয়ালু।\",\n" +
-        "                \"en\": \"In the name of Allah, the Entirely Merciful, the Especially Merciful\",\n" +
-        "                \"es\": \"En el nombre de Dios, el Compasivo con toda la creación, el Misericordioso con los creyentes\",\n" +
-        "                \"fr\": \"Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux\",\n" +
-        "                \"id\": \"Dengan nama Allah Yang Maha Pengasih, Maha Penyayang\",\n" +
-        "                \"ru\": \"Во имя Аллаха, Милостивого, Милосердного\",\n" +
-        "                \"sv\": \"I GUDS, DEN NÅDERIKES, DEN BARMHÄRTIGES NAMN\",\n" +
-        "                \"tr\": \"Rahman ve Rahim olan Allah'ın adıyla\",\n" +
-        "                \"ur\": \"اللہ کے نام سے جو رحمان و رحیم ہے\",\n" +
-        "                \"uz\": \"Меҳрибон ва раҳмли Аллоҳнинг номи билан бошлайман. (Аллоҳ таоло ўз китобини \\\"бисмиллаҳ\\\" билан бошлагани мусулмонларга ҳам ўрнак, улар ҳам доим ўз сўзларини ва ишларини \\\"бисмиллаҳ\\\" билан бошламоқлари лозим. Пайғамбар алайҳиссалом ҳадисларидан бирида: \\\"Эътиборли ҳар бир иш \\\"бисмиллаҳ\\\" билан бошланмас экан, унинг охири кесикдир\\\", деганлар. Яъни, баракаси бўлмайди, охирига етмайди.)\",\n" +
-        "                \"zh\": \"奉至仁至慈的安拉之名\"\n" +
-        "            }", notes = "1")
+    @ApiModelProperty(name = "Translation", position = 4, example = "{" +
+        " \"bn\": \"শুরু করছি আল্লাহর নামে যিনি পরম করুণাময়, অতি দয়ালু।\"," +
+        " \"en\": \"In the name of Allah, the Entirely Merciful, the Especially Merciful\"," +
+        " \"es\": \"En el nombre de Dios, el Compasivo con toda la creación, el Misericordioso con los creyentes\"," +
+        " \"fr\": \"Au nom d'Allah, le Tout Miséricordieux, le Très Miséricordieux\"," +
+        " \"id\": \"Dengan nama Allah Yang Maha Pengasih, Maha Penyayang\"," +
+        " \"ru\": \"Во имя Аллаха, Милостивого, Милосердного\"," +
+        " \"sv\": \"I GUDS, DEN NÅDERIKES, DEN BARMHÄRTIGES NAMN\"," +
+        " \"tr\": \"Rahman ve Rahim olan Allah'ın adıyla\"," +
+        " \"ur\": \"اللہ کے نام سے جو رحمان و رحیم ہے\"," +
+        " \"uz\": \"Меҳрибон ва раҳмли Аллоҳнинг номи билан бошлайман. (Аллоҳ таоло ўз китобини 'бисмиллаҳ' билан бошлагани мусулмонларга ҳам ўрнак, улар ҳам доим ўз сўзларини ва ишларини 'бисмиллаҳ' билан бошламоқлари лозим. Пайғамбар алайҳиссалом ҳадисларидан бирида: 'Эътиборли ҳар бир иш 'бисмиллаҳ' билан бошланмас экан, унинг охири кесикдир', деганлар. Яъни, баракаси бўлмайди, охирига етмайди.)\"," +
+        " \"zh\": \"奉至仁至慈的安拉之名\"" +
+        " }", notes = "you can take language")
     private Object translation;
 
     public Verse(HashMap<String, Object> map, Language language) {

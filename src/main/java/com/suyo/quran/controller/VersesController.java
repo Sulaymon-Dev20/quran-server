@@ -2,13 +2,16 @@ package com.suyo.quran.controller;
 
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Response;
+import com.suyo.quran.models.verses.Verse;
 import com.suyo.quran.service.VersesService;
 import io.swagger.annotations.*;
+import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/verses")
@@ -22,16 +25,16 @@ public class VersesController {
         this.versesService = service;
     }
 
-    @GetMapping
-    @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation(value = "View a list of available products", responseContainer = "application/json", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
-    public Object getAllChapter(@RequestParam(defaultValue = "DEFAULT") Language language) {
+    public List<List<Verse>> getAllChapter(@RequestParam(defaultValue = "DEFAULT") Language language) {
         return versesService.getAllChapter(language);
     }
 
-    @GetMapping("/{number}")
+    @GetMapping(value = "/{number}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
