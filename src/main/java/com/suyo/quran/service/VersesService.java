@@ -23,4 +23,8 @@ public class VersesService {
     public List<List<Verse>> getAllChapter(Language language) {
         return versesList.toList().stream().map(chapter -> ((List<HashMap<String, Object>>) chapter).stream().map(verse -> new Verse(verse, language)).toList()).toList();
     }
+
+    public List<Verse> getChapter(Language language, Integer chapterNumber) {
+        return getAllChapter(language).get(chapterNumber - 1);
+    }
 }

@@ -39,7 +39,7 @@ public class VersesController {
     @ApiResponses(value = {
         @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
-    public Response getChapter(
+    public List<Verse> getChapter(
         @ApiParam(value = "the user to create", defaultValue = "DEFAULT")
         @RequestParam(defaultValue = "DEFAULT")
         Language language,
@@ -48,7 +48,6 @@ public class VersesController {
         @Max(value = 114, message = "max Chapter number is 114")
         @PathVariable("number")
         Integer chapterNumber) {
-//        return versesService.getChapterByLanguage(language, chapterNumber);
-        return null;
+        return versesService.getChapter(language, chapterNumber);
     }
 }
