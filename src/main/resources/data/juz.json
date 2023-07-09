@@ -4,7 +4,6 @@
     "chapters": [
       {
         "index": 1,
-        "pageNumber": 1,
         "verse": {
           "start": 1,
           "end": 7
@@ -27,7 +26,6 @@
       },
       {
         "index": 2,
-        "pageNumber": 2,
         "verse": {
           "start": 1,
           "end": 141
@@ -55,7 +53,6 @@
     "chapters": [
       {
         "index": 2,
-        "pageNumber": 2,
         "verse": {
           "start": 142,
           "end": 252
@@ -83,7 +80,6 @@
     "chapters": [
       {
         "index": 2,
-        "pageNumber": 2,
         "verse": {
           "start": 253,
           "end": 286
@@ -106,7 +102,6 @@
       },
       {
         "index": 3,
-        "pageNumber": 45,
         "verse": {
           "start": 1,
           "end": 92
@@ -134,7 +129,6 @@
     "chapters": [
       {
         "index": 3,
-        "pageNumber": 45,
         "verse": {
           "start": 93,
           "end": 200
@@ -157,7 +151,6 @@
       },
       {
         "index": 4,
-        "pageNumber": 69,
         "verse": {
           "start": 1,
           "end": 23
@@ -185,7 +178,6 @@
     "chapters": [
       {
         "index": 4,
-        "pageNumber": 69,
         "verse": {
           "start": 24,
           "end": 147
@@ -213,7 +205,6 @@
     "chapters": [
       {
         "index": 4,
-        "pageNumber": 69,
         "verse": {
           "start": 148,
           "end": 176
@@ -236,7 +227,6 @@
       },
       {
         "index": 5,
-        "pageNumber": 95,
         "verse": {
           "start": 1,
           "end": 81
@@ -264,7 +254,6 @@
     "chapters": [
       {
         "index": 5,
-        "pageNumber": 95,
         "verse": {
           "start": 82,
           "end": 120
@@ -287,7 +276,6 @@
       },
       {
         "index": 6,
-        "pageNumber": 115,
         "verse": {
           "start": 1,
           "end": 110
@@ -315,7 +303,6 @@
     "chapters": [
       {
         "index": 6,
-        "pageNumber": 115,
         "verse": {
           "start": 111,
           "end": 165
@@ -338,7 +325,6 @@
       },
       {
         "index": 7,
-        "pageNumber": 136,
         "verse": {
           "start": 1,
           "end": 87
@@ -366,7 +352,6 @@
     "chapters": [
       {
         "index": 7,
-        "pageNumber": 136,
         "verse": {
           "start": 88,
           "end": 206
@@ -389,7 +374,6 @@
       },
       {
         "index": 8,
-        "pageNumber": 160,
         "verse": {
           "start": 1,
           "end": 40
@@ -417,7 +401,6 @@
     "chapters": [
       {
         "index": 8,
-        "pageNumber": 160,
         "verse": {
           "start": 41,
           "end": 75
@@ -440,7 +423,6 @@
       },
       {
         "index": 9,
-        "pageNumber": 169,
         "verse": {
           "start": 1,
           "end": 92
@@ -468,7 +450,6 @@
     "chapters": [
       {
         "index": 9,
-        "pageNumber": 169,
         "verse": {
           "start": 93,
           "end": 129
@@ -491,7 +472,6 @@
       },
       {
         "index": 10,
-        "pageNumber": 187,
         "verse": {
           "start": 1,
           "end": 109
@@ -514,7 +494,6 @@
       },
       {
         "index": 11,
-        "pageNumber": 199,
         "verse": {
           "start": 1,
           "end": 5
@@ -542,7 +521,6 @@
     "chapters": [
       {
         "index": 11,
-        "pageNumber": 199,
         "verse": {
           "start": 6,
           "end": 123
@@ -565,7 +543,6 @@
       },
       {
         "index": 12,
-        "pageNumber": 212,
         "verse": {
           "start": 1,
           "end": 52
@@ -593,7 +570,6 @@
     "chapters": [
       {
         "index": 12,
-        "pageNumber": 212,
         "verse": {
           "start": 53,
           "end": 111
@@ -616,7 +592,6 @@
       },
       {
         "index": 13,
-        "pageNumber": 225,
         "verse": {
           "start": 1,
           "end": 43
@@ -639,7 +614,6 @@
       },
       {
         "index": 14,
-        "pageNumber": 231,
         "verse": {
           "start": 1,
           "end": 52
@@ -667,7 +641,6 @@
     "chapters": [
       {
         "index": 15,
-        "pageNumber": 237,
         "verse": {
           "start": 1,
           "end": 99
@@ -690,7 +663,6 @@
       },
       {
         "index": 16,
-        "pageNumber": 242,
         "verse": {
           "start": 1,
           "end": 128
@@ -718,7 +690,6 @@
     "chapters": [
       {
         "index": 17,
-        "pageNumber": 255,
         "verse": {
           "start": 1,
           "end": 111
@@ -741,7 +712,6 @@
       },
       {
         "index": 18,
-        "pageNumber": 266,
         "verse": {
           "start": 1,
           "end": 74
@@ -769,7 +739,6 @@
     "chapters": [
       {
         "index": 18,
-        "pageNumber": 266,
         "verse": {
           "start": 75,
           "end": 110
@@ -792,7 +761,6 @@
       },
       {
         "index": 19,
-        "pageNumber": 277,
         "verse": {
           "start": 1,
           "end": 98
@@ -815,7 +783,6 @@
       },
       {
         "index": 20,
-        "pageNumber": 284,
         "verse": {
           "start": 1,
           "end": 135
@@ -843,7 +810,6 @@
     "chapters": [
       {
         "index": 21,
-        "pageNumber": 294,
         "verse": {
           "start": 1,
           "end": 112
@@ -866,7 +832,6 @@
       },
       {
         "index": 22,
-        "pageNumber": 302,
         "verse": {
           "start": 1,
           "end": 78
@@ -894,7 +859,6 @@
     "chapters": [
       {
         "index": 23,
-        "pageNumber": 311,
         "verse": {
           "start": 1,
           "end": 118
@@ -917,7 +881,6 @@
       },
       {
         "index": 24,
-        "pageNumber": 319,
         "verse": {
           "start": 1,
           "end": 64
@@ -940,7 +903,6 @@
       },
       {
         "index": 25,
-        "pageNumber": 329,
         "verse": {
           "start": 1,
           "end": 20
@@ -968,7 +930,6 @@
     "chapters": [
       {
         "index": 25,
-        "pageNumber": 329,
         "verse": {
           "start": 21,
           "end": 77
@@ -991,7 +952,6 @@
       },
       {
         "index": 26,
-        "pageNumber": 335,
         "verse": {
           "start": 1,
           "end": 227
@@ -1014,7 +974,6 @@
       },
       {
         "index": 27,
-        "pageNumber": 345,
         "verse": {
           "start": 1,
           "end": 55
@@ -1042,7 +1001,6 @@
     "chapters": [
       {
         "index": 27,
-        "pageNumber": 345,
         "verse": {
           "start": 56,
           "end": 93
@@ -1065,7 +1023,6 @@
       },
       {
         "index": 28,
-        "pageNumber": 354,
         "verse": {
           "start": 1,
           "end": 88
@@ -1088,7 +1045,6 @@
       },
       {
         "index": 29,
-        "pageNumber": 364,
         "verse": {
           "start": 1,
           "end": 45
@@ -1116,7 +1072,6 @@
     "chapters": [
       {
         "index": 29,
-        "pageNumber": 364,
         "verse": {
           "start": 46,
           "end": 69
@@ -1139,7 +1094,6 @@
       },
       {
         "index": 30,
-        "pageNumber": 371,
         "verse": {
           "start": 1,
           "end": 60
@@ -1162,7 +1116,6 @@
       },
       {
         "index": 31,
-        "pageNumber": 377,
         "verse": {
           "start": 1,
           "end": 34
@@ -1185,7 +1138,6 @@
       },
       {
         "index": 32,
-        "pageNumber": 381,
         "verse": {
           "start": 1,
           "end": 30
@@ -1208,7 +1160,6 @@
       },
       {
         "index": 33,
-        "pageNumber": 383,
         "verse": {
           "start": 1,
           "end": 30
@@ -1236,7 +1187,6 @@
     "chapters": [
       {
         "index": 33,
-        "pageNumber": 383,
         "verse": {
           "start": 31,
           "end": 73
@@ -1259,7 +1209,6 @@
       },
       {
         "index": 34,
-        "pageNumber": 393,
         "verse": {
           "start": 1,
           "end": 54
@@ -1282,7 +1231,6 @@
       },
       {
         "index": 35,
-        "pageNumber": 399,
         "verse": {
           "start": 1,
           "end": 45
@@ -1305,7 +1253,6 @@
       },
       {
         "index": 36,
-        "pageNumber": 404,
         "verse": {
           "start": 1,
           "end": 27
@@ -1333,7 +1280,6 @@
     "chapters": [
       {
         "index": 36,
-        "pageNumber": 404,
         "verse": {
           "start": 28,
           "end": 83
@@ -1356,7 +1302,6 @@
       },
       {
         "index": 37,
-        "pageNumber": 410,
         "verse": {
           "start": 1,
           "end": 182
@@ -1379,7 +1324,6 @@
       },
       {
         "index": 38,
-        "pageNumber": 417,
         "verse": {
           "start": 1,
           "end": 88
@@ -1402,7 +1346,6 @@
       },
       {
         "index": 39,
-        "pageNumber": 422,
         "verse": {
           "start": 1,
           "end": 31
@@ -1430,7 +1373,6 @@
     "chapters": [
       {
         "index": 39,
-        "pageNumber": 422,
         "verse": {
           "start": 32,
           "end": 75
@@ -1453,7 +1395,6 @@
       },
       {
         "index": 40,
-        "pageNumber": 431,
         "verse": {
           "start": 1,
           "end": 85
@@ -1476,7 +1417,6 @@
       },
       {
         "index": 41,
-        "pageNumber": 439,
         "verse": {
           "start": 1,
           "end": 46
@@ -1504,7 +1444,6 @@
     "chapters": [
       {
         "index": 41,
-        "pageNumber": 439,
         "verse": {
           "start": 47,
           "end": 54
@@ -1527,7 +1466,6 @@
       },
       {
         "index": 42,
-        "pageNumber": 445,
         "verse": {
           "start": 1,
           "end": 53
@@ -1550,7 +1488,6 @@
       },
       {
         "index": 43,
-        "pageNumber": 451,
         "verse": {
           "start": 1,
           "end": 89
@@ -1573,7 +1510,6 @@
       },
       {
         "index": 44,
-        "pageNumber": 457,
         "verse": {
           "start": 1,
           "end": 59
@@ -1596,7 +1532,6 @@
       },
       {
         "index": 45,
-        "pageNumber": 460,
         "verse": {
           "start": 1,
           "end": 37
@@ -1624,7 +1559,6 @@
     "chapters": [
       {
         "index": 46,
-        "pageNumber": 464,
         "verse": {
           "start": 1,
           "end": 35
@@ -1647,7 +1581,6 @@
       },
       {
         "index": 47,
-        "pageNumber": 468,
         "verse": {
           "start": 1,
           "end": 38
@@ -1670,7 +1603,6 @@
       },
       {
         "index": 48,
-        "pageNumber": 472,
         "verse": {
           "start": 1,
           "end": 29
@@ -1693,7 +1625,6 @@
       },
       {
         "index": 49,
-        "pageNumber": 477,
         "verse": {
           "start": 1,
           "end": 18
@@ -1716,7 +1647,6 @@
       },
       {
         "index": 50,
-        "pageNumber": 479,
         "verse": {
           "start": 1,
           "end": 45
@@ -1739,7 +1669,6 @@
       },
       {
         "index": 51,
-        "pageNumber": 482,
         "verse": {
           "start": 1,
           "end": 30
@@ -1767,7 +1696,6 @@
     "chapters": [
       {
         "index": 51,
-        "pageNumber": 482,
         "verse": {
           "start": 31,
           "end": 60
@@ -1790,7 +1718,6 @@
       },
       {
         "index": 52,
-        "pageNumber": 485,
         "verse": {
           "start": 1,
           "end": 49
@@ -1813,7 +1740,6 @@
       },
       {
         "index": 53,
-        "pageNumber": 487,
         "verse": {
           "start": 1,
           "end": 62
@@ -1836,7 +1762,6 @@
       },
       {
         "index": 54,
-        "pageNumber": 490,
         "verse": {
           "start": 1,
           "end": 55
@@ -1859,7 +1784,6 @@
       },
       {
         "index": 55,
-        "pageNumber": 493,
         "verse": {
           "start": 1,
           "end": 78
@@ -1882,7 +1806,6 @@
       },
       {
         "index": 56,
-        "pageNumber": 496,
         "verse": {
           "start": 1,
           "end": 96
@@ -1905,7 +1828,6 @@
       },
       {
         "index": 57,
-        "pageNumber": 499,
         "verse": {
           "start": 1,
           "end": 29
@@ -1933,7 +1855,6 @@
     "chapters": [
       {
         "index": 58,
-        "pageNumber": 504,
         "verse": {
           "start": 1,
           "end": 22
@@ -1956,7 +1877,6 @@
       },
       {
         "index": 59,
-        "pageNumber": 507,
         "verse": {
           "start": 1,
           "end": 24
@@ -1979,7 +1899,6 @@
       },
       {
         "index": 60,
-        "pageNumber": 510,
         "verse": {
           "start": 1,
           "end": 13
@@ -2002,7 +1921,6 @@
       },
       {
         "index": 61,
-        "pageNumber": 513,
         "verse": {
           "start": 1,
           "end": 14
@@ -2025,7 +1943,6 @@
       },
       {
         "index": 62,
-        "pageNumber": 515,
         "verse": {
           "start": 1,
           "end": 11
@@ -2048,7 +1965,6 @@
       },
       {
         "index": 63,
-        "pageNumber": 516,
         "verse": {
           "start": 1,
           "end": 11
@@ -2071,7 +1987,6 @@
       },
       {
         "index": 64,
-        "pageNumber": 518,
         "verse": {
           "start": 1,
           "end": 18
@@ -2094,7 +2009,6 @@
       },
       {
         "index": 65,
-        "pageNumber": 520,
         "verse": {
           "start": 1,
           "end": 12
@@ -2117,7 +2031,6 @@
       },
       {
         "index": 66,
-        "pageNumber": 522,
         "verse": {
           "start": 1,
           "end": 12
@@ -2145,7 +2058,6 @@
     "chapters": [
       {
         "index": 67,
-        "pageNumber": 524,
         "verse": {
           "start": 1,
           "end": 30
@@ -2168,7 +2080,6 @@
       },
       {
         "index": 68,
-        "pageNumber": 526,
         "verse": {
           "start": 1,
           "end": 52
@@ -2191,7 +2102,6 @@
       },
       {
         "index": 69,
-        "pageNumber": 529,
         "verse": {
           "start": 1,
           "end": 52
@@ -2214,7 +2124,6 @@
       },
       {
         "index": 70,
-        "pageNumber": 531,
         "verse": {
           "start": 1,
           "end": 44
@@ -2237,7 +2146,6 @@
       },
       {
         "index": 71,
-        "pageNumber": 533,
         "verse": {
           "start": 1,
           "end": 28
@@ -2260,7 +2168,6 @@
       },
       {
         "index": 72,
-        "pageNumber": 534,
         "verse": {
           "start": 1,
           "end": 28
@@ -2283,7 +2190,6 @@
       },
       {
         "index": 73,
-        "pageNumber": 537,
         "verse": {
           "start": 1,
           "end": 20
@@ -2306,7 +2212,6 @@
       },
       {
         "index": 74,
-        "pageNumber": 538,
         "verse": {
           "start": 1,
           "end": 56
@@ -2329,7 +2234,6 @@
       },
       {
         "index": 75,
-        "pageNumber": 540,
         "verse": {
           "start": 1,
           "end": 40
@@ -2352,7 +2256,6 @@
       },
       {
         "index": 76,
-        "pageNumber": 542,
         "verse": {
           "start": 1,
           "end": 31
@@ -2375,7 +2278,6 @@
       },
       {
         "index": 77,
-        "pageNumber": 544,
         "verse": {
           "start": 1,
           "end": 50
@@ -2403,7 +2305,6 @@
     "chapters": [
       {
         "index": 78,
-        "pageNumber": 545,
         "verse": {
           "start": 1,
           "end": 40
@@ -2426,7 +2327,6 @@
       },
       {
         "index": 79,
-        "pageNumber": 547,
         "verse": {
           "start": 1,
           "end": 46
@@ -2449,7 +2349,6 @@
       },
       {
         "index": 80,
-        "pageNumber": 548,
         "verse": {
           "start": 1,
           "end": 42
@@ -2472,7 +2371,6 @@
       },
       {
         "index": 81,
-        "pageNumber": 550,
         "verse": {
           "start": 1,
           "end": 29
@@ -2495,7 +2393,6 @@
       },
       {
         "index": 82,
-        "pageNumber": 551,
         "verse": {
           "start": 1,
           "end": 19
@@ -2518,7 +2415,6 @@
       },
       {
         "index": 83,
-        "pageNumber": 552,
         "verse": {
           "start": 1,
           "end": 36
@@ -2541,7 +2437,6 @@
       },
       {
         "index": 84,
-        "pageNumber": 553,
         "verse": {
           "start": 1,
           "end": 25
@@ -2564,7 +2459,6 @@
       },
       {
         "index": 85,
-        "pageNumber": 554,
         "verse": {
           "start": 1,
           "end": 22
@@ -2587,7 +2481,6 @@
       },
       {
         "index": 86,
-        "pageNumber": 555,
         "verse": {
           "start": 1,
           "end": 17
@@ -2610,7 +2503,6 @@
       },
       {
         "index": 87,
-        "pageNumber": 556,
         "verse": {
           "start": 1,
           "end": 19
@@ -2633,7 +2525,6 @@
       },
       {
         "index": 88,
-        "pageNumber": 556,
         "verse": {
           "start": 1,
           "end": 26
@@ -2656,7 +2547,6 @@
       },
       {
         "index": 89,
-        "pageNumber": 557,
         "verse": {
           "start": 1,
           "end": 30
@@ -2679,7 +2569,6 @@
       },
       {
         "index": 90,
-        "pageNumber": 559,
         "verse": {
           "start": 1,
           "end": 20
@@ -2702,7 +2591,6 @@
       },
       {
         "index": 91,
-        "pageNumber": 559,
         "verse": {
           "start": 1,
           "end": 15
@@ -2725,7 +2613,6 @@
       },
       {
         "index": 92,
-        "pageNumber": 560,
         "verse": {
           "start": 1,
           "end": 21
@@ -2748,7 +2635,6 @@
       },
       {
         "index": 93,
-        "pageNumber": 561,
         "verse": {
           "start": 1,
           "end": 11
@@ -2771,7 +2657,6 @@
       },
       {
         "index": 94,
-        "pageNumber": 561,
         "verse": {
           "start": 1,
           "end": 8
@@ -2794,7 +2679,6 @@
       },
       {
         "index": 95,
-        "pageNumber": 562,
         "verse": {
           "start": 1,
           "end": 8
@@ -2817,7 +2701,6 @@
       },
       {
         "index": 96,
-        "pageNumber": 562,
         "verse": {
           "start": 1,
           "end": 19
@@ -2840,7 +2723,6 @@
       },
       {
         "index": 97,
-        "pageNumber": 563,
         "verse": {
           "start": 1,
           "end": 5
@@ -2863,7 +2745,6 @@
       },
       {
         "index": 98,
-        "pageNumber": 563,
         "verse": {
           "start": 1,
           "end": 8
@@ -2886,7 +2767,6 @@
       },
       {
         "index": 99,
-        "pageNumber": 564,
         "verse": {
           "start": 1,
           "end": 8
@@ -2909,7 +2789,6 @@
       },
       {
         "index": 100,
-        "pageNumber": 564,
         "verse": {
           "start": 1,
           "end": 11
@@ -2932,7 +2811,6 @@
       },
       {
         "index": 101,
-        "pageNumber": 565,
         "verse": {
           "start": 1,
           "end": 11
@@ -2955,7 +2833,6 @@
       },
       {
         "index": 102,
-        "pageNumber": 565,
         "verse": {
           "start": 1,
           "end": 8
@@ -2978,7 +2855,6 @@
       },
       {
         "index": 103,
-        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 3
@@ -3001,7 +2877,6 @@
       },
       {
         "index": 104,
-        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 9
@@ -3024,7 +2899,6 @@
       },
       {
         "index": 105,
-        "pageNumber": 566,
         "verse": {
           "start": 1,
           "end": 5
@@ -3047,7 +2921,6 @@
       },
       {
         "index": 106,
-        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 4
@@ -3070,7 +2943,6 @@
       },
       {
         "index": 107,
-        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 7
@@ -3093,7 +2965,6 @@
       },
       {
         "index": 108,
-        "pageNumber": 567,
         "verse": {
           "start": 1,
           "end": 3
@@ -3116,7 +2987,6 @@
       },
       {
         "index": 109,
-        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 6
@@ -3139,7 +3009,6 @@
       },
       {
         "index": 110,
-        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 3
@@ -3162,7 +3031,6 @@
       },
       {
         "index": 111,
-        "pageNumber": 568,
         "verse": {
           "start": 1,
           "end": 5
@@ -3185,7 +3053,6 @@
       },
       {
         "index": 112,
-        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 4
@@ -3208,7 +3075,6 @@
       },
       {
         "index": 113,
-        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 5
@@ -3231,7 +3097,6 @@
       },
       {
         "index": 114,
-        "pageNumber": 569,
         "verse": {
           "start": 1,
           "end": 6

@@ -17,8 +17,6 @@ import java.util.HashMap;
 public class Chapter {
     @ApiModelProperty(name = "Chapter Number", position = 1, example = "1", notes = "1")
     private int index;
-    @ApiModelProperty(name = "Page Number", position = 2, example = "1", notes = "page number  1")
-    private int pageNumber;
     @ApiModelProperty(name = "Verse", position = 3, example = "1", notes = "verse")
     private JuzVerse verse;
     @ApiModelProperty(name = "type", position = 4, example = "makkiy", notes = "type only be makkiy or manakiy")
@@ -30,7 +28,6 @@ public class Chapter {
 
     public Chapter(HashMap<String, Object> map, Language language) {
         this.index = (int) map.get("index");
-        this.pageNumber = (int) map.get("pageNumber");
         this.verse = new JuzVerse((HashMap<String, Object>) map.get("verse"));
         this.type = (String) map.get("type");
         this.title = (String) map.get("title");
