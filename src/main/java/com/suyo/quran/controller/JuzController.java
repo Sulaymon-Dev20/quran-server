@@ -2,6 +2,7 @@ package com.suyo.quran.controller;
 
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Response;
+import com.suyo.quran.models.data.JuzModel;
 import com.suyo.quran.service.JuzService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/juz")
@@ -31,7 +34,7 @@ public class JuzController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
-    public Response getJuz(@RequestParam(defaultValue = "DEFAULT") Language language) {
+    public List<JuzModel> getJuz(@RequestParam(defaultValue = "DEFAULT") Language language) {
         return juzService.getJuz(language);
     }
 }

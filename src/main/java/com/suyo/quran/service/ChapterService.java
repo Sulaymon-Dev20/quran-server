@@ -5,6 +5,8 @@ import com.suyo.quran.models.Response;
 import com.suyo.quran.models.Status;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ChapterService {
 

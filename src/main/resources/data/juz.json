@@ -1,7 +1,6 @@
 [
   {
     "index": 1,
-    "page": 1,
     "chapters": [
       {
         "index": 1,
@@ -53,7 +52,6 @@
   },
   {
     "index": 2,
-    "page": 20,
     "chapters": [
       {
         "index": 2,
@@ -82,7 +80,6 @@
   },
   {
     "index": 3,
-    "page": 38,
     "chapters": [
       {
         "index": 2,
@@ -134,7 +131,6 @@
   },
   {
     "index": 4,
-    "page": 56,
     "chapters": [
       {
         "index": 3,
@@ -186,7 +182,6 @@
   },
   {
     "index": 5,
-    "page": 73,
     "chapters": [
       {
         "index": 4,
@@ -215,7 +210,6 @@
   },
   {
     "index": 6,
-    "page": 91,
     "chapters": [
       {
         "index": 4,
@@ -267,7 +261,6 @@
   },
   {
     "index": 7,
-    "page": 109,
     "chapters": [
       {
         "index": 5,
@@ -319,7 +312,6 @@
   },
   {
     "index": 8,
-    "page": 128,
     "chapters": [
       {
         "index": 6,
@@ -371,7 +363,6 @@
   },
   {
     "index": 9,
-    "page": 146,
     "chapters": [
       {
         "index": 7,
@@ -423,7 +414,6 @@
   },
   {
     "index": 10,
-    "page": 164,
     "chapters": [
       {
         "index": 8,
@@ -475,7 +465,6 @@
   },
   {
     "index": 11,
-    "page": 181,
     "chapters": [
       {
         "index": 9,
@@ -550,7 +539,6 @@
   },
   {
     "index": 12,
-    "page": 200,
     "chapters": [
       {
         "index": 11,
@@ -602,7 +590,6 @@
   },
   {
     "index": 13,
-    "page": 219,
     "chapters": [
       {
         "index": 12,
@@ -677,7 +664,6 @@
   },
   {
     "index": 14,
-    "page": 237,
     "chapters": [
       {
         "index": 15,
@@ -729,7 +715,6 @@
   },
   {
     "index": 15,
-    "page": 255,
     "chapters": [
       {
         "index": 17,
@@ -781,7 +766,6 @@
   },
   {
     "index": 16,
-    "page": 274,
     "chapters": [
       {
         "index": 18,
@@ -856,7 +840,6 @@
   },
   {
     "index": 17,
-    "page": 294,
     "chapters": [
       {
         "index": 21,
@@ -908,7 +891,6 @@
   },
   {
     "index": 18,
-    "page": 311,
     "chapters": [
       {
         "index": 23,
@@ -983,7 +965,6 @@
   },
   {
     "index": 19,
-    "page": 331,
     "chapters": [
       {
         "index": 25,
@@ -1058,7 +1039,6 @@
   },
   {
     "index": 20,
-    "page": 350,
     "chapters": [
       {
         "index": 27,
@@ -1133,7 +1113,6 @@
   },
   {
     "index": 21,
-    "page": 368,
     "chapters": [
       {
         "index": 29,
@@ -1254,7 +1233,6 @@
   },
   {
     "index": 22,
-    "page": 387,
     "chapters": [
       {
         "index": 33,
@@ -1352,7 +1330,6 @@
   },
   {
     "index": 23,
-    "page": 406,
     "chapters": [
       {
         "index": 36,
@@ -1450,7 +1427,6 @@
   },
   {
     "index": 24,
-    "page": 426,
     "chapters": [
       {
         "index": 39,
@@ -1525,7 +1501,6 @@
   },
   {
     "index": 25,
-    "page": 444,
     "chapters": [
       {
         "index": 41,
@@ -1646,7 +1621,6 @@
   },
   {
     "index": 26,
-    "page": 464,
     "chapters": [
       {
         "index": 46,
@@ -1790,7 +1764,6 @@
   },
   {
     "index": 27,
-    "page": 483,
     "chapters": [
       {
         "index": 51,
@@ -1957,7 +1930,6 @@
   },
   {
     "index": 28,
-    "page": 504,
     "chapters": [
       {
         "index": 58,
@@ -2170,7 +2142,6 @@
   },
   {
     "index": 29,
-    "page": 524,
     "chapters": [
       {
         "index": 67,
@@ -2429,7 +2400,6 @@
   },
   {
     "index": 30,
-    "page": 545,
     "chapters": [
       {
         "index": 78,
