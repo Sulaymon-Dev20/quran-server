@@ -10,9 +10,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
 
+import static com.suyo.quran.service.DataService.classloader;
+
 @Service
 public class JuzService {
-    final JSONArray juzList = new JSONArray(new String(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResourceAsStream("data/juz.json")).readAllBytes()));
+    final JSONArray juzList = new JSONArray(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/juz.json")).readAllBytes()));
 
     public JuzService() throws IOException {
     }

@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class JuzVerse {
     @ApiModelProperty(name = "start Chapter number", position = 1, example = "1", notes = "1")
     private int start;
-    @ApiModelProperty(name = "end chaoter number", position = 1, example = "7", notes = "1")
+    @ApiModelProperty(name = "end chaoter number", position = 2, example = "7", notes = "1")
     private int end;
 
     public JuzVerse(HashMap<String, Object> map) {

@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 @Service
 public class DataService {
-    ClassLoader classloader = Thread.currentThread().getContextClassLoader();
+    public static ClassLoader classloader = Thread.currentThread().getContextClassLoader();
     final JSONArray chapterList = new JSONArray(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/chapters.json")).readAllBytes()));
     final JSONObject chapter = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/quran.json")).readAllBytes()));
     final JSONObject chapterBN = new JSONObject(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/editions/bn.json")).readAllBytes()));

@@ -13,7 +13,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "Chapter Model", parent = JuzModel.class, description = "chapter asdf")
+@ApiModel(value = "Juz Chapter Model", parent = JuzModel.class, description = "chapter asdf")
 public class JuzChapter {
     @ApiModelProperty(name = "Chapter Number", position = 1, example = "1", notes = "1")
     private int index;
