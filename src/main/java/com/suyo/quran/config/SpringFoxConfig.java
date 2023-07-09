@@ -17,6 +17,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import java.io.InputStream;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @Configuration
 @Import({BeanValidatorPluginsConfiguration.class, SpringDataRestConfiguration.class})
@@ -33,15 +34,16 @@ public class SpringFoxConfig {
     @Bean
     public Docket apiIOS() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .groupName("FOR IOS PART")
-                .useDefaultResponseMessages(false)
-                .select()
+            .groupName("FOR IOS PART")
+            .useDefaultResponseMessages(false)
+            .produces(Set.of("application/json"))
+            .select()
 //                .apis(RequestHandlerSelectors.any())
-                .apis(RequestHandlerSelectors.basePackage("com.suyo.quran.controller"))
-                .paths(PathSelectors.any())
-                .build()
-                .ignoredParameterTypes(classes)
-                .apiInfo(apiInfo());
+            .apis(RequestHandlerSelectors.basePackage("com.suyo.quran.controller"))
+            .paths(PathSelectors.any())
+            .build()
+            .ignoredParameterTypes(classes)
+            .apiInfo(apiInfo());
     }
 
     @Bean
