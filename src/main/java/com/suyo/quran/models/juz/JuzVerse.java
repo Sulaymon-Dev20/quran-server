@@ -1,4 +1,4 @@
-package com.suyo.quran.models.data.JuzChapterModel;
+package com.suyo.quran.models.juz;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,7 +11,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "Juz Verse Model", parent = Chapter.class)
+@ApiModel(value = "Juz Verse Model", parent = JuzChapter.class)
 public class JuzVerse {
     @ApiModelProperty(name = "start Chapter number", position = 1, example = "1", notes = "1")
     private int start;

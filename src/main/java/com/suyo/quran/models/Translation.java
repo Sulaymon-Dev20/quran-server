@@ -1,7 +1,7 @@
-package com.suyo.quran.models.data.JuzChapterModel;
+package com.suyo.quran.models;
 
 import com.suyo.quran.models.Language;
-import com.suyo.quran.models.data.JuzModel;
+import com.suyo.quran.models.juz.JuzModel;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

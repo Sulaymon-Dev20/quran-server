@@ -1,14 +1,12 @@
 package com.suyo.quran.controller;
 
 import com.suyo.quran.models.Language;
-import com.suyo.quran.models.Response;
-import com.suyo.quran.models.data.JuzModel;
+import com.suyo.quran.models.juz.JuzModel;
 import com.suyo.quran.service.JuzService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
