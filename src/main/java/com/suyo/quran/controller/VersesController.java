@@ -25,26 +25,27 @@ public class VersesController {
     @GetMapping
     @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
+        @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
-    public Response getChapterSource(@RequestParam(defaultValue = "DEFAULT") Language language) {
-        return versesService.getChapterByLanguage(language);
+    public Object getAllChapter(@RequestParam(defaultValue = "DEFAULT") Language language) {
+        return versesService.getAllChapter(language);
     }
 
     @GetMapping("/{number}")
     @ApiOperation(value = "View a list of available products", notes = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
+        @ApiResponse(code = 200, message = "model ``` asdf asdf``` <br/> "),
     })
     public Response getChapter(
-            @ApiParam(value = "the user to create", defaultValue = "DEFAULT")
-            @RequestParam(defaultValue = "DEFAULT")
-            Language language,
-            @ApiParam(value = "the user to create", required = true)
-            @Min(value = 1, message = "min Chapter number is 1")
-            @Max(value = 114, message = "max Chapter number is 114")
-            @PathVariable("number")
-            Integer chapterNumber) {
-        return versesService.getChapterByLanguage(language, chapterNumber);
+        @ApiParam(value = "the user to create", defaultValue = "DEFAULT")
+        @RequestParam(defaultValue = "DEFAULT")
+        Language language,
+        @ApiParam(value = "the user to create", required = true)
+        @Min(value = 1, message = "min Chapter number is 1")
+        @Max(value = 114, message = "max Chapter number is 114")
+        @PathVariable("number")
+        Integer chapterNumber) {
+//        return versesService.getChapterByLanguage(language, chapterNumber);
+        return null;
     }
 }

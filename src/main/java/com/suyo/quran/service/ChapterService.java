@@ -16,10 +16,8 @@ import static com.suyo.quran.service.DataService.classloader;
 public class ChapterService {
 
     final JSONArray chapterList = new JSONArray(new String(Objects.requireNonNull(classloader.getResourceAsStream("data/chapters.json")).readAllBytes()));
-    final DataService dataService;
 
-    public ChapterService(DataService service) throws IOException {
-        this.dataService = service;
+    public ChapterService() throws IOException {
     }
 
     public List<Chapter> getChapterListByLanguage(Language language) {
