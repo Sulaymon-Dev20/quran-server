@@ -1,6 +1,5 @@
 package com.suyo.quran.service;
 
-import com.suyo.quran.models.MailData;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import org.springframework.beans.factory.annotation.Autowired;
