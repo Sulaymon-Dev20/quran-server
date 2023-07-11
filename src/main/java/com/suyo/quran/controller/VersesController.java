@@ -27,24 +27,22 @@ public class VersesController {
         this.versesService = service;
     }
 
-    @GetMapping
+    @GetMapping(produces = "application/json")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses({
-//            @ApiResponse(responseCode = "200", content = {@Content(schema = @Schema(implementation = Response.class), mediaType = "application/json")})
             @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
     public List<List<Verse>> getAllChapter(@RequestParam(defaultValue = "DEFAULT") Language language) {
         return versesService.getAllChapter(language);
     }
 
-    @GetMapping(value = "/{number}")
+    @GetMapping(value = "/{number}", produces = "application/json")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses({
-//            @ApiResponse(responseCode = "200", content = {@Content(schema = @Schema(implementation = Response.class), mediaType = "application/json")})
             @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
     public List<Verse> getChapter(
-            @Parameter(description = "the user to create", example = "DEFAULT")
+            @Parameter(name = "language", description = "the user to create", example = "DEFAULT")
             @RequestParam(defaultValue = "DEFAULT")
             Language language,
             @Parameter(description = "the user to create", required = true)
