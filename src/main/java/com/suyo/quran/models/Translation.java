@@ -1,8 +1,6 @@
 package com.suyo.quran.models;
 
-import com.suyo.quran.models.Language;
-import com.suyo.quran.models.juz.JuzModel;
-import io.swagger.annotations.ApiModel;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,7 +10,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "Translation Model", parent = JuzModel.class, description = "chapter asdf")
+@Schema(name = "Translation Model", description = "chapter asdf")
 public class Translation {
     private String ru;
     private String sv;

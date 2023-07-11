@@ -2,15 +2,14 @@ package com.suyo.quran.service;
 
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
-import javax.annotation.PostConstruct;
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -29,7 +28,7 @@ public class DataService {
         this.config = config;
     }
 
-    @PostConstruct
+    //    @PostConstruct
 //    public void sendMail(MailData mailData) {
     public void sendMail() {
         MimeMessage message = sender.createMimeMessage();

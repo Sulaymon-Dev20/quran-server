@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myEmojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😗", "🥰", "😘", "😍", "😎", "😊", "😋", "😉", "😙", "😚", "🙂", "🤗", "🤩", "🤔", "🤨", "😥", "😮", "😣", "😏", "🙄", "😶", "😑", "😐", "🤐", "😯", "😪", "😫", "😴", "🥱", "😌", "😛", "😜", "😝", "🤤", "😒", "😓", "😔", "🙃", "😕", "😬"]
+    let useAnimate = () => {
+        window.location.hash = myEmojis[Math.floor(Math.random() * myEmojis.length)];
+        setTimeout(useAnimate, 70);
+    }
+    useAnimate()
+</script>
+test
+</body>
+</html>
