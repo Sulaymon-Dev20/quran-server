@@ -1,11 +1,15 @@
 package com.suyo.quran.config;
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
+import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -37,17 +41,23 @@ public class SpringFoxConfig {
                 .group("FOR IOS PART 2")
                 .displayName("for authenticated USERS")
                 .pathsToMatch("/admin/**")
+                .packagesToScan("com.suyo.quran.controller")
+                .addOpenApiCustomizer(internalApiCustomizer())
                 .build();
     }
 
-    //    static SecurityContext securityContext() {
-//        return SecurityContext.builder().securityReferences(List.of(new SecurityReference("TOKEN SWAMP 💪", new AuthorizationScope[]{new AuthorizationScope("global", "accessEverything")}))).build();
-//    }
-//
-//    private ApiKey apiKey() {
-//        return new ApiKey("TOKEN SWAMP 💪", "Authentication", "header");
-//    }
-//
+
+    @Bean
+    public OpenApiCustomizer internalApiCustomizer() {
+        return openApi -> openApi
+                .addSecurityItem(new SecurityRequirement().addList("authorizations"))
+                .components(new Components()
+                        .addSecuritySchemes("TOKEN SWAMP 😐", new SecurityScheme()
+                                .type(SecurityScheme.Type.APIKEY)
+                                .in(SecurityScheme.In.HEADER)
+                                .name("TOKEN SWAMP")));
+    }
+
     @Bean
     public OpenAPI usersMicroserviceOpenAPI() {
         Server devServer = new Server();
@@ -66,7 +76,7 @@ public class SpringFoxConfig {
                                 .version(applicationVersion))
                 .externalDocs(new ExternalDocumentation()
                         .description("Source code Github")
-                        .url("https://springshop.wiki.github.org/docs"))
+                        .url("https://github.com/Sulaymon-Dev20/quran-online"))
                 .servers(List.of(devServer, prodServer));
     }
 }
