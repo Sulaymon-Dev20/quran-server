@@ -4,6 +4,7 @@ import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Translation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Schema(title = "Chapter", name = "Chapter Model", description = "get Chapter list api")
 public class Chapter {
     @Schema(name = "Chapter Index", example = "1", description = "Chapter ordinal number")

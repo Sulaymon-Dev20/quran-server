@@ -33,19 +33,29 @@ public class SpringFoxConfig {
     public GroupedOpenApi apiIOS() {
         return GroupedOpenApi.builder()
                 .group("FOR IOS PART")
-                .displayName("for REGULAR USERS")
+                .displayName("FOR IOS PART")
                 .pathsToMatch("/api/**")
+                .packagesToScan("com.suyo.quran.controller")
                 .build();
     }
 
     @Bean
-    public GroupedOpenApi adminApi() {
+    public GroupedOpenApi authApi() {
         return GroupedOpenApi.builder()
-                .group("FOR IOS PART 2")
-                .displayName("for authenticated USERS")
+                .group("Auth Controller")
+                .displayName("Auth Controller")
                 .pathsToMatch("/api/**")
-                .packagesToScan("com.suyo.quran.controller")
+                .packagesToScan("com.suyo.quran.security.auth")
                 .addOpenApiCustomizer(internalApiCustomizer())
+                .build();
+    }
+
+    @Bean
+    public GroupedOpenApi allApis() {
+        return GroupedOpenApi.builder()
+                .group("All APIs")
+                .displayName("All APIs")
+                .pathsToMatch("/api/**")
                 .build();
     }
 
