@@ -1,7 +1,7 @@
 package com.suyo.quran.security.config;
 
 
-import com.suyo.quran.security.repository.UserRepository;
+import com.suyo.quran.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

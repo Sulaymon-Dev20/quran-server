@@ -1,10 +1,10 @@
 package com.suyo.quran.security.security;
 
+import com.suyo.quran.entities.User;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
 import com.suyo.quran.security.models.RegisterRequest;
-import com.suyo.quran.security.repository.UserRepository;
-import com.suyo.quran.security.user.User;
+import com.suyo.quran.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

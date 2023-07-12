@@ -1,6 +1,6 @@
-package com.suyo.quran.security.repository;
+package com.suyo.quran.repository;
 
-import com.suyo.quran.security.user.User;
+import com.suyo.quran.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

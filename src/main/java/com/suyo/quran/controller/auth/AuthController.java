@@ -1,4 +1,4 @@
-package com.suyo.quran.security.controller;
+package com.suyo.quran.controller.auth;
 
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
