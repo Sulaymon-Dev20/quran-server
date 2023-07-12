@@ -16,22 +16,22 @@ import java.util.HashMap;
 @Builder
 @Schema(title = "Chapter", name = "Chapter Model", description = "get Chapter list api")
 public class Chapter {
-    @Schema(name = "Chapter Index", example = "1", description = "Chapter ordinal number")
+    @Schema(title = "Chapter Index", example = "1", description = "Chapter ordinal number")
     private Integer id;
 
-    @Schema(name = "Chapter Name", example = "الفاتحة", description = "Chapter name")
+    @Schema(title = "Chapter Name", example = "الفاتحة", description = "Chapter name")
     private String name;
 
-    @Schema(name = "Chapter Type", example = "Makkiyah", description = "Chapter Type")
+    @Schema(title = "Chapter Type", example = "Makkiyah", description = "Chapter Type")
     private String type;
 
-    @Schema(name = "Chapter Total Verses", example = "7", description = "Chapter total verses")
+    @Schema(title = "Chapter Total Verses", example = "7", description = "Chapter total verses")
     private Integer totalVerses;
 
-    @Schema(name = "Chapter pronunciation", example = "Al-Fatihah", description = "Chapter name transliteration pronunciation")
+    @Schema(title = "Chapter pronunciation", example = "Al-Fatihah", description = "Chapter name transliteration pronunciation")
     private String transliteration;
 
-    @Schema(name = "Translation", example = "{ \"ru\": \"Открывающая Коран\", \"sv\": \"Öppningen\", \"uz\": \"Fotiha\", \"en\": \"The Opener\", \"id\": \"Pembukaan\", \"fr\": \"L'ouverture\", \"bn\": \"সূচনা\", \"ur\": \"کھولنے والی\", \"tr\": \"Fâtiha\", \"es\": \"La Apertura\", \"zh\": \"开端章\"}", description = "Chapter Type")
+    @Schema(title = "Translation", example = "{ \"ru\": \"Открывающая Коран\", \"sv\": \"Öppningen\", \"uz\": \"Fotiha\", \"en\": \"The Opener\", \"id\": \"Pembukaan\", \"fr\": \"L'ouverture\", \"bn\": \"সূচনা\", \"ur\": \"کھولنے والی\", \"tr\": \"Fâtiha\", \"es\": \"La Apertura\", \"zh\": \"开端章\"}", description = "Chapter Type")
     private Object translation;
 
     public Chapter(HashMap<String, Object> map, Language language) {

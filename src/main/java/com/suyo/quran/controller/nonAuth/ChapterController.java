@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/chapter")
+@RequestMapping(value = "/api/source/chapter", produces = "application/json")
 @Validated
 @RequiredArgsConstructor
 @Tag(name = "Chapter Controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
@@ -26,12 +26,12 @@ public class ChapterController {
 
     private final ChapterService chapterService;
 
-    @GetMapping(produces = "application/json")
+    @GetMapping
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
-    public List<Chapter> getChapterList(@Parameter(name = "language", description = "the user to create", example = "DEFAULT") @RequestParam(defaultValue = "DEFAULT") Language language) {
+    public List<Chapter> getChapterList(@Parameter(description = "the user to create", example = "") @RequestParam(defaultValue = "DEFAULT") Language language) {
         return chapterService.getChapterListByLanguage(language);
     }
 }

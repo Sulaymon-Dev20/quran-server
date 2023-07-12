@@ -12,9 +12,9 @@ import java.util.HashMap;
 @NoArgsConstructor
 @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
 public class JuzVerse {
-    @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
+    @Schema(title = "Start Verse Number", example = "0", description = "juz model")
     private int start;
-    @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
+    @Schema(title = "End Verse Number", example = "7", description = "juz model")
     private int end;
 
     public JuzVerse(HashMap<String, Object> map) {

@@ -12,15 +12,15 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(title = " asdf sadfsadf2", name = "Verse Model", description = " 2 asdfVerse Model")
+@Schema(title = "Verse Model Verse Model", name = "Verse Model", description = " 2 asdfVerse Model")
 public class Verse {
-    @Schema(name = "Chapter Number", example = "1", description = "First Chapter")
+    @Schema(title = "Chapter Number", example = "1", description = "First Chapter")
     private Integer chapter;
-    @Schema(name = "Verse Number", example = "1", description = "Number of Verse")
+    @Schema(title = "Verse Number", example = "1", description = "Number of Verse")
     private Integer verse;
-    @Schema(name = "Text", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
+    @Schema(title = "Text", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String text;
-    @Schema(name = "Translation", example = "{" +
+    @Schema(title = "Translation", example = "{" +
             " \"bn\": \"শুরু করছি আল্লাহর নামে যিনি পরম করুণাময়, অতি দয়ালু।\"," +
             " \"en\": \"In the name of Allah, the Entirely Merciful, the Especially Merciful\"," +
             " \"es\": \"En el nombre de Dios, el Compasivo con toda la creación, el Misericordioso con los creyentes\"," +

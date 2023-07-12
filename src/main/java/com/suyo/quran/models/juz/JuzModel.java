@@ -14,9 +14,9 @@ import java.util.List;
 @NoArgsConstructor
 @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
 public class JuzModel {
-    @Schema(name = "Index", example = "1", description = "Juz number")
+    @Schema(title = "Index", example = "1", description = "Juz number")
     private int index;
-    @Schema(name = "Chapter List", description = "Chapter all info without hole verse")
+    @Schema(title = "Chapter List", description = "Chapter all info without hole verse")
     private List<JuzChapter> chapters;
 
     public JuzModel(HashMap<String, Object> map, Language language) {
