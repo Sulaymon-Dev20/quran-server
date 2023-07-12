@@ -1,5 +1,6 @@
 package com.suyo.quran.models.juz;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,11 +10,11 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@ApiModel(value = "Juz Verse Model", parent = JuzChapter.class)
+@Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
 public class JuzVerse {
-    //    @ApiModelProperty(name = "start Chapter number", position = 1, example = "1", notes = "1")
+    @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
     private int start;
-    //    @ApiModelProperty(name = "end chaoter number", position = 2, example = "7", notes = "1")
+    @Schema(title = "Juz Model", name = "Juz Model 2", description = "juz model ")
     private int end;
 
     public JuzVerse(HashMap<String, Object> map) {

@@ -2,6 +2,7 @@ package com.suyo.quran.models.juz;
 
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Translation;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,17 +12,17 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@ApiModel(value = "Juz Chapter Model", parent = JuzModel.class, description = "chapter asdf")
+@Schema(title = "Juz Chapter Model", name = "Chapter Juz Model", description = "chapter asdf")
 public class JuzChapter {
-    //    @ApiModelProperty(name = "Chapter Number", position = 1, example = "1", notes = "1")
+    @Schema(name = "Chapter Number", example = "1", description = "First Chapter")
     private int index;
-    //    @ApiModelProperty(name = "type", position = 2, example = "makkiy", notes = "type only be makkiy or manakiy")
+    @Schema(name = "Chapter type", example = "makkiy", description = "type only be makkiy or manakiy")
     private String type;
-    //    @ApiModelProperty(name = "Surah name", position = 3, example = "Al-Fatiha", notes = "Al-Fatiha")
+    @Schema(name = "Chapter name", example = "الفاتحة", description = "chat chapter name only arabic")
     private String title;
-    //    @ApiModelProperty(name = "Translation", position = 4, example = "1", notes = "asdffjskajfk")
+    @Schema(name = "Chapter Translation name", example = "{ \"ru\": \"Открывающая Коран\", \"sv\": \"Öppningen\", \"uz\": \"Fotiha\", \"en\": \"The Opener\", \"id\": \"Pembukaan\", \"fr\": \"L'ouverture\", \"bn\": \"সূচনা\", \"ur\": \"کھولنے والی\", \"tr\": \"Fâtiha\", \"es\": \"La Apertura\", \"zh\": \"开端章\"}", description = "Chapter translation all language")
     private Object translation;
-    //    @ApiModelProperty(name = "Verse", position = 5, example = "1", notes = "verse")
+    @Schema(name = "Chapter Verse", example = "{\"start\": 1,\"end\": 7}", description = "verse")
     private JuzVerse verse;
 
     public JuzChapter(HashMap<String, Object> map, Language language) {

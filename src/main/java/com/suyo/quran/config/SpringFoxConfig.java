@@ -17,6 +17,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
+import static io.swagger.v3.oas.models.security.SecurityScheme.In.HEADER;
+import static io.swagger.v3.oas.models.security.SecurityScheme.Type.HTTP;
+
 @Configuration
 public class SpringFoxConfig {
 
@@ -40,7 +43,7 @@ public class SpringFoxConfig {
         return GroupedOpenApi.builder()
                 .group("FOR IOS PART 2")
                 .displayName("for authenticated USERS")
-                .pathsToMatch("/admin/**")
+                .pathsToMatch("/api/**")
                 .packagesToScan("com.suyo.quran.controller")
                 .addOpenApiCustomizer(internalApiCustomizer())
                 .build();
@@ -50,12 +53,10 @@ public class SpringFoxConfig {
     @Bean
     public OpenApiCustomizer internalApiCustomizer() {
         return openApi -> openApi
-                .addSecurityItem(new SecurityRequirement().addList("authorizations"))
+                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"))
                 .components(new Components()
-                        .addSecuritySchemes("TOKEN SWAMP 😐", new SecurityScheme()
-                                .type(SecurityScheme.Type.APIKEY)
-                                .in(SecurityScheme.In.HEADER)
-                                .name("TOKEN SWAMP")));
+                        .addSecuritySchemes("TOKEN SWAMP 😐",
+                                new SecurityScheme().scheme("bearer").name("bearerAuth").description("JWT auth description").type(HTTP).bearerFormat("JWT").in(HEADER)));
     }
 
     @Bean

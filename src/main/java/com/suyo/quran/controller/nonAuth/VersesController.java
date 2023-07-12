@@ -1,4 +1,4 @@
-package com.suyo.quran.controller;
+package com.suyo.quran.controller.nonAuth;
 
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.verses.Verse;
@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,14 +19,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/verses")
 @Validated
+@RequiredArgsConstructor
 @Tag(name = "Verses Controller 2", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
 public class VersesController {
 
-    final VersesService versesService;
-
-    public VersesController(VersesService service) {
-        this.versesService = service;
-    }
+    private final VersesService versesService;
 
     @GetMapping(produces = "application/json")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")

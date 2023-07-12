@@ -2,6 +2,7 @@ package com.suyo.quran.models.chapter;
 
 import com.suyo.quran.models.Language;
 import com.suyo.quran.models.Translation;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,24 +12,24 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@ApiModel("Chapter Model")
+@Schema(title = "Chapter", name = "Chapter Model", description = "get Chapter list api")
 public class Chapter {
-    //    @ApiModelProperty(name = "Index", position = 1, example = "1", notes = "ordinal number")
+    @Schema(name = "Chapter Index", example = "1", description = "Chapter ordinal number")
     private Integer id;
 
-    //    @ApiModelProperty(name = "Name", position = 2, example = "الفاتحة", notes = "chapter name")
+    @Schema(name = "Chapter Name", example = "الفاتحة", description = "Chapter name")
     private String name;
 
-    //    @ApiModelProperty(name = "Type", position = 3, example = "manadiya", notes = "Chapter type")
+    @Schema(name = "Chapter Type", example = "Makkiyah", description = "Chapter Type")
     private String type;
 
-    //    @ApiModelProperty(name = "Total Verses Number", position = 4, example = "7", notes = "Chapter total verses")
+    @Schema(name = "Chapter Total Verses", example = "7", description = "Chapter total verses")
     private Integer totalVerses;
 
-    //    @ApiModelProperty(name = "transliteration pronunciation", position = 5, example = "Al-Fatihah", notes = "Transliteration")
+    @Schema(name = "Chapter pronunciation", example = "Al-Fatihah", description = "Chapter name transliteration pronunciation")
     private String transliteration;
 
-    //    @ApiModelProperty(name = "Translation", position = 6, example = "Fotiha", notes = "you should to select language")
+    @Schema(name = "Translation", example = "{ \"ru\": \"Открывающая Коран\", \"sv\": \"Öppningen\", \"uz\": \"Fotiha\", \"en\": \"The Opener\", \"id\": \"Pembukaan\", \"fr\": \"L'ouverture\", \"bn\": \"সূচনা\", \"ur\": \"کھولنے والی\", \"tr\": \"Fâtiha\", \"es\": \"La Apertura\", \"zh\": \"开端章\"}", description = "Chapter Type")
     private Object translation;
 
     public Chapter(HashMap<String, Object> map, Language language) {
