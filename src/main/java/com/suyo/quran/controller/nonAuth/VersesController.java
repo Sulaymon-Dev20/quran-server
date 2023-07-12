@@ -20,7 +20,7 @@ import java.util.List;
 @RequestMapping("/api/verses")
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "Verses Controller 2", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = "Verses Controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
 public class VersesController {
 
     private final VersesService versesService;

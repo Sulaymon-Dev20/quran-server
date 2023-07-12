@@ -34,7 +34,7 @@ public class SpringFoxConfig {
         return GroupedOpenApi.builder()
                 .group("FOR IOS PART")
                 .displayName("for REGULAR USERS")
-                .pathsToMatch("/**")
+                .pathsToMatch("/api/**")
                 .build();
     }
 

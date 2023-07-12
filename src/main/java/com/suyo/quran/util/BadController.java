@@ -20,7 +20,7 @@ import java.util.Random;
 public class BadController implements ErrorController {
 
     @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH}, produces = MediaType.APPLICATION_JSON_VALUE)
-    public HttpEntity<Response> handleError(HttpServletRequest request) {
+    public HttpEntity<Response> handleErrorJson(HttpServletRequest request) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());
@@ -38,7 +38,7 @@ public class BadController implements ErrorController {
     }
 
     @RequestMapping(value = "/error", method = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.PATCH}, produces = MediaType.TEXT_HTML_VALUE)
-    public String handleError2(HttpServletRequest request) {
+    public String handleErrorHTML(HttpServletRequest request) {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());

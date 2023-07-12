@@ -5,11 +5,17 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
-@PropertySource("classpath:app.mail.properties")
+@PropertySources({
+        @PropertySource("classpath:app.mail.properties"),
+        @PropertySource("classpath:app.jpa.properties"),
+        @PropertySource("classpath:app.security.properties"),
+        @PropertySource("classpath:app.swagger.properties")
+})
 public class QuranApplication {
 
     private static ConfigurableApplicationContext context;
