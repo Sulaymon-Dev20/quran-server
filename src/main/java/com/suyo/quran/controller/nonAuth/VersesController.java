@@ -28,25 +28,25 @@ public class VersesController {
     @GetMapping
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
-    public List<List<Verse>> getAllChapter(@RequestParam(defaultValue = "DEFAULT") Language language) {
+    public List<List<Verse>> getAllChapter(@RequestParam(defaultValue = "ALL") Language language) {
         return versesService.getAllChapter(language);
     }
 
     @GetMapping(value = "/{number}")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
     public List<Verse> getChapter(
-            @Parameter(description = "the user to create", example = "DEFAULT")
-            @RequestParam(defaultValue = "DEFAULT")
+        @Parameter(description = "the user to create")
+        @RequestParam(defaultValue = "ALL")
             Language language,
-            @Parameter(description = "the user to create", required = true)
-            @Min(value = 1, message = "min Chapter number is 1")
-            @Max(value = 114, message = "max Chapter number is 114")
-            @PathVariable("number")
+        @Parameter(description = "the user to create", required = true)
+        @Min(value = 1, message = "min Chapter number is 1")
+        @Max(value = 114, message = "max Chapter number is 114")
+        @PathVariable("number")
             Integer chapterNumber) {
         return versesService.getChapter(language, chapterNumber);
     }

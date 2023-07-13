@@ -29,6 +29,8 @@ public class User extends AbsNameEntity implements UserDetails {
     private String password;
     @Column(columnDefinition = "TEXT default '[]'")
     private String bookmarks;
+    @Column(columnDefinition = "TEXT default '[]'")
+    private String textSettings;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

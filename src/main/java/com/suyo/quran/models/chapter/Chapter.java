@@ -29,9 +29,6 @@ public class Chapter {
     @Schema(title = "Chapter Total Verses", example = "7", description = "Chapter total verses")
     private Integer totalVerses;
 
-    @Schema(title = "Chapter pronunciation", example = "Al-Fatihah", description = "Chapter name transliteration pronunciation")
-    private String transliteration;
-
     @Schema(title = "Translation", example = "{ \"ru\": \"Открывающая Коран\", \"sv\": \"Öppningen\", \"uz\": \"Fotiha\", \"en\": \"The Opener\", \"id\": \"Pembukaan\", \"fr\": \"L'ouverture\", \"bn\": \"সূচনা\", \"ur\": \"کھولنے والی\", \"tr\": \"Fâtiha\", \"es\": \"La Apertura\", \"zh\": \"开端章\"}", description = "Chapter Type")
     private Object translation;
 
@@ -40,7 +37,6 @@ public class Chapter {
         this.name = StringUtils.newStringUtf8(((String) map.get("name")).getBytes());
         this.type = StringUtils.newStringUtf8(((String) map.get("type")).getBytes());
         this.totalVerses = (Integer) map.get("total_verses");
-        this.transliteration = StringUtils.newStringUtf8(((String) map.get("transliteration")).getBytes());
         this.translation = new Translation((HashMap<String, String>) map.get("translation")).getLanguage(language);
     }
 }

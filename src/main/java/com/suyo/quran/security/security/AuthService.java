@@ -2,8 +2,7 @@ package com.suyo.quran.security.security;
 
 import com.suyo.quran.entities.User;
 import com.suyo.quran.models.CheckEmailCode;
-import com.suyo.quran.models.MailData;
-import com.suyo.quran.models.SetPassword;
+import com.suyo.quran.entities.MailData;
 import com.suyo.quran.repository.MailCodeRepository;
 import com.suyo.quran.repository.UserRepository;
 import com.suyo.quran.security.models.AuthResponse;
@@ -15,8 +14,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor

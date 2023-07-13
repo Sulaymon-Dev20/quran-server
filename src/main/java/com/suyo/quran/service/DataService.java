@@ -1,6 +1,6 @@
 package com.suyo.quran.service;
 
-import com.suyo.quran.models.MailData;
+import com.suyo.quran.entities.MailData;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import jakarta.mail.MessagingException;
