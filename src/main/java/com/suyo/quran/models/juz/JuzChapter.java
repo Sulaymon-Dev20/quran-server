@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 
 import java.util.HashMap;
 
@@ -28,8 +29,8 @@ public class JuzChapter {
     public JuzChapter(HashMap<String, Object> map, Language language) {
         this.index = (int) map.get("index");
         this.verse = new JuzVerse((HashMap<String, Object>) map.get("verse"));
-        this.type = (String) map.get("type");
-        this.title = (String) map.get("title");
+        this.type = StringUtils.newStringUtf8(((String) map.get("type")).getBytes());
+        this.title = StringUtils.newStringUtf8(((String) map.get("title")).getBytes());
         this.translation = new Translation((HashMap<String, String>) map.get("translation")).getLanguage(language);
     }
 }

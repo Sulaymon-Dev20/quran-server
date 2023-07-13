@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 
 import java.util.HashMap;
 
@@ -36,10 +37,10 @@ public class Chapter {
 
     public Chapter(HashMap<String, Object> map, Language language) {
         this.id = (Integer) map.get("id");
-        this.name = (String) map.get("name");
-        this.type = (String) map.get("type");
+        this.name = StringUtils.newStringUtf8(((String) map.get("name")).getBytes());
+        this.type = StringUtils.newStringUtf8(((String) map.get("type")).getBytes());
         this.totalVerses = (Integer) map.get("total_verses");
-        this.transliteration = (String) map.get("transliteration");
+        this.transliteration = StringUtils.newStringUtf8(((String) map.get("transliteration")).getBytes());
         this.translation = new Translation((HashMap<String, String>) map.get("translation")).getLanguage(language);
     }
 }

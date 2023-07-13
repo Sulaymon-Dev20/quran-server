@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 
 import java.util.HashMap;
 
@@ -38,7 +39,7 @@ public class Verse {
     public Verse(HashMap<String, Object> map, Language language) {
         this.chapter = (int) map.get("chapter");
         this.verse = (int) map.get("verse");
-        this.text = (String) map.get("text");
+        this.text = StringUtils.newStringUtf8(((String) map.get("text")).getBytes());
         this.translation = new Translation((HashMap<String, String>) map.get("translation")).getLanguage(language);
     }
 }

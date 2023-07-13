@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.tomcat.util.codec.binary.StringUtils;
 
 import java.util.HashMap;
 
@@ -25,17 +26,17 @@ public class Translation {
     private String zh;
 
     public Translation(HashMap<String, String> map) {
-        this.ru = map.get("ru");
-        this.sv = map.get("sv");
-        this.uz = map.get("uz");
-        this.en = map.get("en");
-        this.id = map.get("id");
-        this.fr = map.get("fr");
-        this.bn = map.get("bn");
-        this.ur = map.get("ur");
-        this.tr = map.get("tr");
-        this.es = map.get("es");
-        this.zh = map.get("zh");
+        this.ru = StringUtils.newStringUtf8(map.get("ru").getBytes());
+        this.sv = StringUtils.newStringUtf8(map.get("sv").getBytes());
+        this.uz = StringUtils.newStringUtf8(map.get("uz").getBytes());
+        this.en = StringUtils.newStringUtf8(map.get("en").getBytes());
+        this.id = StringUtils.newStringUtf8(map.get("id").getBytes());
+        this.fr = StringUtils.newStringUtf8(map.get("fr").getBytes());
+        this.bn = StringUtils.newStringUtf8(map.get("bn").getBytes());
+        this.ur = StringUtils.newStringUtf8(map.get("ur").getBytes());
+        this.tr = StringUtils.newStringUtf8(map.get("tr").getBytes());
+        this.es = StringUtils.newStringUtf8(map.get("es").getBytes());
+        this.zh = StringUtils.newStringUtf8(map.get("zh").getBytes());
     }
 
     public Object getLanguage(Language language) {
