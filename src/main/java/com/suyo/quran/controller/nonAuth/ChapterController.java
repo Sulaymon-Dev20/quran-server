@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping(value = "/api/source/chapter", produces = "application/json")
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "Chapter Controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = "chapter controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
 public class ChapterController {
 
     private final ChapterService chapterService;

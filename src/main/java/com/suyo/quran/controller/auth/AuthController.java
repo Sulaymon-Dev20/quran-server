@@ -1,5 +1,6 @@
 package com.suyo.quran.controller.auth;
 
+import com.suyo.quran.models.CheckEmailCode;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
 import com.suyo.quran.security.models.RegisterRequest;
@@ -18,9 +19,19 @@ public class AuthController {
 
     private final AuthService authService;
 
+    @PostMapping("/sendCode")
+    public ResponseEntity<Object> sendCode(@RequestBody RegisterRequest request) {
+        return ResponseEntity.ok(authService.sendCode(request));
+    }
+
+    @PostMapping("/check/code")
+    public ResponseEntity<Object> check(@RequestBody CheckEmailCode request) {
+        return ResponseEntity.ok(authService.checkCode(request));
+    }
+
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
-        return ResponseEntity.ok(authService.register(request));
+        return null;
     }
 
     @PostMapping("/login")
