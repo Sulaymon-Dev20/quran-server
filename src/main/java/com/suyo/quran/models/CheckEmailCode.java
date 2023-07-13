@@ -11,7 +11,7 @@ public class CheckEmailCode {
     private String code;
     private String email;
 
-    public CheckEmailCode(String code) {
-        this.code = code.replaceAll("[A-z,/-]", "");
+    public String getCode() {
+        return code.replaceAll("[A-z, /-]", "");
     }
 }

@@ -20,18 +20,13 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/sendCode")
-    public ResponseEntity<Object> sendCode(@RequestBody RegisterRequest request) {
-        return ResponseEntity.ok(authService.sendCode(request));
+    public Object sendCode(@RequestBody RegisterRequest request) {
+        return authService.sendCode(request);
     }
 
     @PostMapping("/check/code")
     public ResponseEntity<Object> check(@RequestBody CheckEmailCode request) {
         return ResponseEntity.ok(authService.checkCode(request));
-    }
-
-    @PostMapping("/register")
-    public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
-        return null;
     }
 
     @PostMapping("/login")

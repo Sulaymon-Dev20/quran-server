@@ -27,11 +27,11 @@ public class DataService {
         MimeMessage message = sender.createMimeMessage();
         try {
             Map<String, Object> gmailMessage = new HashMap<>();
-            gmailMessage.put("username", mailData.getUsername());
+            gmailMessage.put("username", mailData.getMail());
             gmailMessage.put("code", mailData.getCode());
             MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
             String html = FreeMarkerTemplateUtils.processTemplateIntoString(config.getTemplate("codePassword.ftl"), gmailMessage);
-            helper.setTo(mailData.getUsername());
+            helper.setTo(mailData.getMail());
             helper.setText(html, true);
             helper.setSubject("Register");
             helper.setFrom("sulaymon1w@gmail.com");

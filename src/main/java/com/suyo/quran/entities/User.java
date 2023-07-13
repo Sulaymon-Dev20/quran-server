@@ -1,6 +1,10 @@
 package com.suyo.quran.entities;
 
-import jakarta.persistence.*;
+import com.suyo.quran.entities.enums.ThemeEnum;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -20,11 +24,11 @@ public class User extends AbsNameEntity implements UserDetails {
     private String lastName;
     @Column(unique = true)
     private String email;
+    @Enumerated(EnumType.STRING)
+    private ThemeEnum theme;
     private String password;
-    @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "bookmarks", joinColumns = @JoinColumn(name = "user_id"))
-    @Column(name = "bookmark", nullable = false)
-    private List<String> bookmarks;
+    @Column(columnDefinition = "TEXT default '[]'")
+    private String bookmarks;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
