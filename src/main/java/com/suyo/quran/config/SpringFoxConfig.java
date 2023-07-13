@@ -38,7 +38,7 @@ public class SpringFoxConfig {
                 .group("FOR IOS PART")
                 .displayName("FOR IOS PART")
                 .pathsToMatch("/api/**")
-                .packagesToScan("com.suyo.quran.controller")
+                .packagesToScan("com.suyo.quran.controller.nonAuth")
                 .build();
     }
 
@@ -48,7 +48,7 @@ public class SpringFoxConfig {
                 .group("Auth Controller")
                 .displayName("Auth Controller")
                 .pathsToMatch("/api/**")
-                .packagesToScan("com.suyo.quran.security.auth")
+                .packagesToScan("com.suyo.quran.controller.auth")
                 .addOpenApiCustomizer(internalApiCustomizer())
                 .build();
     }

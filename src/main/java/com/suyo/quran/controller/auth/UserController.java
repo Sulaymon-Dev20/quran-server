@@ -5,6 +5,8 @@ import com.suyo.quran.models.ChangePassword;
 import com.suyo.quran.models.SetPassword;
 import com.suyo.quran.security.CurrentUser;
 import com.suyo.quran.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,11 +24,13 @@ public class UserController {
     }
 
     @PostMapping("/set/password")
+    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", security = {@SecurityRequirement(name = "bearerAuth")})
     public ResponseEntity<Object> setUpPassword(@CurrentUser User user, @RequestBody SetPassword password) {
         return ResponseEntity.ok(userService.setPassword(user.getId(), password));
     }
 
     @PostMapping("/change/password")
+    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", security = {@SecurityRequirement(name = "bearerAuth")})
     public ResponseEntity<Object> changePassword(@CurrentUser User user, @RequestBody ChangePassword password) {
         return ResponseEntity.ok(userService.changePassword(user.getId(), password));
     }

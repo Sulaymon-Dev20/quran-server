@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/source/juz", produces = "application/json")
+@RequestMapping(value = "/api/juz", produces = "application/json")
 @Validated
 @RequiredArgsConstructor
 @Tag(name = "juz controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
