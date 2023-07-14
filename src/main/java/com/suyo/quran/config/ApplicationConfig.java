@@ -1,4 +1,4 @@
-package com.suyo.quran.security.config;
+package com.suyo.quran.config;
 
 
 import com.suyo.quran.repository.UserRepository;

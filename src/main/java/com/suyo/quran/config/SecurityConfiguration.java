@@ -1,6 +1,6 @@
-package com.suyo.quran.security.config;
+package com.suyo.quran.config;
 
-import com.suyo.quran.security.security.JwtAuthenticationFilter;
+import com.suyo.quran.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +29,7 @@ public class SecurityConfiguration {
                         "/error",
                         "/error/**",
                         "/api/v1/auth/**",
+                        "/utilLogos.png",
                         "/api/chapter/**",
                         "/api/verses/**",
                         "/api/juz/**",

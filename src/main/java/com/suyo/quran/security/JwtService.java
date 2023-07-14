@@ -1,4 +1,4 @@
-package com.suyo.quran.security.security;
+package com.suyo.quran.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

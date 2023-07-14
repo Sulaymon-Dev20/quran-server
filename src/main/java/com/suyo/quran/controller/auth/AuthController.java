@@ -4,7 +4,7 @@ import com.suyo.quran.models.CheckEmailCode;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
 import com.suyo.quran.security.models.RegisterRequest;
-import com.suyo.quran.security.security.AuthService;
+import com.suyo.quran.security.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

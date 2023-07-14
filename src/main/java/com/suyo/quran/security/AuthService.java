@@ -1,4 +1,4 @@
-package com.suyo.quran.security.security;
+package com.suyo.quran.security;
 
 import com.suyo.quran.entities.User;
 import com.suyo.quran.models.CheckEmailCode;
