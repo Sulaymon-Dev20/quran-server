@@ -46,7 +46,6 @@ public class SpringFoxConfig {
                 .displayName("Auth Controller")
                 .pathsToMatch("/api/**")
                 .packagesToScan("com.suyo.quran.controller.auth")
-                .addOpenApiCustomizer(internalApiCustomizer())
                 .build();
     }
 
@@ -56,7 +55,6 @@ public class SpringFoxConfig {
                 .group("All APIs")
                 .displayName("All APIs")
                 .pathsToMatch("/api/**")
-                .addOpenApiCustomizer(internalApiCustomizer())
                 .build();
     }
 
