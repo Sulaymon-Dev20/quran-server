@@ -24,15 +24,7 @@ public class BadController implements ErrorController {
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());
-            if (statusCode == HttpStatus.NOT_FOUND.value()) {
-                return ResponseEntity.ok(new Response(new Status(HttpStatus.NOT_FOUND), List.of(), null));
-            } else if (statusCode == HttpStatus.INTERNAL_SERVER_ERROR.value()) {
-                return ResponseEntity.ok(new Response(new Status(HttpStatus.INTERNAL_SERVER_ERROR), List.of(), null));
-            } else if (statusCode == HttpStatus.FORBIDDEN.value()) {
-                return ResponseEntity.status(HttpStatus.FORBIDDEN.value()).body(new Response(new Status(HttpStatus.FORBIDDEN), List.of(), null));
-            } else {
-                return ResponseEntity.ok(new Response(new Status(statusCode), List.of(), null));
-            }
+            return ResponseEntity.status(statusCode).body(new Response(new Status(statusCode), List.of(), null));
         }
         return ResponseEntity.ok(new Response(new Status(400, "error"), List.of(), null));
     }

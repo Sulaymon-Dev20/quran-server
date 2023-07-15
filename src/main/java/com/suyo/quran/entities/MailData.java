@@ -2,6 +2,7 @@ package com.suyo.quran.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,15 +13,18 @@ import java.util.Random;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
-@Entity
-@Table(name = "mail_code")
+@Entity(name = "mail_code")
+@Table(indexes = {@Index(name = "index_mail",  columnList="email")})
 public class MailData extends AbsNameEntity {
-    private String mail;
-    @Column(length = 6)
+
+    @Column(nullable = false, columnDefinition = "TEXT")
+    private String email;
+
+    @Column(nullable = false, length = 6)
     private String code;
 
     public MailData(String mail) {
-        this.mail = mail;
+        this.email = mail;
         final int max = 999999;
         final int min = 100000;
         this.code = String.valueOf(new Random().nextInt(max + 1 - min) + min);

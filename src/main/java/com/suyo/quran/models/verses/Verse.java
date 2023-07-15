@@ -13,7 +13,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(title = "Verse Model Verse Model", name = "Verse Model", description = " 2 asdfVerse Model")
+@Schema(title = "Verse Model", name = "Verse Model", description = " 2 asdfVerse Model")
 public class Verse {
     @Schema(title = "Chapter Number", example = "1", description = "First Chapter")
     private Integer chapter;

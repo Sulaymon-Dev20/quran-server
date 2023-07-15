@@ -3,8 +3,8 @@ package com.suyo.quran.entities;
 import com.suyo.quran.entities.enums.ThemeEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.Index;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -19,12 +19,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "users")
+@Table(indexes = {@Index(name = "user_index_mail",  columnList="email")})
 public class User extends AbsNameEntity implements UserDetails {
     private String firstName;
     private String lastName;
     @Column(unique = true)
     private String email;
-    @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "varchar(20) default 'AUTO'")
     private ThemeEnum theme;
     private String password;
     @Column(columnDefinition = "TEXT default '[]'")
