@@ -1,5 +1,6 @@
 package com.suyo.quran.config;
 
+import io.micrometer.common.lang.NonNull;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -13,7 +14,7 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
 
             @Override
-            public void addCorsMappings(CorsRegistry registry) {
+            public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/**")
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH")
                     .allowedHeaders("*")
