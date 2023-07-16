@@ -23,7 +23,8 @@ public class UserService {
 
     public Object changePassword(Long id, ChangePassword password) {
         if (!password.getOldPassword().equals(password.getNewPassword())) {
-            return userRepository.changePassword(id, password.getNewPassword(), password.getOldPassword()).orElse(null);
+            System.out.println(passwordEncoder.encode(password.getOldPassword()));
+            return userRepository.changePassword(id, passwordEncoder.encode(password.getNewPassword()), passwordEncoder.encode(password.getOldPassword())).orElse(null);
         } else {
             return "password should be different";
         }

@@ -2,8 +2,6 @@ package com.suyo.quran.security;
 
 import com.suyo.quran.entities.User;
 import com.suyo.quran.models.CheckEmailCode;
-import com.suyo.quran.entities.MailData;
-import com.suyo.quran.repository.MailCodeRepository;
 import com.suyo.quran.repository.UserRepository;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
@@ -15,6 +13,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.Random;
+
 @Service
 @RequiredArgsConstructor
 public class AuthService {
@@ -22,7 +23,6 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final DataService dataService;
-    private final MailCodeRepository mailCodeRepository;
     private final AuthenticationManager authenticationManager;
 
 //    public AuthResponse register(RegisterRequest request) {
@@ -43,21 +43,20 @@ public class AuthService {
         return AuthResponse.builder().token(jwtService.generateToken(user)).build();
     }
 
-    public Object sendCode(RegisterRequest request) {
-        final MailData mailData = new MailData(request.getEmail());
-        dataService.sendMail(mailData);
-        mailCodeRepository.save(mailData);
-        return mailData;
+    public Object checkCode(CheckEmailCode request) {
+        final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
+        return AuthResponse.builder().token(user.map(jwtService::generateToken).orElse(null)).build();
     }
 
-    public Object checkCode(CheckEmailCode request) {
-        boolean status = mailCodeRepository.existsByMailAndAndCodeAndCreatedAtIsLessThan(request.getEmail(), request.getCode());
-        if (status) {
-            User save = userRepository.save(User.builder().email(request.getEmail()).build());
-            userRepository.save(save);
-            return AuthResponse.builder().token(jwtService.generateToken(save)).build();
-        } else {
-            return null;
-        }
+    public Object register(RegisterRequest request) {
+        final String code = generateEmailCode();
+        dataService.sendMail(request.getEmail(), code);
+        return userRepository.updateAuthCode(request.getEmail(), code, request.getFirstName(), request.getLastName());
+    }
+
+    private String generateEmailCode() {
+        final int max = 999999;
+        final int min = 100000;
+        return String.valueOf(new Random().nextInt(max + 1 - min) + min);
     }
 }

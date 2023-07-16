@@ -12,11 +12,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @PropertySources({
-        @PropertySource("classpath:properties/app.mail.properties"),
-        @PropertySource("classpath:properties/app.jpa.properties"),
-        @PropertySource("classpath:properties/app.security.properties"),
-        @PropertySource("classpath:properties/app.swagger.properties"),
-        @PropertySource("classpath:properties/app.datasource.properties"),
+    @PropertySource("classpath:properties/app.mail.properties"),
+    @PropertySource("classpath:properties/app.jpa.properties"),
+    @PropertySource("classpath:properties/app.security.properties"),
+    @PropertySource("classpath:properties/app.swagger.properties"),
+    @PropertySource("classpath:properties/app.datasource.properties"),
 })
 public class QuranApplication {
 

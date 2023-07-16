@@ -11,14 +11,22 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(title = "Verse Model Verse Model", name = "Verse Model", description = "asdf Verse Model")
+@Schema(title = "User Info Model", name = "User Information", description = "there is information of user")
 public class UserInfo {
+    @Schema(title = "firstName", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String firstName;
+    @Schema(title = "lastName", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String lastName;
+    @Schema(title = "email", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String email;
+    @Schema(title = "theme", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private ThemeEnum theme;
+    @Schema(title = "bookmarks", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String bookmarks;
+    @Schema(title = "textSettings", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private String textSettings;
+    @Schema(title = "createdAt", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private Timestamp createdAt;
+    @Schema(title = "updatedAt", example = "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ", description = "Verse value")
     private Timestamp updatedAt;
 }
