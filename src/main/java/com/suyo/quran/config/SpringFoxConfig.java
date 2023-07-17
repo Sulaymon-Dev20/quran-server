@@ -3,14 +3,17 @@ package com.suyo.quran.config;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
-import io.swagger.v3.oas.models.ExternalDocumentation;
-import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.*;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
+import io.swagger.v3.oas.models.links.Link;
+import io.swagger.v3.oas.models.media.Schema;
+import io.swagger.v3.oas.models.parameters.Parameter;
 import io.swagger.v3.oas.models.servers.Server;
 import io.swagger.v3.oas.models.servers.ServerVariable;
 import io.swagger.v3.oas.models.servers.ServerVariables;
+import io.swagger.v3.oas.models.tags.Tag;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -73,10 +76,10 @@ public class SpringFoxConfig {
             .addServerVariable("protocol", new ServerVariable()._default("https")._enum(List.of("http", "https")))
             .addServerVariable("subdomain", new ServerVariable().description("nimadir nimadir nimadir 222")._default("quran"));
 
-        Server localServer = new Server()
+        final Server localServer = new Server()
             .url("http://localhost:6236")
             .description("Server URL in Local environment");
-        Server devServer = new Server()
+        final Server devServer = new Server()
             .url("{protocol}://{address}")
             .description("Server URL in Development environment")
             .variables(new ServerVariables()
@@ -84,11 +87,10 @@ public class SpringFoxConfig {
                 .addServerVariable("address", new ServerVariable()._default("16.16.90.73:20"))
             );
 
-        Server prodServer = new Server()
+        final Server prodServer = new Server()
             .url("{protocol}://{subdomain}.sulaymonyahyo.com")
             .description("Server URL in Production environment")
             .variables(serverVariables);
-
 
         return new OpenAPI()
             .info(
