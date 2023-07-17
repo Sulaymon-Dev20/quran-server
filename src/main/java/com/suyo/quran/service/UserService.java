@@ -1,7 +1,6 @@
 package com.suyo.quran.service;
 
 import com.suyo.quran.entities.User;
-import com.suyo.quran.models.ChangePassword;
 import com.suyo.quran.models.SetPassword;
 import com.suyo.quran.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,12 +20,12 @@ public class UserService {
         return user.orElse(null);
     }
 
-    public Object changePassword(Long id, ChangePassword password) {
-        if (!password.getOldPassword().equals(password.getNewPassword())) {
-            System.out.println(passwordEncoder.encode(password.getOldPassword()));
-            return userRepository.changePassword(id, passwordEncoder.encode(password.getNewPassword()), passwordEncoder.encode(password.getOldPassword())).orElse(null);
-        } else {
-            return "password should be different";
-        }
-    }
+//    public Object changePassword(Long id, ChangePassword password) {
+//        if (!password.getOldPassword().equals(password.getNewPassword())) {
+//            System.out.println(passwordEncoder.encode(password.getOldPassword()));
+//            return userRepository.changePassword(id, passwordEncoder.encode(password.getNewPassword()), passwordEncoder.encode(password.getOldPassword())).orElse(null);
+//        } else {
+//            return "password should be different";
+//        }
+//    }
 }

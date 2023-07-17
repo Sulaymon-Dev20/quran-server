@@ -9,12 +9,15 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
+import io.swagger.v3.oas.models.servers.ServerVariable;
+import io.swagger.v3.oas.models.servers.ServerVariables;
 import org.springdoc.core.models.GroupedOpenApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
+import java.util.Map;
 
 @Configuration
 @SecurityScheme(
@@ -65,13 +68,27 @@ public class SpringFoxConfig {
 
     @Bean
     public OpenAPI usersMicroserviceOpenAPI() {
-        Server devServer = new Server();
-        devServer.setUrl("http://localhost:6236");
-        devServer.setDescription("Server URL in Development environment");
 
-        Server prodServer = new Server();
-        prodServer.setUrl("http://localhost:121");
-        prodServer.setDescription("Server URL in Production environment");
+        final ServerVariables serverVariables = new ServerVariables()
+            .addServerVariable("protocol", new ServerVariable()._default("https")._enum(List.of("http", "https")))
+            .addServerVariable("subdomain", new ServerVariable().description("nimadir nimadir nimadir 222")._default("quran"));
+
+        Server localServer = new Server()
+            .url("http://localhost:6236")
+            .description("Server URL in Local environment");
+        Server devServer = new Server()
+            .url("{protocol}://{address}")
+            .description("Server URL in Development environment")
+            .variables(new ServerVariables()
+                .addServerVariable("protocol", new ServerVariable()._default("http")._enum(List.of("http", "https")))
+                .addServerVariable("address", new ServerVariable()._default("16.16.90.73:20"))
+            );
+
+        Server prodServer = new Server()
+            .url("{protocol}://{subdomain}.sulaymonyahyo.com")
+            .description("Server URL in Production environment")
+            .variables(serverVariables);
+
 
         return new OpenAPI()
             .info(
@@ -83,6 +100,6 @@ public class SpringFoxConfig {
             .externalDocs(new ExternalDocumentation()
                 .description("Source code Github")
                 .url("https://github.com/Sulaymon-Dev20/quran-online"))
-            .servers(List.of(devServer, prodServer));
+            .servers(List.of(localServer, devServer, prodServer));
     }
 }
