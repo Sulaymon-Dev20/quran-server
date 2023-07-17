@@ -72,10 +72,6 @@ public class SpringFoxConfig {
     @Bean
     public OpenAPI usersMicroserviceOpenAPI() {
 
-        final ServerVariables serverVariables = new ServerVariables()
-            .addServerVariable("protocol", new ServerVariable()._default("https")._enum(List.of("http", "https")))
-            .addServerVariable("subdomain", new ServerVariable().description("nimadir nimadir nimadir 222")._default("quran"));
-
         final Server localServer = new Server()
             .url("http://localhost:6236")
             .description("Server URL in Local environment");
@@ -90,7 +86,9 @@ public class SpringFoxConfig {
         final Server prodServer = new Server()
             .url("{protocol}://{subdomain}.sulaymonyahyo.com")
             .description("Server URL in Production environment")
-            .variables(serverVariables);
+            .variables(new ServerVariables()
+                .addServerVariable("protocol", new ServerVariable()._default("https")._enum(List.of("http", "https")))
+                .addServerVariable("subdomain", new ServerVariable().description("nimadir nimadir nimadir 222")._default("quran")));
 
         return new OpenAPI()
             .info(
