@@ -1,6 +1,6 @@
 package com.suyo.quran.models.chapter;
 
-import com.suyo.quran.models.Language;
+import com.suyo.quran.entities.enums.Language;
 import com.suyo.quran.models.Translation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

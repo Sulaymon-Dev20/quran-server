@@ -1,10 +1,10 @@
 package com.suyo.quran.controller.auth;
 
 import com.suyo.quran.models.CheckEmailCode;
+import com.suyo.quran.security.AuthService;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
 import com.suyo.quran.security.models.RegisterRequest;
-import com.suyo.quran.security.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;

@@ -1,7 +1,7 @@
 package com.suyo.quran.entities;
 
 import com.suyo.quran.entities.enums.ThemeEnum;
-import com.suyo.quran.models.Language;
+import com.suyo.quran.entities.enums.Language;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;

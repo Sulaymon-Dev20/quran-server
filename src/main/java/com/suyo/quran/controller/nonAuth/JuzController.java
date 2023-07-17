@@ -1,6 +1,6 @@
 package com.suyo.quran.controller.nonAuth;
 
-import com.suyo.quran.models.Language;
+import com.suyo.quran.entities.enums.Language;
 import com.suyo.quran.models.juz.JuzModel;
 import com.suyo.quran.service.JuzService;
 import io.swagger.v3.oas.annotations.Operation;

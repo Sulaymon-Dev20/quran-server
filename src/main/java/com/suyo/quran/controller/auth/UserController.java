@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/user", produces = "application/json")
 @Validated
 @RequiredArgsConstructor
-@Tag(externalDocs = @ExternalDocumentation(description = "Auth JWT Required", url = "#/auth%20controller/register"), name = "user controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = "user controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application", externalDocs = @ExternalDocumentation(description = "Auth JWT Required", url = "#/auth%20controller/register"))
 public class UserController {
 
     private final UserService userService;

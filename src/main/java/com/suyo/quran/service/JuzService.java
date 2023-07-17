@@ -1,6 +1,6 @@
 package com.suyo.quran.service;
 
-import com.suyo.quran.models.Language;
+import com.suyo.quran.entities.enums.Language;
 import com.suyo.quran.models.juz.JuzModel;
 import org.json.JSONArray;
 import org.springframework.stereotype.Service;

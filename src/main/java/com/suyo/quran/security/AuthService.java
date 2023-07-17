@@ -10,7 +10,6 @@ import com.suyo.quran.service.DataService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -20,22 +19,9 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class AuthService {
     private final UserRepository userRepository;
-    private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final DataService dataService;
     private final AuthenticationManager authenticationManager;
-
-//    public AuthResponse register(RegisterRequest request) {
-//        User build = User
-//            .builder()
-//            .firstName(request.getFirstname())
-//            .lastName(request.getLastname())
-//            .email(request.getEmail())
-//            .password(passwordEncoder.encode(request.getPassword()))
-//            .build();
-//        userRepository.save(build);
-//        return AuthResponse.builder().token(jwtService.generateToken(build)).build();
-//    }
 
     public AuthResponse login(LoginRequest request) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
@@ -43,7 +29,7 @@ public class AuthService {
         return AuthResponse.builder().token(jwtService.generateToken(user)).build();
     }
 
-    public Object checkCode(CheckEmailCode request) {
+    public AuthResponse checkCode(CheckEmailCode request) {
         final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
         return AuthResponse.builder().token(user.map(jwtService::generateToken).orElse(null)).build();
     }
@@ -51,7 +37,8 @@ public class AuthService {
     public Object register(RegisterRequest request) {
         final String code = generateEmailCode();
         dataService.sendMail(request.getEmail(), code);
-        return userRepository.updateAuthCode(request.getEmail(), code, request.getFirstName(), request.getLastName());
+        final User user = userRepository.updateAuthCode(request.getEmail(), code, request.getFirstName(), request.getLastName());
+        return user.getCode();
     }
 
     private String generateEmailCode() {
