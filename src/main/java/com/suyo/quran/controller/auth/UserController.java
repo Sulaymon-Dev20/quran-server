@@ -5,6 +5,7 @@ import com.suyo.quran.models.SetPassword;
 import com.suyo.quran.models.UserInfo;
 import com.suyo.quran.security.CurrentUser;
 import com.suyo.quran.service.UserService;
+import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/user", produces = "application/json")
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "user controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(externalDocs = @ExternalDocumentation(description = "Auth JWT Required", url = "#/auth%20controller/register"), name = "user controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
 public class UserController {
 
     private final UserService userService;

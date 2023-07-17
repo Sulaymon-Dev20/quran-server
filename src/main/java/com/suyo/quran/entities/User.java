@@ -30,6 +30,7 @@ public class User extends AbsNameEntity implements UserDetails {
     @Column(columnDefinition = "varchar(5) default 'ALL'")
     @Enumerated(EnumType.STRING)
     private Language language;
+    @Column(columnDefinition = "TEXT")
     private String password;
     @Column(columnDefinition = "TEXT")
     private String bookmarks;
