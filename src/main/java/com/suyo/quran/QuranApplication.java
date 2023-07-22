@@ -11,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @PropertySources({
+    @PropertySource("classpath:properties/application.properties"),
     @PropertySource("classpath:properties/app.mail.properties"),
     @PropertySource("classpath:properties/app.jpa.properties"),
     @PropertySource("classpath:properties/app.security.properties"),

@@ -1,7 +1,6 @@
-
-██╗  ██╗ ██████╗ ██╗  ██╗   ██╗    ██████╗  ██████╗  ██████╗ ██╗  ██╗
-██║  ██║██╔═══██╗██║  ╚██╗ ██╔╝    ██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝
-███████║██║   ██║██║   ╚████╔╝     ██████╔╝██║   ██║██║   ██║█████╔╝ 
-██╔══██║██║   ██║██║    ╚██╔╝      ██╔══██╗██║   ██║██║   ██║██╔═██╗ 
-██║  ██║╚██████╔╝███████╗██║       ██████╔╝╚██████╔╝╚██████╔╝██║  ██╗
-╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝       ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝
+██╗  ██╗ ██████╗ ██╗  ██╗   ██╗    ██████╗  ██████╗  ██████╗ ██╗  ██╗   | Application Name:${AnsiColor.BRIGHT_WHITE} ${application.title} ${AnsiColor.DEFAULT}
+██║  ██║██╔═══██╗██║  ╚██╗ ██╔╝    ██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝   | Application Version:${AnsiColor.BRIGHT_WHITE} ${application.version} ${AnsiColor.DEFAULT}
+███████║██║   ██║██║   ╚████╔╝     ██████╔╝██║   ██║██║   ██║█████╔╝    | Spring Boot:${AnsiColor.BRIGHT_WHITE} ${spring-boot.version} ${AnsiColor.DEFAULT}
+██╔══██║██║   ██║██║    ╚██╔╝      ██╔══██╗██║   ██║██║   ██║██╔═██╗    | Developer:${AnsiColor.BRIGHT_WHITE} 𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠 ${AnsiColor.DEFAULT}
+██║  ██║╚██████╔╝███████╗██║       ██████╔╝╚██████╔╝╚██████╔╝██║  ██╗   | Date:${AnsiColor.BRIGHT_RED} ??:??:?? ??:?? ?? ${AnsiColor.DEFAULT}
+╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝       ╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝   | Release number:${AnsiColor.BRIGHT_RED} ??? ${AnsiColor.DEFAULT}
