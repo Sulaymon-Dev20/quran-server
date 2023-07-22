@@ -39,6 +39,12 @@ public class SpringFoxConfig {
     @Value("${spring.application.version:-}")
     private String applicationVersion;
 
+    @Value("${spring.application.description:-}")
+    private String applicationDescription;
+
+    @Value("${spring.application.url:-}")
+    private String applicationSourceUrl;
+
     @Bean
     public GroupedOpenApi apiIOS() {
         return GroupedOpenApi.builder()
@@ -95,11 +101,11 @@ public class SpringFoxConfig {
                 new Info().title(applicationName)
                     .contact(new Contact().name("𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠").url("https://sulaymonyahyo.com").email("sulaymon1w@gmail.com"))
                     .license(new License().name("Apache License Version 2.0").url("https://www.apache.org/licenses/LICENSE-2.0"))
-                    .description("<h1>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum <h2>Project Tools </h2> <img height='100' src='/utilLogos.png' alt='Swagger UI'/>")
+                    .description("<h1>بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</h1>" + applicationDescription + " <h2>Project Tools </h2> <img height='100' src='/utilLogos.png' alt='Swagger UI'/>")
                     .version(applicationVersion))
             .externalDocs(new ExternalDocumentation()
                 .description("Source code Github")
-                .url("https://github.com/Sulaymon-Dev20/quran-online"))
+                .url(applicationSourceUrl))
             .servers(List.of(localServer, devServer, prodServer));
     }
 }

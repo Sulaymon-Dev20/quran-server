@@ -11,8 +11,25 @@
     <groupId>com.suyo</groupId>
     <artifactId>quran</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>quran</name>
-    <description>quran</description>
+    <name>QURAN_SERVER</name>
+    <description>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</description>
+    <url>https://github.com/Sulaymon-Dev20/quran-server</url>
+    <licenses>
+        <license>
+            <name>Apache License Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>𝕊𝕦𝕝𝕒𝕪𝕞𝕠𝕟 𝕐𝕒𝕙𝕪𝕠</name>
+            <email>sulaymonyahyo@icloud.com</email>
+            <url>https://sulaymonyahyo.com</url>
+            <roles>
+                <role>that project for only improve Knowledge</role>
+            </roles>
+        </developer>
+    </developers>
     <properties>
         <java.version>17</java.version>
     </properties>
