@@ -10,11 +10,11 @@ import org.springframework.context.annotation.PropertySources;
 @SpringBootApplication
 @PropertySources({
     @PropertySource("classpath:properties/application.properties"),
-    @PropertySource("classpath:properties/app.mail.properties"),
-    @PropertySource("classpath:properties/app.jpa.properties"),
-    @PropertySource("classpath:properties/app.security.properties"),
-    @PropertySource("classpath:properties/app.swagger.properties"),
-    @PropertySource("classpath:properties/app.datasource.properties"),
+    @PropertySource("classpath:properties/application-datasource.properties"),
+    @PropertySource("classpath:properties/application-mail.properties"),
+    @PropertySource("classpath:properties/application-jpa.properties"),
+    @PropertySource("classpath:properties/application-security.properties"),
+    @PropertySource("classpath:properties/application-swagger.properties"),
 })
 public class QuranApplication {
 
