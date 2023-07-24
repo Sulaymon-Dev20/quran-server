@@ -21,7 +21,7 @@ public class DataService {
 
     @SneakyThrows
     public static String getTemplate(String path) {
-        return new String(Objects.requireNonNull(classloader.getResourceAsStream(path).readAllBytes()));
+        return new String(Objects.requireNonNull(classloader.getResourceAsStream(path)).readAllBytes());
     }
 
     public void sendMail(String email, String code) {
