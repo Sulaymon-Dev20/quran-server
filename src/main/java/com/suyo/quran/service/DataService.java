@@ -24,16 +24,28 @@ public class DataService {
         return new String(Objects.requireNonNull(classloader.getResourceAsStream(path)).readAllBytes());
     }
 
+    @SneakyThrows
+    public static String getTemplate(String path, Map<String, Object> replace) {
+        String result = new String(Objects.requireNonNull(classloader.getResourceAsStream(path)).readAllBytes());
+        for (Map.Entry<String, Object> item : replace.entrySet()) {
+            result = result.replace("${" + item.getKey() + "}", item.getValue().toString());
+        }
+        return result;
+    }
+
     public void sendMail(String email, String code) {
         MimeMessage message = sender.createMimeMessage();
         try {
             Map<String, Object> gmailMessage = new HashMap<>();
             gmailMessage.put("username", email);
             gmailMessage.put("code", code);
+//            gmailMessage.put("url", "http://localhost:6236/");
+            gmailMessage.put("url", "https://c03b-82-215-114-164.ngrok-free.app/");
             MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
-            getTemplate("");
+            final String template = getTemplate("templates/index.html", gmailMessage);
+//            getTemplate("templates/forgetPassword.html", gmailMessage);
             helper.setTo(email);
-            helper.setText("html", true);
+            helper.setText(template, true);
             helper.setSubject("Register");
             helper.setFrom("sulaymon1w@gmail.com");
             sender.send(message);

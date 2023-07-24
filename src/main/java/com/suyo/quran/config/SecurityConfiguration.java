@@ -26,8 +26,8 @@ public class SecurityConfiguration {
             .disable()
             .authorizeHttpRequests()
             .requestMatchers(
-                "/error",
                 "/error/**",
+                "/images/**",
                 "/api/v1/auth/**",
                 "/utilLogos.png",
                 "/api/chapter/**",
