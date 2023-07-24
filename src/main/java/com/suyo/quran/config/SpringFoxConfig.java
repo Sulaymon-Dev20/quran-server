@@ -84,7 +84,7 @@ public class SpringFoxConfig {
             .description("Server URL in Development environment")
             .variables(new ServerVariables()
                 .addServerVariable("protocol", new ServerVariable()._default("http")._enum(List.of("http", "https")))
-                .addServerVariable("address", new ServerVariable()._default("16.16.90.73:20")));
+                .addServerVariable("address", new ServerVariable()._default("16.16.90.73:" + localPort)));
 
         final Server prodServer = new Server()
             .url("{protocol}://{subdomain}.sulaymonyahyo.com")
