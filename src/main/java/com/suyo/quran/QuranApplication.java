@@ -15,6 +15,7 @@ import org.springframework.context.annotation.PropertySources;
     @PropertySource("classpath:properties/application-jpa.properties"),
     @PropertySource("classpath:properties/application-security.properties"),
     @PropertySource("classpath:properties/application-swagger.properties"),
+    @PropertySource("classpath:properties/application-telegram.properties"),
 })
 public class QuranApplication {
 
