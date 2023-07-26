@@ -1,5 +1,6 @@
 package com.suyo.quran.service;
 
+import com.suyo.quran.models.EmailEnum;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
@@ -9,9 +10,11 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
+import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.TimeZone;
 
 @Service
 @RequiredArgsConstructor
@@ -33,17 +36,14 @@ public class DataService {
         return result;
     }
 
-    public void sendMail(String email, String code) {
+    public void sendMail(String email, String code, Timestamp authenticatedTime) {
         MimeMessage message = sender.createMimeMessage();
         try {
             Map<String, Object> gmailMessage = new HashMap<>();
-            gmailMessage.put("username", email);
+            gmailMessage.put("timeZone", TimeZone.getDefault().getID());
             gmailMessage.put("code", code);
-//            gmailMessage.put("url", "http://localhost:6236/");
-            gmailMessage.put("url", "https://c03b-82-215-114-164.ngrok-free.app/");
             MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
-            final String template = getTemplate("templates/index.html", gmailMessage);
-//            getTemplate("templates/forgetPassword.html", gmailMessage);
+            final String template = getTemplate("templates/codePassword.html", gmailMessage);
             helper.setTo(email);
             helper.setText(template, true);
             helper.setSubject("Register");

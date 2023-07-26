@@ -36,7 +36,7 @@ public class AuthService {
 
     public Object register(RegisterRequest request) {
         final String code = generateEmailCode();
-        dataService.sendMail(request.getEmail(), code);
+        dataService.sendMail(request.getEmail(), code, null);
         final User user = userRepository.updateAuthCode(request.getEmail(), code, request.getFirstName(), request.getLastName());
         return user.getCode();
     }
