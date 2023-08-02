@@ -3,6 +3,7 @@ package com.suyo.quran.service.mail;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,9 @@ public class MailService {
     public static final String shutdownMail = "templates/codePassword.html";
     public static final String sendCodeMail = "templates/codePassword.html";
 
+    @Value("${spring.mail.username}")
+    private String fromMail;
+
     public void sendMail(String email, String mailFile, Map<String, Object> gmailMessage) {
         MimeMessage message = sender.createMimeMessage();
         try {
@@ -29,7 +33,7 @@ public class MailService {
             helper.setTo(email);
             helper.setText(template, true);
             helper.setSubject("Register");
-            helper.setFrom("sulaymon1w@gmail.com");
+            helper.setFrom(fromMail);
             sender.send(message);
         } catch (MessagingException e) {
             e.fillInStackTrace();

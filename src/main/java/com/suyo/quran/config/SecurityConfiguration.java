@@ -30,6 +30,7 @@ public class SecurityConfiguration {
             .requestMatchers(
                 "/error/**",
                 "/images/**",
+//                "/**",//remove that line
                 "/api/v1/auth/**",
                 "/utilLogos.png",
                 "/api/chapter/**",

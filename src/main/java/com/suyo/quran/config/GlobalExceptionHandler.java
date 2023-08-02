@@ -5,11 +5,9 @@ import com.suyo.quran.models.Status;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,8 +15,9 @@ import java.util.List;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
+    @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public Response handleConstraintViolationException(HttpServletRequest request, Exception ex) {
         return new Response(new Status(400), List.of(ex.getMessage()), request.getServletPath());
     }
@@ -26,6 +25,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
+    @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public Response onConstraintValidationException(ConstraintViolationException e) {
         Response res = new Response();
         res.setStatus(new Status(400));
@@ -36,6 +36,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
+    @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public Response onMethodArgumentNotValidException(MethodArgumentNotValidException e) {
         Response res = new Response();
         res.setStatus(new Status(400));

@@ -41,6 +41,8 @@ public class SpringShutdownHook implements DisposableBean {
         if (isLive) {
             notificationEmail();
             notificationTelegram();
+        } else {
+            log.info("🐜 notification permission denied");
         }
     }
 
