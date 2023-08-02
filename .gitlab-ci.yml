@@ -3,7 +3,9 @@ image: maven:3.8.3-openjdk-17
 variables:
   IMAGE_NAME: sulaymonyahyo/quran-server
   DEV_PORT: 6236
-  VERSION: $(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+
+before_script:
+  - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
 
 stages:
   - build_dev
