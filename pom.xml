@@ -34,48 +34,40 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
-        <!--|Spring depend|-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-<!--        &lt;!&ndash;|Validation depend|&ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.hibernate.validator</groupId>-->
-<!--            <artifactId>hibernate-validator</artifactId>-->
-<!--            <version>6.0.21.Final</version>-->
-<!--        </dependency>-->
-        <!--|Lombok depend|-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <!--|Swagger depend|-->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.0.4</version>
-        </dependency>
-        <!--|JSON depend|-->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20230618</version>
-        </dependency>
-        <!--|Mail depends|-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
+            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-        <!--| SEcu|-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20230618</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -96,10 +88,6 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
             <version>0.11.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
     </dependencies>
     <build>
