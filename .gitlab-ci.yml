@@ -4,9 +4,6 @@ variables:
   IMAGE_NAME: sulaymonyahyo/quran-server
   DEV_PORT: 6236
 
-before_script:
-  - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
-
 stages:
   - build_dev
   - deploy_dev
@@ -20,6 +17,7 @@ build_dev:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
   script:
     - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$VERSION .
     - docker push $IMAGE_NAME:$VERSION
@@ -28,6 +26,7 @@ deploy_dev:
   stage: deploy_dev
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
     - chmod 600 $SSH_KEY
   script:
     - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
