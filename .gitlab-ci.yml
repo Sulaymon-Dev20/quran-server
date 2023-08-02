@@ -10,7 +10,7 @@ stages:
 
 build_dev:
   stage: build_dev
-  image: docker:20.10.16
+  image: docker:20.10.16, maven:3.8.3-openjdk-17
   services:
     - docker:20.10.16-dind
   variables:
