@@ -1,20 +1,13 @@
-image: ubuntu:focal
+image: maven:3.8.3-openjdk-17
 
 variables:
-  TELEGRAM_MESSAGE: CI - CD STATUS
-  IMAGE_NAME: sulaymonyahyo/portfolio
+  IMAGE_NAME: sulaymonyahyo/quran-server
   DEV_PORT: 6236
+  VERSION: $(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
 
 stages:
   - build_dev
   - deploy_dev
-
-cache:
-  paths:
-    - .yarn
-    - node_modules
-    - build
-    - message.txt
 
 build_dev:
   stage: build_dev
@@ -26,8 +19,8 @@ build_dev:
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
   script:
-    - docker build -t $IMAGE_NAME:$(cat package.json | grep '"version"' | cut -d '"' -f 4) .
-    - docker push $IMAGE_NAME:$(cat package.json | grep '"version"' | cut -d '"' -f 4)
+    - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$VERSION .
+    - docker push $IMAGE_NAME:$VERSION
 
 deploy_dev:
   stage: deploy_dev
@@ -38,6 +31,6 @@ deploy_dev:
     - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $USER@$HOST "
       docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $DEV_PORT:80 -p 443:443 $IMAGE_NAME:$(cat package.json | grep '"version"' | cut -d '"' -f 4)"
+      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$VERSION"
   needs:
     - build_dev

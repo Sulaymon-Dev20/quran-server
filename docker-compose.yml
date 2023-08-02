@@ -1,6 +1,11 @@
 version: '3.8'
 
 services:
+  backend:
+    build: ./docker/dev/
+    ports:
+      - "6236:6236"
+
   db:
     container_name: pg_container
     image: postgres
@@ -11,6 +16,7 @@ services:
       POSTGRES_DB: ihb
     ports:
       - "5432:5432"
+
   pgadmin:
     container_name: pgadmin4_container
     image: dpage/pgadmin4
