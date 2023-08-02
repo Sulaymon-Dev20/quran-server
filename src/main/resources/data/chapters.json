@@ -1,9 +1,10 @@
 [
   {
     "id": 1,
-    "name": "الفاتحة",
+    "title": "الفاتحة",
     "type": "meccan",
     "total_verses": 7,
+    "name": "Al-Fatiha",
     "translation": {
       "ru": "Открывающая Коран",
       "sv": "Öppningen",
@@ -20,9 +21,10 @@
   },
   {
     "id": 2,
-    "name": "البقرة",
+    "title": "البقرة",
     "type": "medinan",
     "total_verses": 286,
+    "name": "Al-Baqarah",
     "translation": {
       "ru": "Корова",
       "sv": "Kon",
@@ -39,9 +41,10 @@
   },
   {
     "id": 3,
-    "name": "آل عمران",
+    "title": "آل عمران",
     "type": "medinan",
     "total_verses": 200,
+    "name": "Aali Imran",
     "translation": {
       "ru": "Семейство Имрана",
       "sv": "Imrans Ätt",
@@ -58,9 +61,10 @@
   },
   {
     "id": 4,
-    "name": "النساء",
+    "title": "النساء",
     "type": "medinan",
     "total_verses": 176,
+    "name": "An-Nisa'",
     "translation": {
       "ru": "Женщины",
       "sv": "Kvinnor",
@@ -77,9 +81,10 @@
   },
   {
     "id": 5,
-    "name": "المائدة",
+    "title": "المائدة",
     "type": "medinan",
     "total_verses": 120,
+    "name": "Al-Ma'idah",
     "translation": {
       "ru": "Трапеза",
       "sv": "Den Himmelska Måltiden",
@@ -96,9 +101,10 @@
   },
   {
     "id": 6,
-    "name": "الأنعام",
+    "title": "الأنعام",
     "type": "meccan",
     "total_verses": 165,
+    "name": "Al-An'am",
     "translation": {
       "ru": "Скот",
       "sv": "Boskap",
@@ -115,9 +121,10 @@
   },
   {
     "id": 7,
-    "name": "الأعراف",
+    "title": "الأعراف",
     "type": "meccan",
     "total_verses": 206,
+    "name": "Al-A'raf",
     "translation": {
       "ru": "Ограды",
       "sv": "Urskiljning",
@@ -134,9 +141,10 @@
   },
   {
     "id": 8,
-    "name": "الأنفال",
+    "title": "الأنفال",
     "type": "medinan",
     "total_verses": 75,
+    "name": "Al-Anfal",
     "translation": {
       "ru": "Трофеи",
       "sv": "Krigsbyte",
@@ -153,9 +161,10 @@
   },
   {
     "id": 9,
-    "name": "التوبة",
+    "title": "التوبة",
     "type": "medinan",
     "total_verses": 129,
+    "name": "At-Tawbah",
     "translation": {
       "ru": "Покаяние",
       "sv": "Ånger",
@@ -172,9 +181,10 @@
   },
   {
     "id": 10,
-    "name": "يونس",
+    "title": "يونس",
     "type": "meccan",
     "total_verses": 109,
+    "name": "Yunus",
     "translation": {
       "ru": "Йунус",
       "sv": "Jonah",
@@ -191,9 +201,10 @@
   },
   {
     "id": 11,
-    "name": "هود",
+    "title": "هود",
     "type": "meccan",
     "total_verses": 123,
+    "name": "Hud",
     "translation": {
       "ru": "Худ",
       "sv": "Hud",
@@ -210,9 +221,10 @@
   },
   {
     "id": 12,
-    "name": "يوسف",
+    "title": "يوسف",
     "type": "meccan",
     "total_verses": 111,
+    "name": "Yusuf",
     "translation": {
       "ru": "Йусуф",
       "sv": "Josef",
@@ -229,9 +241,10 @@
   },
   {
     "id": 13,
-    "name": "الرعد",
+    "title": "الرعد",
     "type": "medinan",
     "total_verses": 43,
+    "name": "Ar-Ra'd",
     "translation": {
       "ru": "Гром",
       "sv": "Åskan",
@@ -248,9 +261,10 @@
   },
   {
     "id": 14,
-    "name": "ابراهيم",
+    "title": "ابراهيم",
     "type": "meccan",
     "total_verses": 52,
+    "name": "Ibrahim",
     "translation": {
       "ru": "Ибрахим",
       "sv": "Abraham",
@@ -267,9 +281,10 @@
   },
   {
     "id": 15,
-    "name": "الحجر",
+    "title": "الحجر",
     "type": "meccan",
     "total_verses": 99,
+    "name": "Al-Hijr",
     "translation": {
       "ru": "Хиджр ",
       "sv": "Al-Hijr",
@@ -286,9 +301,10 @@
   },
   {
     "id": 16,
-    "name": "النحل",
+    "title": "النحل",
     "type": "meccan",
     "total_verses": 128,
+    "name": "An-Nahl",
     "translation": {
       "ru": "Пчелы",
       "sv": "Biet",
@@ -305,9 +321,10 @@
   },
   {
     "id": 17,
-    "name": "الإسراء",
+    "title": "الإسراء",
     "type": "meccan",
     "total_verses": 111,
+    "name": "Al-Isra'",
     "translation": {
       "ru": "Ночной перенос",
       "sv": "Den Nattliga Resan",
@@ -324,9 +341,10 @@
   },
   {
     "id": 18,
-    "name": "الكهف",
+    "title": "الكهف",
     "type": "meccan",
     "total_verses": 110,
+    "name": "Al-Kahf",
     "translation": {
       "ru": "Пещера",
       "sv": "Grottan",
@@ -343,9 +361,10 @@
   },
   {
     "id": 19,
-    "name": "مريم",
+    "title": "مريم",
     "type": "meccan",
     "total_verses": 98,
+    "name": "Maryam",
     "translation": {
       "ru": "Марьям",
       "sv": "Maria",
@@ -362,9 +381,10 @@
   },
   {
     "id": 20,
-    "name": "طه",
+    "title": "طه",
     "type": "meccan",
     "total_verses": 135,
+    "name": "Ta-Ha",
     "translation": {
       "ru": "Та Ха ",
       "sv": "Ta-Ha",
@@ -381,9 +401,10 @@
   },
   {
     "id": 21,
-    "name": "الأنبياء",
+    "title": "الأنبياء",
     "type": "meccan",
     "total_verses": 112,
+    "name": "Al-Anbiya'",
     "translation": {
       "ru": "Пророки",
       "sv": "Profeterna",
@@ -400,9 +421,10 @@
   },
   {
     "id": 22,
-    "name": "الحج",
+    "title": "الحج",
     "type": "medinan",
     "total_verses": 78,
+    "name": "Al-Hajj",
     "translation": {
       "ru": "Паломничество",
       "sv": "Vallfärden",
@@ -419,9 +441,10 @@
   },
   {
     "id": 23,
-    "name": "المؤمنون",
+    "title": "المؤمنون",
     "type": "meccan",
     "total_verses": 118,
+    "name": "Al-Mu'minun",
     "translation": {
       "ru": "Верующие",
       "sv": "De Troende",
@@ -438,9 +461,10 @@
   },
   {
     "id": 24,
-    "name": "النور",
+    "title": "النور",
     "type": "medinan",
     "total_verses": 64,
+    "name": "An-Nur",
     "translation": {
       "ru": "Свет",
       "sv": "Ljus",
@@ -457,9 +481,10 @@
   },
   {
     "id": 25,
-    "name": "الفرقان",
+    "title": "الفرقان",
     "type": "meccan",
     "total_verses": 77,
+    "name": "Al-Furqan",
     "translation": {
       "ru": "аль-Фуркан",
       "sv": "Måttstocken",
@@ -476,9 +501,10 @@
   },
   {
     "id": 26,
-    "name": "الشعراء",
+    "title": "الشعراء",
     "type": "meccan",
     "total_verses": 227,
+    "name": "Ash-Shu'ara'",
     "translation": {
       "ru": "Поэты",
       "sv": "Poeterna",
@@ -495,9 +521,10 @@
   },
   {
     "id": 27,
-    "name": "النمل",
+    "title": "النمل",
     "type": "meccan",
     "total_verses": 93,
+    "name": "An-Naml",
     "translation": {
       "ru": "Муравьи",
       "sv": "Myrorna",
@@ -514,9 +541,10 @@
   },
   {
     "id": 28,
-    "name": "القصص",
+    "title": "القصص",
     "type": "meccan",
     "total_verses": 88,
+    "name": "Al-Qasas",
     "translation": {
       "ru": "Рассказ",
       "sv": "Berättelsen",
@@ -533,9 +561,10 @@
   },
   {
     "id": 29,
-    "name": "العنكبوت",
+    "title": "العنكبوت",
     "type": "meccan",
     "total_verses": 69,
+    "name": "Al-Ankabut",
     "translation": {
       "ru": "Паук",
       "sv": "Spindeln",
@@ -552,9 +581,10 @@
   },
   {
     "id": 30,
-    "name": "الروم",
+    "title": "الروم",
     "type": "meccan",
     "total_verses": 60,
+    "name": "Ar-Rum",
     "translation": {
       "ru": "Римляне",
       "sv": "Bysantinerna",
@@ -571,9 +601,10 @@
   },
   {
     "id": 31,
-    "name": "لقمان",
+    "title": "لقمان",
     "type": "meccan",
     "total_verses": 34,
+    "name": "Luqman",
     "translation": {
       "ru": "Лукман",
       "sv": "Luqman",
@@ -590,9 +621,10 @@
   },
   {
     "id": 32,
-    "name": "السجدة",
+    "title": "السجدة",
     "type": "meccan",
     "total_verses": 30,
+    "name": "As-Sajda",
     "translation": {
       "ru": "Земной поклон",
       "sv": "De Faller Ned I Tillbedjan",
@@ -609,9 +641,10 @@
   },
   {
     "id": 33,
-    "name": "الأحزاب",
+    "title": "الأحزاب",
     "type": "medinan",
     "total_verses": 73,
+    "name": "Al-Ahzab",
     "translation": {
       "ru": "Союзники",
       "sv": "De Sammansvurna",
@@ -628,9 +661,10 @@
   },
   {
     "id": 34,
-    "name": "سبإ",
+    "title": "سبإ",
     "type": "meccan",
     "total_verses": 54,
+    "name": "Saba'",
     "translation": {
       "ru": "Сава",
       "sv": "Saba",
@@ -647,9 +681,10 @@
   },
   {
     "id": 35,
-    "name": "فاطر",
+    "title": "فاطر",
     "type": "meccan",
     "total_verses": 45,
+    "name": "Fatir",
     "translation": {
       "ru": "Творец",
       "sv": "Himlarnas Och Jordens Skapare",
@@ -666,9 +701,10 @@
   },
   {
     "id": 36,
-    "name": "يس",
+    "title": "يس",
     "type": "meccan",
     "total_verses": 83,
+    "name": "Ya-Sin",
     "translation": {
       "ru": "Йа Син",
       "sv": "Ya-Sin",
@@ -685,9 +721,10 @@
   },
   {
     "id": 37,
-    "name": "الصافات",
+    "title": "الصافات",
     "type": "meccan",
     "total_verses": 182,
+    "name": "As-Saffat",
     "translation": {
       "ru": "Выстроившиеся в ряды",
       "sv": "I Sluten Ordning",
@@ -704,9 +741,10 @@
   },
   {
     "id": 38,
-    "name": "ص",
+    "title": "ص",
     "type": "meccan",
     "total_verses": 88,
+    "name": "Sad",
     "translation": {
       "ru": "Сод",
       "sv": "Sad",
@@ -723,9 +761,10 @@
   },
   {
     "id": 39,
-    "name": "الزمر",
+    "title": "الزمر",
     "type": "meccan",
     "total_verses": 75,
+    "name": "Az-Zumar",
     "translation": {
       "ru": "Толпы",
       "sv": "Skarorna",
@@ -742,9 +781,10 @@
   },
   {
     "id": 40,
-    "name": "غافر",
+    "title": "غافر",
     "type": "meccan",
     "total_verses": 85,
+    "name": "Ghafir",
     "translation": {
       "ru": "Прощающий",
       "sv": "Han Som Förlåter",
@@ -761,9 +801,10 @@
   },
   {
     "id": 41,
-    "name": "فصلت",
+    "title": "فصلت",
     "type": "meccan",
     "total_verses": 54,
+    "name": "Fussilat",
     "translation": {
       "ru": "Разъяснены",
       "sv": "En Fast Och Klar Förkunnelse",
@@ -780,9 +821,10 @@
   },
   {
     "id": 42,
-    "name": "الشورى",
+    "title": "الشورى",
     "type": "meccan",
     "total_verses": 53,
+    "name": "Ash-Shura",
     "translation": {
       "ru": "Совет",
       "sv": "Samråd",
@@ -799,14 +841,15 @@
   },
   {
     "id": 43,
-    "name": "الزخرف",
+    "title": "الزخرف",
     "type": "meccan",
     "total_verses": 89,
+    "name": "Az-Zukhruf",
     "translation": {
       "ru": "Украшения",
       "sv": "Guld",
       "uz": "Zuxruf",
-      "en": "The Ornaments of Gold",
+      "en": "The Ortitlents of Gold",
       "id": "Perhiasan",
       "fr": "L'ornement",
       "bn": "সোনাদানা",
@@ -818,9 +861,10 @@
   },
   {
     "id": 44,
-    "name": "الدخان",
+    "title": "الدخان",
     "type": "meccan",
     "total_verses": 59,
+    "name": "Ad-Dukhan",
     "translation": {
       "ru": "Дым",
       "sv": "Rök",
@@ -837,9 +881,10 @@
   },
   {
     "id": 45,
-    "name": "الجاثية",
+    "title": "الجاثية",
     "type": "meccan",
     "total_verses": 37,
+    "name": "Al-Jathiyah",
     "translation": {
       "ru": "Коленопреклоненные",
       "sv": "På Knä",
@@ -856,9 +901,10 @@
   },
   {
     "id": 46,
-    "name": "الأحقاف",
+    "title": "الأحقاف",
     "type": "meccan",
     "total_verses": 35,
+    "name": "Al-Ahqaf",
     "translation": {
       "ru": "Барханы",
       "sv": "Sanddynorna",
@@ -875,9 +921,10 @@
   },
   {
     "id": 47,
-    "name": "محمد",
+    "title": "محمد",
     "type": "medinan",
     "total_verses": 38,
+    "name": "Muhammad",
     "translation": {
       "ru": "Мухаммад",
       "sv": "Muhammad",
@@ -894,9 +941,10 @@
   },
   {
     "id": 48,
-    "name": "الفتح",
+    "title": "الفتح",
     "type": "medinan",
     "total_verses": 29,
+    "name": "Al-Fath",
     "translation": {
       "ru": "Победа",
       "sv": "Segern",
@@ -913,9 +961,10 @@
   },
   {
     "id": 49,
-    "name": "الحجرات",
+    "title": "الحجرات",
     "type": "medinan",
     "total_verses": 18,
+    "name": "Al-Hujurat",
     "translation": {
       "ru": "Комнаты",
       "sv": "De Inre Rummen",
@@ -932,9 +981,10 @@
   },
   {
     "id": 50,
-    "name": "ق",
+    "title": "ق",
     "type": "meccan",
     "total_verses": 45,
+    "name": "Qaf",
     "translation": {
       "ru": "Каф",
       "sv": "Qaf",
@@ -951,9 +1001,10 @@
   },
   {
     "id": 51,
-    "name": "الذاريات",
+    "title": "الذاريات",
     "type": "meccan",
     "total_verses": 60,
+    "name": "Adh-Dhariyat",
     "translation": {
       "ru": "Рассеивающие прах",
       "sv": "De Som Virvlar Upp",
@@ -970,9 +1021,10 @@
   },
   {
     "id": 52,
-    "name": "الطور",
+    "title": "الطور",
     "type": "meccan",
     "total_verses": 49,
+    "name": "At-Tur",
     "translation": {
       "ru": "Гора",
       "sv": "Sinai Berg",
@@ -989,9 +1041,10 @@
   },
   {
     "id": 53,
-    "name": "النجم",
+    "title": "النجم",
     "type": "meccan",
     "total_verses": 62,
+    "name": "An-Najm",
     "translation": {
       "ru": "Звезда",
       "sv": "Stjärnan",
@@ -1008,9 +1061,10 @@
   },
   {
     "id": 54,
-    "name": "القمر",
+    "title": "القمر",
     "type": "meccan",
     "total_verses": 55,
+    "name": "Al-Qamar",
     "translation": {
       "ru": "Месяц",
       "sv": "Månen",
@@ -1027,9 +1081,10 @@
   },
   {
     "id": 55,
-    "name": "الرحمن",
+    "title": "الرحمن",
     "type": "medinan",
     "total_verses": 78,
+    "name": "Ar-Rahman",
     "translation": {
       "ru": "Милостивый",
       "sv": "Den Nåderike",
@@ -1046,9 +1101,10 @@
   },
   {
     "id": 56,
-    "name": "الواقعة",
+    "title": "الواقعة",
     "type": "meccan",
     "total_verses": 96,
+    "name": "Al-Waqi'ah",
     "translation": {
       "ru": "Событие",
       "sv": "Det Som Måste Komma",
@@ -1065,9 +1121,10 @@
   },
   {
     "id": 57,
-    "name": "الحديد",
+    "title": "الحديد",
     "type": "medinan",
     "total_verses": 29,
+    "name": "Al-Hadid",
     "translation": {
       "ru": "Железо",
       "sv": "Järnet",
@@ -1084,9 +1141,10 @@
   },
   {
     "id": 58,
-    "name": "المجادلة",
+    "title": "المجادلة",
     "type": "medinan",
     "total_verses": 22,
+    "name": "Al-Mujadila",
     "translation": {
       "ru": "Препирающаяся",
       "sv": "Hon Som Vädjar",
@@ -1103,9 +1161,10 @@
   },
   {
     "id": 59,
-    "name": "الحشر",
+    "title": "الحشر",
     "type": "medinan",
     "total_verses": 24,
+    "name": "Al-Hashr",
     "translation": {
       "ru": "Сбор",
       "sv": "Mönstringen",
@@ -1122,9 +1181,10 @@
   },
   {
     "id": 60,
-    "name": "الممتحنة",
+    "title": "الممتحنة",
     "type": "medinan",
     "total_verses": 13,
+    "name": "Al-Mumtahanah",
     "translation": {
       "ru": "Испытуемая",
       "sv": "Den Som Skall Förhöras",
@@ -1141,9 +1201,10 @@
   },
   {
     "id": 61,
-    "name": "الصف",
+    "title": "الصف",
     "type": "medinan",
     "total_verses": 14,
+    "name": "As-Saff",
     "translation": {
       "ru": "Ряды",
       "sv": "I Slutna Led",
@@ -1160,9 +1221,10 @@
   },
   {
     "id": 62,
-    "name": "الجمعة",
+    "title": "الجمعة",
     "type": "medinan",
     "total_verses": 11,
+    "name": "Al-Jumu'ah",
     "translation": {
       "ru": "Собрание",
       "sv": "Fredagsbönen",
@@ -1179,9 +1241,10 @@
   },
   {
     "id": 63,
-    "name": "المنافقون",
+    "title": "المنافقون",
     "type": "medinan",
     "total_verses": 11,
+    "name": "Al-Munafiqun",
     "translation": {
       "ru": "Лицемеры",
       "sv": "Hycklarna",
@@ -1198,9 +1261,10 @@
   },
   {
     "id": 64,
-    "name": "التغابن",
+    "title": "التغابن",
     "type": "medinan",
     "total_verses": 18,
+    "name": "At-Taghabun",
     "translation": {
       "ru": "Взаимное обделение",
       "sv": "Då Vinnarna Och Förlorarna Byter Plats",
@@ -1217,9 +1281,10 @@
   },
   {
     "id": 65,
-    "name": "الطلاق",
+    "title": "الطلاق",
     "type": "medinan",
     "total_verses": 12,
+    "name": "At-Talaq",
     "translation": {
       "ru": "Развод",
       "sv": "Skilsmässa",
@@ -1236,9 +1301,10 @@
   },
   {
     "id": 66,
-    "name": "التحريم",
+    "title": "التحريم",
     "type": "medinan",
     "total_verses": 12,
+    "name": "At-Tahrim",
     "translation": {
       "ru": "Запрещение",
       "sv": "Förbudet",
@@ -1255,9 +1321,10 @@
   },
   {
     "id": 67,
-    "name": "الملك",
+    "title": "الملك",
     "type": "meccan",
     "total_verses": 30,
+    "name": "Al-Mulk",
     "translation": {
       "ru": "Власть",
       "sv": "Herravälde",
@@ -1274,9 +1341,10 @@
   },
   {
     "id": 68,
-    "name": "القلم",
+    "title": "القلم",
     "type": "meccan",
     "total_verses": 52,
+    "name": "Al-Qalam",
     "translation": {
       "ru": "Письменная трость",
       "sv": "Pennan",
@@ -1293,9 +1361,10 @@
   },
   {
     "id": 69,
-    "name": "الحاقة",
+    "title": "الحاقة",
     "type": "meccan",
     "total_verses": 52,
+    "name": "Al-Haqqah",
     "translation": {
       "ru": "Неминуемое",
       "sv": "Sanningens Stund",
@@ -1312,9 +1381,10 @@
   },
   {
     "id": 70,
-    "name": "المعارج",
+    "title": "المعارج",
     "type": "meccan",
     "total_verses": 44,
+    "name": "Al-Ma'arij",
     "translation": {
       "ru": "Ступени",
       "sv": "Vägarna Upp Till Gud",
@@ -1331,9 +1401,10 @@
   },
   {
     "id": 71,
-    "name": "نوح",
+    "title": "نوح",
     "type": "meccan",
     "total_verses": 28,
+    "name": "Nuh",
     "translation": {
       "ru": "Нух",
       "sv": "Noa",
@@ -1350,9 +1421,10 @@
   },
   {
     "id": 72,
-    "name": "الجن",
+    "title": "الجن",
     "type": "meccan",
     "total_verses": 28,
+    "name": "Al-Jinn",
     "translation": {
       "ru": "Джинны",
       "sv": "Osynliga Väsen",
@@ -1369,9 +1441,10 @@
   },
   {
     "id": 73,
-    "name": "المزمل",
+    "title": "المزمل",
     "type": "meccan",
     "total_verses": 20,
+    "name": "Al-Muzzammil",
     "translation": {
       "ru": "Закутавшийся",
       "sv": "Du Som Täcker Över Dig",
@@ -1388,9 +1461,10 @@
   },
   {
     "id": 74,
-    "name": "المدثر",
+    "title": "المدثر",
     "type": "meccan",
     "total_verses": 56,
+    "name": "Al-Muddaththir",
     "translation": {
       "ru": "Завернувшийся",
       "sv": "Du Som Sveper In Dig",
@@ -1407,9 +1481,10 @@
   },
   {
     "id": 75,
-    "name": "القيامة",
+    "title": "القيامة",
     "type": "meccan",
     "total_verses": 40,
+    "name": "Al-Qiyamah",
     "translation": {
       "ru": "Воскресение",
       "sv": "Uppståndelsen",
@@ -1426,9 +1501,10 @@
   },
   {
     "id": 76,
-    "name": "الانسان",
+    "title": "الانسان",
     "type": "medinan",
     "total_verses": 31,
+    "name": "Al-Insan",
     "translation": {
       "ru": "Человек",
       "sv": "Människan",
@@ -1445,9 +1521,10 @@
   },
   {
     "id": 77,
-    "name": "المرسلات",
+    "title": "المرسلات",
     "type": "meccan",
     "total_verses": 50,
+    "name": "Al-Mursalat",
     "translation": {
       "ru": "Посылаемые",
       "sv": "De Som Sänds Ut",
@@ -1464,9 +1541,10 @@
   },
   {
     "id": 78,
-    "name": "النبإ",
+    "title": "النبإ",
     "type": "meccan",
     "total_verses": 40,
+    "name": "An-Naba'",
     "translation": {
       "ru": "Весть",
       "sv": "Tillkännagivandet",
@@ -1483,9 +1561,10 @@
   },
   {
     "id": 79,
-    "name": "النازعات",
+    "title": "النازعات",
     "type": "meccan",
     "total_verses": 46,
+    "name": "An-Nazi'at",
     "translation": {
       "ru": "Исторгающие",
       "sv": "De Som Stiger Över Horisonten",
@@ -1502,9 +1581,10 @@
   },
   {
     "id": 80,
-    "name": "عبس",
+    "title": "عبس",
     "type": "meccan",
     "total_verses": 42,
+    "name": "'Abasa",
     "translation": {
       "ru": "Нахмурился",
       "sv": "Med Bister Min",
@@ -1521,9 +1601,10 @@
   },
   {
     "id": 81,
-    "name": "التكوير",
+    "title": "التكوير",
     "type": "meccan",
     "total_verses": 29,
+    "name": "At-Takwir",
     "translation": {
       "ru": "Скручивание",
       "sv": "När Solen Lindas In",
@@ -1540,9 +1621,10 @@
   },
   {
     "id": 82,
-    "name": "الإنفطار",
+    "title": "الإنفطار",
     "type": "meccan",
     "total_verses": 19,
+    "name": "Al-Infitar",
     "translation": {
       "ru": "Раскалывание",
       "sv": "När Himlen Rämnar",
@@ -1559,9 +1641,10 @@
   },
   {
     "id": 83,
-    "name": "المطففين",
+    "title": "المطففين",
     "type": "meccan",
     "total_verses": 36,
+    "name": "Al-Mutaffifin",
     "translation": {
       "ru": "Обвешивающие",
       "sv": "De Som Snålar Med Mått Och Vikt",
@@ -1578,9 +1661,10 @@
   },
   {
     "id": 84,
-    "name": "الإنشقاق",
+    "title": "الإنشقاق",
     "type": "meccan",
     "total_verses": 25,
+    "name": "Al-Inshiqaq",
     "translation": {
       "ru": "Разверзнется",
       "sv": "När Himlen Brister I Stycken",
@@ -1597,9 +1681,10 @@
   },
   {
     "id": 85,
-    "name": "البروج",
+    "title": "البروج",
     "type": "meccan",
     "total_verses": 22,
+    "name": "Al-Buruj",
     "translation": {
       "ru": "Созвездия Зодиака",
       "sv": "Stjärnbilderna",
@@ -1616,9 +1701,10 @@
   },
   {
     "id": 86,
-    "name": "الطارق",
+    "title": "الطارق",
     "type": "meccan",
     "total_verses": 17,
+    "name": "At-Tariq",
     "translation": {
       "ru": "Ночной путник",
       "sv": "Den Nattliga Besökaren",
@@ -1635,9 +1721,10 @@
   },
   {
     "id": 87,
-    "name": "الأعلى",
+    "title": "الأعلى",
     "type": "meccan",
     "total_verses": 19,
+    "name": "Al-A'la",
     "translation": {
       "ru": "Всевышний",
       "sv": "Den Högste",
@@ -1654,9 +1741,10 @@
   },
   {
     "id": 88,
-    "name": "الغاشية",
+    "title": "الغاشية",
     "type": "meccan",
     "total_verses": 26,
+    "name": "Al-Ghashiyah",
     "translation": {
       "ru": "Покрывающее",
       "sv": "Det Som Skall Överskugga Allt",
@@ -1673,9 +1761,10 @@
   },
   {
     "id": 89,
-    "name": "الفجر",
+    "title": "الفجر",
     "type": "meccan",
     "total_verses": 30,
+    "name": "Al-Fajr",
     "translation": {
       "ru": "Заря",
       "sv": "Gryningsljuset",
@@ -1692,9 +1781,10 @@
   },
   {
     "id": 90,
-    "name": "البلد",
+    "title": "البلد",
     "type": "meccan",
     "total_verses": 20,
+    "name": "Al-Balad",
     "translation": {
       "ru": "Город",
       "sv": "Landet",
@@ -1711,9 +1801,10 @@
   },
   {
     "id": 91,
-    "name": "الشمس",
+    "title": "الشمس",
     "type": "meccan",
     "total_verses": 15,
+    "name": "Ash-Shams",
     "translation": {
       "ru": "Солнце",
       "sv": "Solen",
@@ -1730,9 +1821,10 @@
   },
   {
     "id": 92,
-    "name": "الليل",
+    "title": "الليل",
     "type": "meccan",
     "total_verses": 21,
+    "name": "Al-Lail",
     "translation": {
       "ru": "Ночь",
       "sv": "Natten",
@@ -1749,9 +1841,10 @@
   },
   {
     "id": 93,
-    "name": "الضحى",
+    "title": "الضحى",
     "type": "meccan",
     "total_verses": 11,
+    "name": "Ad-Duha",
     "translation": {
       "ru": "Утро",
       "sv": "Det Klara Morgonljuset",
@@ -1768,9 +1861,10 @@
   },
   {
     "id": 94,
-    "name": "الشرح",
+    "title": "الشرح",
     "type": "meccan",
     "total_verses": 8,
+    "name": "Ash-Sharh",
     "translation": {
       "ru": "Раскрытие",
       "sv": "Har Vi Inte Öppnat Ditt Bröst",
@@ -1787,9 +1881,10 @@
   },
   {
     "id": 95,
-    "name": "التين",
+    "title": "التين",
     "type": "meccan",
     "total_verses": 8,
+    "name": "At-Tin",
     "translation": {
       "ru": "Смоковница",
       "sv": "Fikonträdet",
@@ -1806,9 +1901,10 @@
   },
   {
     "id": 96,
-    "name": "العلق",
+    "title": "العلق",
     "type": "meccan",
     "total_verses": 19,
+    "name": "Al-'Alaq",
     "translation": {
       "ru": "Сгусток крови",
       "sv": "Grodden",
@@ -1825,9 +1921,10 @@
   },
   {
     "id": 97,
-    "name": "القدر",
+    "title": "القدر",
     "type": "meccan",
     "total_verses": 5,
+    "name": "Al-Qadr",
     "translation": {
       "ru": "Предопределение",
       "sv": "Allmaktens Natt",
@@ -1844,9 +1941,10 @@
   },
   {
     "id": 98,
-    "name": "البينة",
+    "title": "البينة",
     "type": "medinan",
     "total_verses": 8,
+    "name": "Al-Bayyinah",
     "translation": {
       "ru": "Ясное знамение",
       "sv": "Det Klara Vittnesbördet",
@@ -1863,9 +1961,10 @@
   },
   {
     "id": 99,
-    "name": "الزلزلة",
+    "title": "الزلزلة",
     "type": "medinan",
     "total_verses": 8,
+    "name": "Az-Zalzalah",
     "translation": {
       "ru": "Сотрясение",
       "sv": "När Jorden Skälver",
@@ -1882,9 +1981,10 @@
   },
   {
     "id": 100,
-    "name": "العاديات",
+    "title": "العاديات",
     "type": "meccan",
     "total_verses": 11,
+    "name": "Al-'Adiyat",
     "translation": {
       "ru": "Скачущие",
       "sv": "Stridshästarna",
@@ -1901,9 +2001,10 @@
   },
   {
     "id": 101,
-    "name": "القارعة",
+    "title": "القارعة",
     "type": "meccan",
     "total_verses": 11,
+    "name": "Al-Qari'ah",
     "translation": {
       "ru": "Великое бедствие",
       "sv": "Det Dundrande Slaget",
@@ -1920,9 +2021,10 @@
   },
   {
     "id": 102,
-    "name": "التكاثر",
+    "title": "التكاثر",
     "type": "meccan",
     "total_verses": 8,
+    "name": "At-Takathur",
     "translation": {
       "ru": "Страсть к приумножению",
       "sv": "Tävlan I Rikedom",
@@ -1939,9 +2041,10 @@
   },
   {
     "id": 103,
-    "name": "العصر",
+    "title": "العصر",
     "type": "meccan",
     "total_verses": 3,
+    "name": "Al-Asr",
     "translation": {
       "ru": "Предвечернее время",
       "sv": "Den Flyende Tiden",
@@ -1958,9 +2061,10 @@
   },
   {
     "id": 104,
-    "name": "الهمزة",
+    "title": "الهمزة",
     "type": "meccan",
     "total_verses": 9,
+    "name": "Al-Humazah",
     "translation": {
       "ru": "Хулитель",
       "sv": "Baktalaren",
@@ -1977,9 +2081,10 @@
   },
   {
     "id": 105,
-    "name": "الفيل",
+    "title": "الفيل",
     "type": "meccan",
     "total_verses": 5,
+    "name": "Al-Fil",
     "translation": {
       "ru": "Слон",
       "sv": "Elefanten",
@@ -1996,9 +2101,10 @@
   },
   {
     "id": 106,
-    "name": "قريش",
+    "title": "قريش",
     "type": "meccan",
     "total_verses": 4,
+    "name": "Quraysh",
     "translation": {
       "ru": "Курейшиты",
       "sv": "Quraysh",
@@ -2015,9 +2121,10 @@
   },
   {
     "id": 107,
-    "name": "الماعون",
+    "title": "الماعون",
     "type": "meccan",
     "total_verses": 7,
+    "name": "Al-Ma'un",
     "translation": {
       "ru": "Мелочь",
       "sv": "Den Minsta Hjälp",
@@ -2034,9 +2141,10 @@
   },
   {
     "id": 108,
-    "name": "الكوثر",
+    "title": "الكوثر",
     "type": "meccan",
     "total_verses": 3,
+    "name": "Al-Kawthar",
     "translation": {
       "ru": "Изобилие",
       "sv": "Det Goda I Överflöd",
@@ -2053,9 +2161,10 @@
   },
   {
     "id": 109,
-    "name": "الكافرون",
+    "title": "الكافرون",
     "type": "meccan",
     "total_verses": 6,
+    "name": "Al-Kafirun",
     "translation": {
       "ru": "Неверующие",
       "sv": "Sanningens Förnekare",
@@ -2072,9 +2181,10 @@
   },
   {
     "id": 110,
-    "name": "النصر",
+    "title": "النصر",
     "type": "medinan",
     "total_verses": 3,
+    "name": "An-Nasr",
     "translation": {
       "ru": "Помощь",
       "sv": "Guds Hjälp",
@@ -2091,9 +2201,10 @@
   },
   {
     "id": 111,
-    "name": "المسد",
+    "title": "المسد",
     "type": "meccan",
     "total_verses": 5,
+    "name": "Al-Masad",
     "translation": {
       "ru": "Пальмовые волокна",
       "sv": "Ett Tvinnat Rep",
@@ -2110,9 +2221,10 @@
   },
   {
     "id": 112,
-    "name": "الإخلاص",
+    "title": "الإخلاص",
     "type": "meccan",
     "total_verses": 4,
+    "name": "Al-Ikhlas",
     "translation": {
       "ru": "Очищение веры",
       "sv": "Den Rena Tron",
@@ -2129,9 +2241,10 @@
   },
   {
     "id": 113,
-    "name": "الفلق",
+    "title": "الفلق",
     "type": "meccan",
     "total_verses": 5,
+    "name": "Al-Falaq",
     "translation": {
       "ru": "Рассвет",
       "sv": "Gryningens Herre",
@@ -2148,9 +2261,10 @@
   },
   {
     "id": 114,
-    "name": "الناس",
+    "title": "الناس",
     "type": "meccan",
     "total_verses": 6,
+    "name": "An-Nas",
     "translation": {
       "ru": "Люди",
       "sv": "Människornas Herre",

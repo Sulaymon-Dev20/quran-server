@@ -20,7 +20,10 @@ public class Chapter {
     @Schema(title = "Chapter Index", example = "1", description = "Chapter ordinal number")
     private Integer id;
 
-    @Schema(title = "Chapter Name", example = "الفاتحة", description = "Chapter name")
+    @Schema(title = "Chapter Title", example = "الفاتحة", description = "Chapter name In Arabic")
+    private String title;
+
+    @Schema(title = "Chapter Name", example = "Al-Fatiha", description = "Chapter name In English")
     private String name;
 
     @Schema(title = "Chapter Type", example = "Makkiyah", description = "Chapter Type")
@@ -34,6 +37,7 @@ public class Chapter {
 
     public Chapter(HashMap<String, Object> map, Language language) {
         this.id = (Integer) map.get("id");
+        this.title = StringUtils.newStringUtf8(((String) map.get("title")).getBytes());
         this.name = StringUtils.newStringUtf8(((String) map.get("name")).getBytes());
         this.type = StringUtils.newStringUtf8(((String) map.get("type")).getBytes());
         this.totalVerses = (Integer) map.get("total_verses");
