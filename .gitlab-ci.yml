@@ -31,7 +31,7 @@ build-image:
     - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
     - docker push $IMAGE_NAME:$BUILD_VERSION
   needs:
-    - variables
+    - run-test-variables
 
 deploy-aws:
   stage: deploy
@@ -44,5 +44,4 @@ deploy-aws:
       docker ps -aq | xargs docker stop | xargs docker rm &&
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
-    - build
-    - variables
+    - build-image
