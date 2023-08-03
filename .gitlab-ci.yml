@@ -60,4 +60,4 @@ release_job:
     description: '$CI_COMMIT_TAG'
     ref: '$CI_COMMIT_SHA'
   needs:
-    - deploy-aws
+    - build-image
