@@ -1,7 +1,7 @@
 image: ubuntu:focal
 
 variables:
-  IMAGE_NAME: sulaymonyahyo/quran-server
+  IMAGE_NAME: registry.gitlab.com/sulaymonyahyo/holy-quran-server
   DEV_PORT: 6236
 
 stages:
@@ -26,7 +26,7 @@ build-image:
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
-    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker login registry.gitlab.com -u $DOCKER_USER -p '$DOCKER_PASSWORD'
   script:
     - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
     - docker push $IMAGE_NAME:$BUILD_VERSION
