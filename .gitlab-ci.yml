@@ -1,37 +1,50 @@
-image: maven:3.8.3-openjdk-17
+image: ubuntu:focal
 
 variables:
   IMAGE_NAME: sulaymonyahyo/quran-server
   DEV_PORT: 6236
 
 stages:
+  - get_version
   - build_dev
   - deploy_dev
 
+get_version:
+  stage: get_version
+  image: maven:3.8.3-openjdk-17
+  script:
+    - echo "BUILD_VERSION=${mvn help:evaluate -Dexpression=project.version -q -DforceStdout}" >> build.env
+  artifacts:
+    reports:
+      dotenv: build.env
+
 build_dev:
   stage: build_dev
-  image: docker:20.10.16, maven:3.8.3-openjdk-17
+  image: docker:20.10.16
   services:
     - docker:20.10.16-dind
   variables:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+#    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
   script:
-    - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$VERSION .
-    - docker push $IMAGE_NAME:$VERSION
+    - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
+    - docker push $IMAGE_NAME:$BUILD_VERSION
+  needs:
+    - get_version
 
 deploy_dev:
   stage: deploy_dev
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
+#    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
     - chmod 600 $SSH_KEY
   script:
     - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
       docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$VERSION"
+      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - build_dev
+    - get_version
