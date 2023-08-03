@@ -9,7 +9,7 @@ stages:
   - build
   - deploy
 
-"get some verables":
+get some verables:
   stage: set_variables
   image: maven:3.8.3-openjdk-17
   script:
@@ -18,7 +18,7 @@ stages:
     reports:
       dotenv: build.env
 
-"build docker":
+build docker:
   stage: build
   image: docker:20.10.16
   services:
@@ -33,7 +33,7 @@ stages:
   needs:
     - set_variables
 
-"deploy aws with docker":
+deploy aws with docker:
   stage: deploy
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
