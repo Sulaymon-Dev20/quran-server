@@ -34,7 +34,7 @@ build-image:
     - run-test-variables
 
 deploy-aws:
-  stage: deploy & release
+  stage: 'deploy & release'
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
     - chmod 600 $SSH_KEY
@@ -45,9 +45,10 @@ deploy-aws:
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - build-image
+  timeout: 10m
 
 release_job:
-  stage: deploy & release
+  stage: 'deploy & release'
   image: registry.gitlab.com/gitlab-org/release-cli:latest
   rules:
     - if: $CI_COMMIT_TAG                 # Run this job when a tag is created
