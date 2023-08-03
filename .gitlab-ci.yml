@@ -30,7 +30,7 @@ build-image:
     - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
     - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
     - docker push $CI_REGISTRY_IMAGE:latest
-    needs:
+  needs:
     - run-test-variables
 
 run-image-local:
