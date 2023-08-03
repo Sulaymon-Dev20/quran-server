@@ -27,9 +27,10 @@ build-image:
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD registry.gitlab.com
   script:
-    - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
-    - docker push $IMAGE_NAME:$BUILD_VERSION
-  needs:
+    - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
+    - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
+    - docker push $CI_REGISTRY_IMAGE:latest
+    needs:
     - run-test-variables
 
 run-image-local:
