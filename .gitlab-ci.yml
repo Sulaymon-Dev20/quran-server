@@ -5,12 +5,12 @@ variables:
   DEV_PORT: 6236
 
 stages:
-  - get_version
-  - build_dev
-  - deploy_dev
+  - set_variables
+  - build
+  - deploy
 
-get_version:
-  stage: get_version
+"get some verables":
+  stage: set_variables
   image: maven:3.8.3-openjdk-17
   script:
     - echo "BUILD_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> build.env
@@ -18,8 +18,8 @@ get_version:
     reports:
       dotenv: build.env
 
-build_dev:
-  stage: build_dev
+"build docker":
+  stage: build
   image: docker:20.10.16
   services:
     - docker:20.10.16-dind
@@ -27,18 +27,16 @@ build_dev:
     DOCKER_TLS_CERTDIR: "/certs"
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
-#    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
   script:
     - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
     - docker push $IMAGE_NAME:$BUILD_VERSION
   needs:
-    - get_version
+    - set_variables
 
-deploy_dev:
-  stage: deploy_dev
+"deploy aws with docker":
+  stage: deploy
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-#    - export VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)
     - chmod 600 $SSH_KEY
   script:
     - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
@@ -46,5 +44,5 @@ deploy_dev:
       docker ps -aq | xargs docker stop | xargs docker rm &&
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
-    - build_dev
-    - get_version
+    - build
+    - set_variables
