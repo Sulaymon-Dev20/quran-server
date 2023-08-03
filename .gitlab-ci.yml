@@ -40,7 +40,7 @@ stages:
     - chmod 600 $SSH_KEY
   script:
     - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
-      docker login -u $DOCKER_USER -p $DOCKER_PASSWORD &&
+      docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
