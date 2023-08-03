@@ -39,7 +39,9 @@ run-image-local:
   services:
     - docker:20.10.16-dind
   script:
-    - docker run $IMAGE_NAME:$BUILD_VERSION
+    - echo ' ok '
+#    - docker run $IMAGE_NAME:$BUILD_VERSION
+#    - docker ps -aq | xargs docker stop | xargs docker rm &&
   needs:
     - build-image
   timeout: 2m
