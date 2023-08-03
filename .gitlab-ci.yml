@@ -45,7 +45,7 @@ deploy-aws:
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - build-image
-  timeout: 10m
+  timeout: 5m
 
 release_job:
   stage: deploy & release
@@ -61,3 +61,4 @@ release_job:
     ref: '$CI_COMMIT_SHA'
   needs:
     - build-image
+  timeout: 5m
