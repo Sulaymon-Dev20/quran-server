@@ -5,12 +5,12 @@ variables:
   DEV_PORT: 6236
 
 stages:
-  - set_variables
+  - variables
   - build
   - deploy
 
-set_variables:
-  stage: set_variables
+run_test_variables:
+  stage: variables
   image: maven:3.8.3-openjdk-17
   script:
     - echo "BUILD_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> build.env
@@ -18,7 +18,7 @@ set_variables:
     reports:
       dotenv: build.env
 
-build:
+build_image:
   stage: build
   image: docker:20.10.16
   services:
@@ -31,9 +31,9 @@ build:
     - docker build -f docker/dev/Dockerfile -t $IMAGE_NAME:$BUILD_VERSION .
     - docker push $IMAGE_NAME:$BUILD_VERSION
   needs:
-    - set_variables
+    - variables
 
-deploy:
+deploy_aws:
   stage: deploy
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
@@ -45,4 +45,4 @@ deploy:
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - build
-    - set_variables
+    - variables
