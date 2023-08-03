@@ -10,7 +10,7 @@ stages:
   - test
   - deploy & release
 
-run-test-variables:
+set-some-variables:
   stage: variables
   image: maven:3.8.3-openjdk-17
   script:
@@ -31,7 +31,7 @@ build-image:
     - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
     - docker push $CI_REGISTRY_IMAGE:latest
   needs:
-    - run-test-variables
+    - set-some-variables
 
 run-image-local:
   stage: test
