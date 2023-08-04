@@ -2,12 +2,21 @@ version: '3.8'
 
 services:
   backend:
-    build: ./docker/dev/
+    container_name: quran-server
+    image: sulaymonyahyo/quran-server:${TAG}
+    build:
+      dockerfile: docker/dev/Dockerfile
     ports:
       - "6236:6236"
+    environment:
+      - DATABASE_URL=jdbc:postgresql://db:5432/ihb
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=admin
+    depends_on:
+      - db
 
   db:
-    container_name: pg_container
+    container_name: postgesql
     image: postgres
     restart: always
     environment:
@@ -17,16 +26,12 @@ services:
     ports:
       - "5432:5432"
 
-  pgadmin:
-    container_name: pgadmin4_container
-    image: dpage/pgadmin4
-    restart: always
-    environment:
-      PGADMIN_DEFAULT_EMAIL: sulaymon1w@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: root
-    ports:
-      - "5050:80"
-
-volumes:
-  local_pgdata:
-  pgadmin-data:
+#  pgadmin:
+#    container_name: pgadmin4_container
+#    image: dpage/pgadmin4
+#    restart: always
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: sulaymon1w@gmail.com
+#      PGADMIN_DEFAULT_PASSWORD: root
+#    ports:
+#      - "5050:80"

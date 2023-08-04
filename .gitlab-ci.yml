@@ -3,15 +3,19 @@ image: ubuntu:focal
 variables:
   IMAGE_NAME: registry.gitlab.com/sulaymonyahyo/holy-quran-server
   DEV_PORT: 6236
+  LIVE_PROJECT_PORT: 6236
+  CONTAINER_PROJECT_PORT: 6236
 
 stages:
   - variables
   - build
   - test
   - deploy & release
-  - deploy_live
+  - deploy to live
+  - test live server
+  - restore old version
 
-set-some-variables:
+set some variables:
   stage: variables
   image: maven:3.8.3-openjdk-17
   script:
@@ -20,7 +24,7 @@ set-some-variables:
     reports:
       dotenv: build.env
 
-build-image:
+build image:
   stage: build
   image: docker:20.10.16
   services:
@@ -32,35 +36,35 @@ build-image:
     - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
     - docker push $CI_REGISTRY_IMAGE:latest
   needs:
-    - set-some-variables
+    - set some variables
 
-run-image-local:
+run image local:
   stage: test
   image: docker:20.10.16
   services:
     - docker:20.10.16-dind
   script:
-    - echo ' ok '
+    - echo ' we should to loop up how to test docker '
 #    - docker run $IMAGE_NAME:$BUILD_VERSION
 #    - docker ps -aq | xargs docker stop | xargs docker rm &&
   needs:
-    - build-image
+    - build image
   timeout: 2m
 
-deploy-aws:
+deploy aws:
   stage: deploy & release
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-    - chmod 600 $SSH_KEY
-  rules:
-    - if: $CI_COMMIT_TAG == null
+    - chmod 600 $DEV_SSH_KEY
+#  rules:
+#    - if: $CI_COMMIT_TAG == null
   script:
-    - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
+    - ssh -o StrictHostKeyChecking=no -p $DEV_SSH_PORT -i $DEV_SSH_KEY $DEV_SSH_USER@$DEV_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
+      docker run -d -p $DEV_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$BUILD_VERSION"
   needs:
-    - run-image-local
+    - run image local
   timeout: 5m
 
 release job:
@@ -76,21 +80,51 @@ release job:
     description: '$CI_COMMIT_TAG'
     ref: '$CI_COMMIT_SHA'
   needs:
-    - run-image-local
+    - run image local
   timeout: 5m
 
 deploy live server:
-  stage: deploy & release
+  stage: deploy to live
   rules:
     - if: $CI_COMMIT_TAG
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-    - chmod 600 $SSH_KEY
+    - chmod 600 $LIVE_SSH_KEY
   script:
-    - ssh -o StrictHostKeyChecking=no -p $SSH_PORT -i $SSH_KEY $SSH_USER@$HOST "
+    - ssh -o StrictHostKeyChecking=no -p $LIVE_SSH_PORT -i $LIVE_SSH_KEY $LIVE_SSH_USER@$LIVE_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - release job
+  timeout: 5m
+
+test server:
+  stage: test live server
+  rules:
+    - if: $CI_COMMIT_TAG
+  before_script:
+    - which nc || ( apt-get update -y && apt-get install netcat -y )
+  script:
+    - nc -v -z -w 1 $LIVE_HOST $LIVE_PROJECT_PORT &> /dev/null && exit 2 || echo "should to retore"
+  allow_failure:
+    exit_codes: 2
+  needs:
+    - release job
+  timeout: 3m
+
+restore server:
+  stage: restore old version
+  rules:
+    - if: $CI_COMMIT_TAG
+  before_script:
+    - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+    - chmod 600 $LIVE_SSH_KEY
+  script:
+    - ssh -o StrictHostKeyChecking=no -p $LIVE_SSH_PORT -i $LIVE_SSH_KEY $LIVE_SSH_USER@$LIVE_HOST "
+      docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
+      docker ps -aq | xargs docker stop | xargs docker rm &&
+      docker run -d -p $LIVE_PROJECT_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$BUILD_VERSION"
+  needs:
+    - test server
   timeout: 5m
