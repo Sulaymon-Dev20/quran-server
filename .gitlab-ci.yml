@@ -32,8 +32,8 @@ build image:
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD registry.gitlab.com
   script:
-    - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
-    - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
+    - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$CI_COMMIT_TAG --tag $IMAGE_NAME:latest .
+    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_TAG
     - docker push $CI_REGISTRY_IMAGE:latest
   needs:
     - set some variables
@@ -45,7 +45,7 @@ run image local:
     - docker:20.10.16-dind
   script:
     - echo ' we should to loop up how to test docker '
-#    - docker run $IMAGE_NAME:$BUILD_VERSION
+#    - docker run $IMAGE_NAME:$CI_COMMIT_TAG
 #    - docker ps -aq | xargs docker stop | xargs docker rm &&
   needs:
     - build image
@@ -62,7 +62,7 @@ deploy aws:
     - ssh -o StrictHostKeyChecking=no -p $DEV_SSH_PORT -i $DEV_SSH_KEY $DEV_SSH_USER@$DEV_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $DEV_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$BUILD_VERSION"
+      docker run -d -p $DEV_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$CI_COMMIT_TAG"
   needs:
     - run image local
   timeout: 5m
@@ -75,7 +75,7 @@ release job:
   script:
     - echo "running release job for $TAG"
   release:
-    name: 'Release $BUILD_VERSION'
+    name: 'Release $CI_COMMIT_TAG'
     tag_name: '$CI_COMMIT_TAG'
     description: '$CI_COMMIT_TAG'
     ref: '$CI_COMMIT_SHA'
@@ -94,7 +94,7 @@ deploy live server:
     - ssh -o StrictHostKeyChecking=no -p $LIVE_SSH_PORT -i $LIVE_SSH_KEY $LIVE_SSH_USER@$LIVE_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
+      docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$CI_COMMIT_TAG"
   needs:
     - release job
   timeout: 5m
@@ -124,7 +124,7 @@ restore server:
     - ssh -o StrictHostKeyChecking=no -p $LIVE_SSH_PORT -i $LIVE_SSH_KEY $LIVE_SSH_USER@$LIVE_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&
       docker ps -aq | xargs docker stop | xargs docker rm &&
-      docker run -d -p $LIVE_PROJECT_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$BUILD_VERSION"
+      docker run -d -p $LIVE_PROJECT_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$CI_COMMIT_TAG"
   needs:
     - test server
   timeout: 5m
