@@ -47,8 +47,11 @@ run image local:
     - docker:20.10.16-dind
   script:
     - echo ' we should to loop up how to test docker '
+    - exit 2
 #    - docker run $IMAGE_NAME:$CI_COMMIT_TAG
 #    - docker ps -aq | xargs docker stop | xargs docker rm &&
+  allow_failure:
+    exit_codes: 2
   needs:
     - build image
   timeout: 2m
