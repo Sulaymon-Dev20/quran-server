@@ -26,10 +26,9 @@ set some variables:
 
 build image:
   stage: build
-  image: $CI_REGISTRY/group/project/docker:20.10.16
+  image: docker:20.10.16
   services:
-    - name: $CI_REGISTRY/group/project/docker:20.10.16-dind
-      alias: docker
+    - docker:20.10.16-dind
   before_script:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD registry.gitlab.com
   script:
