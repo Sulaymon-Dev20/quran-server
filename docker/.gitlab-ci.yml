@@ -56,8 +56,8 @@ deploy aws:
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
     - chmod 600 $DEV_SSH_KEY
-#  rules:
-#    - if: $CI_COMMIT_TAG == null
+  rules:
+    - if: $CI_COMMIT_TAG == null
   script:
     - ssh -o StrictHostKeyChecking=no -p $DEV_SSH_PORT -i $DEV_SSH_KEY $DEV_SSH_USER@$DEV_HOST "
       docker login -u $DOCKER_USER -p '$DOCKER_PASSWORD' registry.gitlab.com &&

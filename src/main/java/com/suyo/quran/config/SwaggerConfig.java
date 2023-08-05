@@ -33,12 +33,7 @@ import java.util.List;
 @SecurityScheme(
     name = "security_auth",
     type = SecuritySchemeType.OAUTH2,
-    flows =
-        @OAuthFlows(clientCredentials =
-            @OAuthFlow(tokenUrl = "${openapi.oAuthFlow.tokenUrl}", scopes = {
-                @OAuthScope(name = "openid", description = "openid scope")
-            })
-        )
+    flows = @OAuthFlows(clientCredentials = @OAuthFlow(tokenUrl = "${openapi.oAuthFlow.tokenUrl}", scopes = @OAuthScope(name = "openid", description = "openid scope")))
 )
 public class SwaggerConfig {
 
