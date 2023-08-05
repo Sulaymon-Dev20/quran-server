@@ -34,7 +34,7 @@ build image:
   script:
     - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
     - docker push $CI_REGISTRY_IMAGE:$BUILD_VERSION
-    - docker push $CI_REGISTRY_IMAGE:latest
+    - if [ -n "$CI_COMMIT_TAG" ]; then docker push $CI_REGISTRY_IMAGE:latest; fi
   needs:
     - set some variables
 
@@ -46,10 +46,18 @@ run image local:
   script:
     - echo ' we should to loop up how to test docker '
     - exit 2
-#    - docker run $IMAGE_NAME:$BUILD_VERSION
-#    - docker ps -aq | xargs docker stop | xargs docker rm &&
   allow_failure:
     exit_codes: 2
+  needs:
+    - build image
+  timeout: 2m
+
+test dev server connection:
+  stage: test
+  before_script:
+    - which nc || ( apt-get update -y && apt-get install netcat -y )
+  script:
+    - nc -v -z -w 1 $LIVE_HOST $LIVE_SSH_PORT &> /dev/null &&  echo "SSH SERVER WORKING" || exit 1
   needs:
     - build image
   timeout: 2m
@@ -68,6 +76,7 @@ deploy aws:
       docker run -d -p $DEV_PORT:$CONTAINER_PROJECT_PORT $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - run image local
+    - test dev server connection
   timeout: 5m
 
 release job:
@@ -109,7 +118,7 @@ test server:
   before_script:
     - which nc || ( apt-get update -y && apt-get install netcat -y )
   script:
-    - nc -v -z -w 1 $LIVE_HOST $LIVE_PROJECT_PORT &> /dev/null && exit 2 || echo "should to retore"
+    - nc -v -z -w 1 $LIVE_HOST $LIVE_PROJECT_PORT &> /dev/null && echo "should to retore" || exit 2
   allow_failure:
     exit_codes: 2
   needs:
@@ -120,6 +129,7 @@ restore server:
   stage: restore old version
   rules:
     - if: $CI_COMMIT_TAG
+  when: on_failure
   before_script:
     - which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
     - chmod 600 $LIVE_SSH_KEY
