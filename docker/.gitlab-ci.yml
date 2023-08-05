@@ -131,9 +131,8 @@ test server:
   before_script:
     - which nc || ( apt-get update -y && apt-get install netcat -y )
   script:
-    - nc -v -z -w 1 $LIVE_HOST $LIVE_PROJECT_PORT &> /dev/null && echo "should to retore" || exit 2
-  allow_failure:
-    exit_codes: 2
+    - nc -v -z -w 1 $LIVE_HOST $LIVE_PROJECT_PORT &> /dev/null && exit 2 || echo "should to retore"
+  allow_failure: true
   needs:
     - release job
   timeout: 3m
