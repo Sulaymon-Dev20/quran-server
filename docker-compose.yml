@@ -3,7 +3,7 @@ version: '3.8'
 services:
   backend:
     container_name: quran-server
-    image: sulaymonyahyo/quran-server:${TAG}
+    image: sulaymonyahyo/quran-server:${CI_COMMIT_TAG}
     build:
       dockerfile: docker/dev/Dockerfile
     ports:
