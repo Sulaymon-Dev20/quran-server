@@ -19,7 +19,7 @@ set some variables:
   stage: variables
   image: maven:3.8.3-openjdk-17
   script:
-    - echo "BUILD_VERSION=${CI_COMMIT_REF_SLUG:-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)}" > build.env
+    - echo "BUILD_VERSION=${CI_COMMIT_TAG:-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)}" > build.env
   artifacts:
     reports:
       dotenv: build.env
