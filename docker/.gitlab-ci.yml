@@ -121,6 +121,7 @@ deploy live server:
       docker run -d -p $DEV_PORT:6236 $IMAGE_NAME:$BUILD_VERSION"
   needs:
     - release job
+    - test live server connection
   timeout: 5m
 
 test server:
