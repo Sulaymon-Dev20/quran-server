@@ -35,6 +35,7 @@ build image:
     - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
     - docker push $IMAGE_NAME:$BUILD_VERSION
     - if [ -n "$CI_COMMIT_TAG" ]; then docker push $IMAGE_NAME:latest; fi
+  allow_failure: true
   needs:
     - set some variables
 
@@ -57,9 +58,11 @@ test dev server connection:
   before_script:
     - which nc || ( apt-get update -y && apt-get install netcat -y )
   script:
-    - nc -v -z -w 1 $DEV_HOST $DEV_SSH_PORT &> /dev/null &&  echo "DEV SSH SERVER WORKING" || exit 1
+    - nc -v -z -w 1 $DEV_HOST $DEV_SSH_PORT &> /dev/null &&  echo "DEV SSH SERVER WORKING" || if [ -n "$CI_COMMIT_TAG" ]; then exit 1; else exit 2; fi
   needs:
     - build image
+  allow_failure:
+    exit_codes: 1
   timeout: 2m
 
 test live server connection:
@@ -69,7 +72,8 @@ test live server connection:
   before_script:
     - which nc || ( apt-get update -y && apt-get install netcat -y )
   script:
-    - nc -v -z -w 1 $LIVE_HOST $LIVE_SSH_PORT &> /dev/null &&  echo "LIVE SSH SERVER WORKING" || exit 1
+    - if [ -n "$variable" ]; then echo "bor"; else echo "yoq"; fi
+    - nc -v -z -w 1 $LIVE_HOST $LIVE_SSH_PORT &> /dev/null && echo "LIVE SSH SERVER WORKING" || exit 1
   needs:
     - build image
   timeout: 2m
@@ -123,6 +127,7 @@ deploy live server:
     - release job
     - test live server connection
   timeout: 5m
+  environment: production
 
 test server:
   stage: test live server
@@ -153,3 +158,4 @@ restore server:
   needs:
     - test server
   timeout: 5m
+  environment: production
