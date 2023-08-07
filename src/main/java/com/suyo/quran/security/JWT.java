@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(title = "Register object", name = "Register fields", description = "there is information of user")
+@Schema(title = "JWT model", name = "JWT model", description = "there is information of user")
 public class JWT {
     @Schema(title = "Access Token", example = "qjjd1vmgbtWb23fPK4J9ttUQBKpgC6k1yFmnteU+9mlFxcHeC3rJlly8oGBBAIzw", description = "access token")
     private String accessToken;
