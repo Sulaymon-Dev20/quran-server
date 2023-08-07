@@ -28,7 +28,7 @@ public class SecurityConfiguration {
             .disable()
             .authorizeHttpRequests()
             .requestMatchers(
-                "/api/user/**"
+                "/api/user/**", "/api/v1/auth/refreshToken"
             )
             .authenticated()
             .anyRequest()

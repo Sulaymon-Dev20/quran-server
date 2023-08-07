@@ -8,6 +8,7 @@ import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +33,7 @@ public class UserController {
 
     @PostMapping("/set/password")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", security = @SecurityRequirement(name = "bearerAuth"))
-    public ResponseEntity<Object> setUpPassword(@AuthenticationPrincipal User user, @RequestBody SetPassword password) {
+    public ResponseEntity<Object> setUpPassword(@AuthenticationPrincipal User user, @Valid @RequestBody SetPassword password) {
         return ResponseEntity.ok(userService.setPassword(user.getId(), password));
     }
 }

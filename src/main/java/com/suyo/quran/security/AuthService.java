@@ -5,7 +5,6 @@ import com.suyo.quran.models.auth.CheckEmailCode;
 import com.suyo.quran.models.auth.Login;
 import com.suyo.quran.models.auth.Register;
 import com.suyo.quran.repository.UserRepository;
-import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.service.mail.MailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,15 +24,15 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final MailService mailService;
 
-    public AuthResponse login(Login request) {
+    public JWT login(Login request) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
         User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
-        return AuthResponse.builder().token(jwtService.generateToken(user)).build();
+        return jwtService.generateAllToken(user);
     }
 
-    public AuthResponse checkCode(CheckEmailCode request) {
+    public JWT checkCode(CheckEmailCode request) {
         final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
-        return AuthResponse.builder().token(user.map(jwtService::generateToken).orElse(null)).build();
+        return user.map(jwtService::generateAllToken).orElse(null);
     }
 
     public Object register(Register request) {
@@ -47,5 +46,9 @@ public class AuthService {
         final int max = 999999;
         final int min = 100000;
         return String.valueOf(new Random().nextInt(max + 1 - min) + min);
+    }
+
+    public JWT refreshToken(User user) {
+        return jwtService.generateAllToken(user);
     }
 }
