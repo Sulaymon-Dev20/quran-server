@@ -1,10 +1,10 @@
 package com.suyo.quran.controller.auth;
 
 import com.suyo.quran.models.auth.CheckEmailCode;
+import com.suyo.quran.models.auth.Login;
+import com.suyo.quran.models.auth.Register;
 import com.suyo.quran.security.AuthService;
 import com.suyo.quran.security.models.AuthResponse;
-import com.suyo.quran.security.models.LoginRequest;
-import com.suyo.quran.security.models.RegisterRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
@@ -28,7 +28,7 @@ public class AuthController {
 
     @PostMapping("/register")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
-    public Object register(@RequestBody RegisterRequest request) {
+    public Object register(@Valid @RequestBody Register request) {
         return authService.register(request);
     }
 
@@ -40,7 +40,7 @@ public class AuthController {
 
     @PostMapping("/login")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
-    public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+    public ResponseEntity<AuthResponse> login(@Valid @RequestBody Login request) {
         return ResponseEntity.ok(authService.login(request));
     }
 }

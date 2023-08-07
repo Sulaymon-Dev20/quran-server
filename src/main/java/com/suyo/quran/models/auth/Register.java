@@ -1,9 +1,8 @@
-package com.suyo.quran.security.models;
+package com.suyo.quran.models.auth;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,8 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Schema(title = "Register object", name = "Register fields", description = "there is information of user")
-public class RegisterRequest {
-    @NotNull
+public class Register {
+    @NotNull(message = "column required")
     @Schema(title = "email", example = "sulaymon1w@gmail.com", description = "there shuold be email address then band end service send email short code", required = true)
     private String email;
     @Schema(title = "firstName", example = "SulaymonYahyo", description = "here you can set your firstname")
