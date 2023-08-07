@@ -1,12 +1,13 @@
 package com.suyo.quran.controller.auth;
 
-import com.suyo.quran.models.CheckEmailCode;
+import com.suyo.quran.models.auth.CheckEmailCode;
 import com.suyo.quran.security.AuthService;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;
 import com.suyo.quran.security.models.RegisterRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +34,7 @@ public class AuthController {
 
     @PostMapping("/check/code")
     @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
-    public ResponseEntity<AuthResponse> check(@RequestBody CheckEmailCode request) {
+    public ResponseEntity<AuthResponse> check(@Valid @RequestBody CheckEmailCode request) {
         return ResponseEntity.ok(authService.checkCode(request));
     }
 

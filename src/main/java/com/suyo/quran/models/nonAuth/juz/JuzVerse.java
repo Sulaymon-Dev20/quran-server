@@ -1,4 +1,4 @@
-package com.suyo.quran.models.juz;
+package com.suyo.quran.models.nonAuth.juz;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

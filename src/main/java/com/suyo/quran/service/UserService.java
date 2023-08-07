@@ -1,7 +1,7 @@
 package com.suyo.quran.service;
 
 import com.suyo.quran.entities.User;
-import com.suyo.quran.models.SetPassword;
+import com.suyo.quran.models.auth.SetPassword;
 import com.suyo.quran.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

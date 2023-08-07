@@ -1,8 +1,8 @@
 package com.suyo.quran.controller.auth;
 
 import com.suyo.quran.entities.User;
-import com.suyo.quran.models.SetPassword;
-import com.suyo.quran.models.UserInfo;
+import com.suyo.quran.models.auth.SetPassword;
+import com.suyo.quran.models.auth.UserInfo;
 import com.suyo.quran.service.UserService;
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.Operation;

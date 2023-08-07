@@ -1,4 +1,4 @@
-package com.suyo.quran.models;
+package com.suyo.quran.models.auth;
 
 import com.suyo.quran.entities.enums.ThemeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;

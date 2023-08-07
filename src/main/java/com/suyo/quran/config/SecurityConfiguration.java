@@ -28,28 +28,11 @@ public class SecurityConfiguration {
             .disable()
             .authorizeHttpRequests()
             .requestMatchers(
-                "/error/**",
-                "/images/**",
-//                "/**",//remove that line
-                "/api/v1/auth/**",
-                "/utilLogos.png",
-                "/api/chapter/**",
-                "/api/verses/**",
-                "/api/juz/**",
-                "/v2/api-docs",
-                "/v3/api-docs",
-                "/v3/api-docs/**",
-                "/swagger-resources",
-                "/swagger-resources/**",
-                "/configuration/ui",
-                "/configuration/security",
-                "/swagger-ui/**",
-                "/webjars/**",
-                "/swagger-ui.html"
+                "/api/user/**"
             )
-            .permitAll()
-            .anyRequest()
             .authenticated()
+            .anyRequest()
+            .permitAll()
             .and()
             .sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

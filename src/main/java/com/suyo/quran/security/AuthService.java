@@ -1,7 +1,7 @@
 package com.suyo.quran.security;
 
 import com.suyo.quran.entities.User;
-import com.suyo.quran.models.CheckEmailCode;
+import com.suyo.quran.models.auth.CheckEmailCode;
 import com.suyo.quran.repository.UserRepository;
 import com.suyo.quran.security.models.AuthResponse;
 import com.suyo.quran.security.models.LoginRequest;

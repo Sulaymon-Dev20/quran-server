@@ -1,7 +1,7 @@
 package com.suyo.quran.service;
 
 import com.suyo.quran.entities.enums.Language;
-import com.suyo.quran.models.chapter.Chapter;
+import com.suyo.quran.models.nonAuth.chapter.Chapter;
 import org.json.JSONArray;
 import org.springframework.stereotype.Service;
 

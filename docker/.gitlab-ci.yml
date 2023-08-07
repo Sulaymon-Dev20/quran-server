@@ -35,7 +35,6 @@ build image:
     - docker build -f docker/dev/Dockerfile --cache-from $IMAGE_NAME:latest --tag $IMAGE_NAME:$BUILD_VERSION --tag $IMAGE_NAME:latest .
     - docker push $IMAGE_NAME:$BUILD_VERSION
     - if [ -n "$CI_COMMIT_TAG" ]; then docker push $IMAGE_NAME:latest; fi
-  allow_failure: true
   needs:
     - set some variables
 
@@ -110,6 +109,7 @@ release job:
   needs:
     - run image local
   timeout: 5m
+  environment: production
 
 deploy live server:
   stage: deploy to live

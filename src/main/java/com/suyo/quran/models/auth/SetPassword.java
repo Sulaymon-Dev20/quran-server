@@ -1,4 +1,4 @@
-package com.suyo.quran.models;
+package com.suyo.quran.models.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

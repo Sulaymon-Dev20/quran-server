@@ -1,4 +1,4 @@
-package com.suyo.quran.models;
+package com.suyo.quran.models.nonAuth;
 
 import com.suyo.quran.entities.enums.Language;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -12,7 +12,7 @@ import java.util.HashMap;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Schema(name = "Translation Model", description = "chapter asdf")
+@Schema(name = "Translation Model", description = "to`ldirib yozish kerak")
 public class Translation {
     private String ru;
     private String sv;

@@ -1,7 +1,7 @@
 package com.suyo.quran.controller.nonAuth;
 
 import com.suyo.quran.entities.enums.Language;
-import com.suyo.quran.models.juz.JuzModel;
+import com.suyo.quran.models.nonAuth.juz.JuzModel;
 import com.suyo.quran.service.JuzService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @RestController

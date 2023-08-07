@@ -1,7 +1,7 @@
 package com.suyo.quran.controller.nonAuth;
 
 import com.suyo.quran.entities.enums.Language;
-import com.suyo.quran.models.chapter.Chapter;
+import com.suyo.quran.models.nonAuth.chapter.Chapter;
 import com.suyo.quran.service.ChapterService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
