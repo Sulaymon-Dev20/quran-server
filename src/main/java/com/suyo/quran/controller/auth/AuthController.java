@@ -7,6 +7,7 @@ import com.suyo.quran.models.auth.Register;
 import com.suyo.quran.security.AuthService;
 import com.suyo.quran.security.JWT;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -41,7 +42,7 @@ public class AuthController {
     }
 
     @PostMapping("/refreshToken")
-    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.", security = @SecurityRequirement(name = "bearerAuth"))
     public ResponseEntity<JWT> refreshToken(@AuthenticationPrincipal User user) {
         return ResponseEntity.ok(authService.refreshToken(user));
     }
