@@ -2,6 +2,7 @@ package com.suyo.quran;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
 
@@ -15,7 +16,9 @@ import org.springframework.context.annotation.PropertySources;
     @PropertySource("classpath:properties/application-swagger.properties"),
     @PropertySource("classpath:properties/application-telegram.properties"),
 })
+@ComponentScan(basePackages = {"com.suyo.quran", "org.telegram.telegrambots"})
 public class QuranApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(QuranApplication.class, args);
     }

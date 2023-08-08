@@ -30,12 +30,6 @@ public class SpringShutdownHook implements DisposableBean {
     @Value("${spring.application.version:-}")
     private String applicationVersion;
 
-    @Value("${spring.telegram.bot.token}")
-    private String telegramToken;
-
-    @Value("${spring.telegram.root.id}")
-    private String telegramRootId;
-
     @Override
     public void destroy() {
         if (isLive) {
@@ -47,11 +41,7 @@ public class SpringShutdownHook implements DisposableBean {
     }
 
     private void notificationTelegram() {
-        String uri = "https://api.telegram.org/bot?/sendMessage".replace("?", telegramToken);
-        final Map<String, Object> requestBody = Map.of("chat_id", telegramRootId, "disable_notification", true, "parse_mode", "html", "text", "nima bovotti jgar");
-        HttpEntity<Object> entity = new HttpEntity<>(requestBody, new HttpHeaders());
         try {
-            new RestTemplate().exchange(uri, HttpMethod.POST, entity, Object.class);
             log.warn("🌋 The information about the project's death has been sent to Boss`s Telegram");
         } catch (Exception e) {
             log.error("🦥 We was`t able to tell you boss 🫣");
