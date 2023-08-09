@@ -78,6 +78,7 @@ public class SwaggerConfig {
             .group("All APIs")
             .displayName("all apis")
             .pathsToMatch("/api/**")
+            .packagesToScan("com.suyo.quran.controller")
             .build();
     }
 
