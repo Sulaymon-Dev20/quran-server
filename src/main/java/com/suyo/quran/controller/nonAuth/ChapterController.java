@@ -18,21 +18,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import static com.suyo.quran.util.SwaggerDoc.*;
+
 @RestController
 @RequestMapping(value = "/api/chapter", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "chapter controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = chapterTag, description = chapterTagDescription)
 public class ChapterController {
 
     private final ChapterService chapterService;
 
     @GetMapping
-    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @Operation(summary = chapterGet, description = chapterGetDescription)
     @ApiResponses({
         @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
-    public List<Chapter> getChapterList(@Parameter(description = "the user to create") @RequestParam(defaultValue = "ALL") Language language) {
+    public List<Chapter> getChapterList(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return chapterService.getChapterListByLanguage(language);
     }
 }

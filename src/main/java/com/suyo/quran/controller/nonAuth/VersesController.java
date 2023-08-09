@@ -17,34 +17,36 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import static com.suyo.quran.util.SwaggerDoc.*;
+
 @RestController
 @RequestMapping(value = "/api/verses", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "verses controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = versesTag, description = versesTagDescription)
 public class VersesController {
 
     private final VersesService versesService;
 
     @GetMapping
-    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @Operation(summary = versesGetAllChapter, description = versesGetAllChapterDescription)
     @ApiResponses({
         @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
-    public List<List<Verse>> getAllChapter(@RequestParam(defaultValue = "ALL") Language language) {
+    public List<List<Verse>> getAllChapter(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return versesService.getAllChapter(language);
     }
 
     @GetMapping(value = "/{number}")
-    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @Operation(summary = versesGetChapter, description = versesGetChapterDescription)
     @ApiResponses({
         @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
     })
     public List<Verse> getChapter(
-        @Parameter(description = "the user to create")
+        @Parameter(description = languageParameter)
         @RequestParam(defaultValue = "ALL")
             Language language,
-        @Parameter(description = "the user to create", required = true)
+        @Parameter(description = versesGetChapterNumberParameter, required = true)
         @Min(value = 1, message = "min Chapter number is 1")
         @Max(value = 114, message = "max Chapter number is 114")
         @PathVariable("number")

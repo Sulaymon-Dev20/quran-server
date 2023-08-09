@@ -24,17 +24,6 @@ public class AuthService {
     private final AuthenticationManager authenticationManager;
     private final MailService mailService;
 
-    public JWT login(Login request) {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
-        return jwtService.generateAllToken(user);
-    }
-
-    public JWT checkCode(CheckEmailCode request) {
-        final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
-        return user.map(jwtService::generateAllToken).orElse(null);
-    }
-
     public Object register(Register request) {
         final String code = generateEmailCode();
         mailService.sendMail(request.getEmail(), MailService.sendCodeMail, Map.of("code", code, "timeZone", TimeZone.getDefault().getID()));
@@ -42,13 +31,24 @@ public class AuthService {
         return user.getCode();
     }
 
-    private String generateEmailCode() {
-        final int max = 999999;
-        final int min = 100000;
-        return String.valueOf(new Random().nextInt(max + 1 - min) + min);
+    public JWT checkCode(CheckEmailCode request) {
+        final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
+        return user.map(jwtService::generateAllToken).orElse(null);
     }
 
     public JWT refreshToken(User user) {
         return jwtService.generateAllToken(user);
+    }
+
+    public JWT login(Login request) {
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
+        return jwtService.generateAllToken(user);
+    }
+
+    private String generateEmailCode() {
+        final int max = 999999;
+        final int min = 100000;
+        return String.valueOf(new Random().nextInt(max + 1 - min) + min);
     }
 }

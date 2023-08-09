@@ -4,6 +4,7 @@ import com.suyo.quran.entities.enums.Language;
 import com.suyo.quran.models.nonAuth.juz.JuzModel;
 import com.suyo.quran.service.JuzService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,21 +18,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+import static com.suyo.quran.util.SwaggerDoc.*;
+
 @RestController
 @RequestMapping(value = "/api/juz", produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 @RequiredArgsConstructor
-@Tag(name = "juz controller", description = "Operations ```asdf``` pertaining to manager blood donors in the application")
+@Tag(name = juzTag, description = juzTagDescription)
 public class JuzController {
 
     private final JuzService juzService;
 
     @GetMapping
-    @Operation(summary = "View a list of available products", description = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+    @Operation(summary = juzGet, description = juzGetDescription)
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>", useReturnTypeSchema = true),
+        @ApiResponse(responseCode = "404", description = "model ``` asdf asdf``` <br/>", useReturnTypeSchema = true)
     })
-    public List<JuzModel> getJuz(@RequestParam(defaultValue = "ALL") Language language) {
+    public List<JuzModel> getJuz(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return juzService.getJuz(language);
     }
 }
