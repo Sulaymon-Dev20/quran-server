@@ -56,7 +56,7 @@ public class SwaggerConfig {
     public GroupedOpenApi apiIOS() {
         return GroupedOpenApi.builder()
             .group("FOR IOS PART")
-            .displayName("FOR IOS PART")
+            .displayName("complimentary apis")
             .pathsToMatch("/api/**")
             .packagesToScan("com.suyo.quran.controller.nonAuth")
             .build();
@@ -66,7 +66,7 @@ public class SwaggerConfig {
     public GroupedOpenApi authApi() {
         return GroupedOpenApi.builder()
             .group("Auth Controller")
-            .displayName("Auth Controller")
+            .displayName("authenticated apis")
             .pathsToMatch("/api/**")
             .packagesToScan("com.suyo.quran.controller.auth")
             .build();
@@ -76,7 +76,7 @@ public class SwaggerConfig {
     public GroupedOpenApi allApis() {
         return GroupedOpenApi.builder()
             .group("All APIs")
-            .displayName("All APIs")
+            .displayName("all apis")
             .pathsToMatch("/api/**")
             .build();
     }
