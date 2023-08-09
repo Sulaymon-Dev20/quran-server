@@ -52,6 +52,12 @@ public class Utils {
         return list;
     }
 
+    public static <T> List<T> paginate(List<T> list, int pageNumber, int pageSize) {
+        int fromIndex = (pageNumber - 1) * pageSize;
+        int toIndex = Math.min(fromIndex + pageSize, list.size());
+
+        return list.subList(fromIndex, toIndex);
+    }
 
     public static void main(String[] args) {
         TreeMap<String, Object> objectObjectTreeMap = new TreeMap<>(Comparator.comparingInt(key -> key.length() + Integer.parseInt(key)));

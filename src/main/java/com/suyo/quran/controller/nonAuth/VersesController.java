@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 import static com.suyo.quran.util.SwaggerDoc.*;
+import static com.suyo.quran.util.Utils.paginate;
 
 @RestController
 @RequestMapping(value = "/api/verses", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -52,7 +53,15 @@ public class VersesController {
         @Min(value = 1, message = "min Chapter number is 1")
         @Max(value = 114, message = "max Chapter number is 114")
         @PathVariable("number")
-            Integer chapterNumber) {
-        return versesService.getChapter(language, chapterNumber);
+            Integer chapterNumber,
+        @Parameter(description = versesGetChapterNumberParameter)
+        @RequestParam(name = "page", defaultValue = "1")
+        @Min(value = 1, message = "min pageNumber is 1")
+            Integer pageNumber,
+        @Parameter(description = versesGetChapterNumberParameter)
+        @Min(value = 3, message = "min sizeNumber is 3")
+        @RequestParam(name = "size", defaultValue = "999999")
+            Integer sizeNumber) {
+        return paginate(versesService.getChapter(language, chapterNumber), pageNumber, sizeNumber);
     }
 }
