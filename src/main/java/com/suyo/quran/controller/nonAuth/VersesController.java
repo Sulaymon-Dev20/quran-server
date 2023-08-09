@@ -31,7 +31,8 @@ public class VersesController {
     @GetMapping
     @Operation(summary = versesGetAllChapter, description = versesGetAllChapterDescription)
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = versesGetAllChapter200),
+        @ApiResponse(responseCode = "400", description = versesGetAllChapter400),
     })
     public List<List<Verse>> getAllChapter(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return versesService.getAllChapter(language);
@@ -40,7 +41,8 @@ public class VersesController {
     @GetMapping(value = "/{number}")
     @Operation(summary = versesGetChapter, description = versesGetChapterDescription)
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = versesGetChapter200),
+        @ApiResponse(responseCode = "400", description = versesGetChapter400),
     })
     public List<Verse> getChapter(
         @Parameter(description = languageParameter)

@@ -32,7 +32,8 @@ public class ChapterController {
     @GetMapping
     @Operation(summary = chapterGet, description = chapterGetDescription)
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>")
+        @ApiResponse(responseCode = "200", description = chapterGet200),
+        @ApiResponse(responseCode = "400", description = chapterGet400),
     })
     public List<Chapter> getChapterList(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return chapterService.getChapterListByLanguage(language);

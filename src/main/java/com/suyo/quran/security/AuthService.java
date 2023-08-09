@@ -9,6 +9,7 @@ import com.suyo.quran.service.mail.MailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -33,7 +34,7 @@ public class AuthService {
 
     public JWT checkCode(CheckEmailCode request) {
         final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
-        return user.map(jwtService::generateAllToken).orElse(null);
+        return user.map(jwtService::generateAllToken).orElseThrow(() -> new UsernameNotFoundException("No such user"));
     }
 
     public JWT refreshToken(User user) {

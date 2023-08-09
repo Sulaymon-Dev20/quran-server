@@ -32,8 +32,8 @@ public class JuzController {
     @GetMapping
     @Operation(summary = juzGet, description = juzGetDescription)
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "model ``` asdf asdf``` <br/>", useReturnTypeSchema = true),
-        @ApiResponse(responseCode = "404", description = "model ``` asdf asdf``` <br/>", useReturnTypeSchema = true)
+        @ApiResponse(responseCode = "200", description = juzGet200),
+        @ApiResponse(responseCode = "400", description = juzGet400),
     })
     public List<JuzModel> getJuz(@Parameter(description = languageParameter) @RequestParam(defaultValue = "ALL") Language language) {
         return juzService.getJuz(language);
