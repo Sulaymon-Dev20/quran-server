@@ -26,17 +26,19 @@ public class MailService {
     private String fromMail;
 
     public void sendMail(String email, String mailFile, Map<String, Object> gmailMessage) {
-        MimeMessage message = sender.createMimeMessage();
-        try {
-            MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
-            final String template = getTemplate(mailFile, gmailMessage);
-            helper.setTo(email);
-            helper.setText(template, true);
-            helper.setSubject("Register");
-            helper.setFrom(fromMail);
-            sender.send(message);
-        } catch (MessagingException e) {
-            e.fillInStackTrace();
-        }
+        new Thread(() -> {
+            MimeMessage message = sender.createMimeMessage();
+            try {
+                MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED, StandardCharsets.UTF_8.name());
+                final String template = getTemplate(mailFile, gmailMessage);
+                helper.setTo(email);
+                helper.setText(template, true);
+                helper.setSubject("Register");
+                helper.setFrom(fromMail);
+                sender.send(message);
+            } catch (MessagingException e) {
+                e.fillInStackTrace();
+            }
+        }).start();
     }
 }
