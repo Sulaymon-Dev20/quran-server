@@ -55,7 +55,7 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi apiIOS() {
         return GroupedOpenApi.builder()
-            .group("FOR IOS PART")
+            .group("complimentary")
             .displayName("complimentary apis")
             .pathsToMatch("/api/**")
             .packagesToScan("com.suyo.quran.controller.nonAuth")
@@ -65,7 +65,7 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi authApi() {
         return GroupedOpenApi.builder()
-            .group("Auth Controller")
+            .group("auth")
             .displayName("authenticated apis")
             .pathsToMatch("/api/**")
             .packagesToScan("com.suyo.quran.controller.auth")
@@ -75,7 +75,7 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi allApis() {
         return GroupedOpenApi.builder()
-            .group("All APIs")
+            .group("all")
             .displayName("all apis")
             .pathsToMatch("/api/**")
             .packagesToScan("com.suyo.quran.controller")
