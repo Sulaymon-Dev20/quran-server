@@ -6,10 +6,11 @@ import com.suyo.quran.models.auth.Login;
 import com.suyo.quran.models.auth.Register;
 import com.suyo.quran.repository.UserRepository;
 import com.suyo.quran.service.mail.MailService;
+import jakarta.servlet.ServletException;
 import lombok.RequiredArgsConstructor;
+import lombok.SneakyThrows;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -34,16 +35,17 @@ public class AuthService {
 
     public JWT checkCode(CheckEmailCode request) {
         final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
-        return user.map(jwtService::generateAllToken).orElseThrow(() -> new UsernameNotFoundException("No such user"));
+        return user.map(jwtService::generateAllToken).orElseThrow(() -> new SecurityException("No such user"));
     }
 
     public JWT refreshToken(User user) {
         return jwtService.generateAllToken(user);
     }
 
+    @SneakyThrows
     public JWT login(Login request) {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
+        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new ServletException("No such user"));
         return jwtService.generateAllToken(user);
     }
 
