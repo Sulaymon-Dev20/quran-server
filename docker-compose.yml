@@ -5,7 +5,7 @@ services:
     container_name: quran-server
     image: sulaymonyahyo/quran-server:${CI_COMMIT_TAG}
     build:
-      dockerfile: docker/dev/Dockerfile
+      dockerfile: docker/complete/Dockerfile
     ports:
       - "6236:6236"
     environment:
