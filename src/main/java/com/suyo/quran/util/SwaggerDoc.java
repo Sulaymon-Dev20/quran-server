@@ -2,21 +2,21 @@ package com.suyo.quran.util;
 
 public class SwaggerDoc {
     //   auth docs
-    public static final String authTag = "auth controller";
-    public static final String authTagDescription = "Lorem ```Ipsum``` is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+    public static final String authTag = "Authentication";
+    public static final String authTagDescription = "APIs for ```authentication```";
 
-    public static final String authPostRegister = "View a list of available products";
-    public static final String authPostRegisterDescription = authTagDescription;
+    public static final String authPostRegister = "Register user";
+    public static final String authPostRegisterDescription = "Registers a new user";
     public static final String authPostRegister200 = "model ``` asdf asdf``` <br/>";
     public static final String authPostRegister400 = "model ``` asdf asdf``` <br/>";
 
-    public static final String authPostCheckCode = "View a list of available products";
-    public static final String authPostCheckCodeDescription = authTagDescription;
+    public static final String authPostCheckCode = "Check email code";
+    public static final String authPostCheckCodeDescription = "Checks the email verification code";
     public static final String authPostCheckCode200 = authPostRegister200;
     public static final String authPostCheckCode400 = authPostRegister400;
 
-    public static final String authPostLogin = "View a list of available products";
-    public static final String authPostLoginDescription = authTagDescription;
+    public static final String authPostLogin = "User login";
+    public static final String authPostLoginDescription = "Logs in the user";
     public static final String authPostLogin200 = authPostRegister200;
     public static final String authPostLogin400 = authPostRegister400;
 
