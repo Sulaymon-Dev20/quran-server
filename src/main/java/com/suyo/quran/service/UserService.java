@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -15,7 +16,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public Object setPassword(Long userId, SetPassword password) {
+    public Object setPassword(UUID userId, SetPassword password) {
         Optional<User> user = userRepository.setUpPassword(userId, passwordEncoder.encode(password.getPassword()));
         return user.orElse(null);
     }
