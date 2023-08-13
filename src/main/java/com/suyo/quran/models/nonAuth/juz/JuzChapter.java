@@ -1,7 +1,7 @@
 package com.suyo.quran.models.nonAuth.juz;
 
 import com.suyo.quran.entities.enums.Language;
-import com.suyo.quran.models.nonAuth.Translation;
+import com.suyo.quran.entities.Translation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;

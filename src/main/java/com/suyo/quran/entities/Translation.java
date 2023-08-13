@@ -1,29 +1,47 @@
-package com.suyo.quran.models.nonAuth;
+package com.suyo.quran.entities;
 
 import com.suyo.quran.entities.enums.Language;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.persistence.Entity;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.apache.tomcat.util.codec.binary.StringUtils;
+import org.hibernate.validator.constraints.Length;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity(name = "translation")
 @Schema(name = "Translation Model", description = "to`ldirib yozish kerak")
-public class Translation {
+public class Translation extends AbsNameEntity {
+    @NotNull
     private String ru;
+    @NotNull
     private String sv;
+    @NotNull
     private String uz;
+    @NotNull
     private String en;
+    @NotNull
     private String id;
+    @NotNull
     private String fr;
+    @NotNull
     private String bn;
+    @NotNull
     private String ur;
+    @NotNull
     private String tr;
+    @NotNull
     private String es;
+    @NotNull
     private String zh;
 
     public Translation(HashMap<String, String> map) {
@@ -53,7 +71,19 @@ public class Translation {
             case UR -> this.ur;
             case UZ -> this.uz;
             case ZH -> this.zh;
-            default -> this;
+            default -> new TreeMap<String, String>() {{
+                put("bn", bn);
+                put("en", en);
+                put("es", es);
+                put("fr", fr);
+                put("id", id);
+                put("ru", ru);
+                put("sv", sv);
+                put("tr", tr);
+                put("ur", ur);
+                put("uz", uz);
+                put("zh", zh);
+            }};
         };
     }
 }
