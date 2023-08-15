@@ -5,17 +5,14 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.apache.tomcat.util.codec.binary.StringUtils;
-import org.hibernate.validator.constraints.Length;
 
 import java.util.HashMap;
 import java.util.TreeMap;
 
 @EqualsAndHashCode(callSuper = true)
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "translation")
