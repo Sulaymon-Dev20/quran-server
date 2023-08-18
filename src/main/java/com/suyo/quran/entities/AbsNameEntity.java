@@ -14,6 +14,7 @@ import java.util.UUID;
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AbsNameEntity {
     @Id
+    @Column(columnDefinition = "uuid default gen_random_uuid()")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
