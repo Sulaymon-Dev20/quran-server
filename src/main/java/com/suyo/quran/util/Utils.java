@@ -58,8 +58,4 @@ public class Utils {
 
         return list.subList(fromIndex, toIndex);
     }
-
-    public static void main(String[] args) {
-        TreeMap<String, Object> objectObjectTreeMap = new TreeMap<>(Comparator.comparingInt(key -> key.length() + Integer.parseInt(key)));
-    }
 }
