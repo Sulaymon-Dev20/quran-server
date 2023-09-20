@@ -1,0 +1,110 @@
+version: "3.9"
+name: quran-project
+services:
+  eureka-server:
+    image: ${DOCKER_USER}/quran-eureka-server:latest
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    environment:
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=${ZIPKIN_URL}
+      - SPRING_SECURITY_USER_NAME=${EUREKA_SECURITY_NAME}
+      - SPRING_SECURITY_USER_PASSWORD=${EUREKA_SECURITY_PASSWORD}
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+  service-gateway:
+    image: ${DOCKER_USER}/quran-gateway:latest
+    container_name: service-gateway
+    ports:
+      - "4123:4123"
+    environment:
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=${EUREKA_URL}
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=${ZIPKIN_URL}
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+      - eureka-server
+  service-telegram:
+    image: ${DOCKER_USER}/quran-telegram:latest
+    container_name: service-telegram
+    ports:
+      - "8018:8018"
+    environment:
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=${EUREKA_URL}
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=${ZIPKIN_URL}
+      - SPRING_TELEGRAM_BOT_TOKEN=${SPRING_TELEGRAM_BOT_TOKEN}
+      - SPRING_TELEGRAM_BOT_USERNAME=${SPRING_TELEGRAM_BOT_USERNAME}
+    networks:
+      - spring
+    depends_on:
+      - zipkin
+      - eureka-server
+      - service-main
+  service-main:
+    image: ${DOCKER_USER}/quran-server:latest
+    container_name: service-main
+    ports:
+      - "6236:6236"
+    environment:
+      - EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE=${EUREKA_URL}
+      - MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=${ZIPKIN_URL}
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/${POSTGRES_DATABASE}
+      - SPRING_DATASOURCE_USERNAME=${POSTGRES_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - spring
+      - postgres
+    depends_on:
+      - zipkin
+      - eureka-server
+      - postgres
+
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: ${POSTGRES_DATABASE}
+      POSTGRES_USER: ${POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+  zipkin:
+    image: openzipkin/zipkin:2.24.2
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - spring
+
+networks:
+  postgres:
+    driver: bridge
+  spring:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

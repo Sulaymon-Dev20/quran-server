@@ -17,6 +17,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,5 +61,14 @@ public class UserController {
     })
     public JWT refreshToken(@AuthenticationPrincipal User user) {
         return authService.refreshToken(user);
+    }
+
+    @GetMapping("/userinfo")
+    public User getUserInfo(@AuthenticationPrincipal OAuth2User principal) {
+        User user = new User();
+        String email = principal.getAttribute("email");
+        user.setEmail(email);
+        System.out.println(email);
+        return user;
     }
 }

@@ -9,9 +9,11 @@ import com.suyo.quran.service.mail.MailService;
 import jakarta.servlet.ServletException;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Map;
 import java.util.Optional;
@@ -35,7 +37,7 @@ public class AuthService {
 
     public JWT checkCode(CheckEmailCode request) {
         final Optional<User> user = userRepository.checkEmailCode(request.getEmail(), request.getCode());
-        return user.map(jwtService::generateAllToken).orElseThrow(() -> new SecurityException("No such user"));
+        return user.map(jwtService::generateAllToken).orElseThrow(() -> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "No such user"));
     }
 
     public JWT refreshToken(User user) {
